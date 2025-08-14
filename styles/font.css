@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "Fricolage Grotesque";
+  font-weight: 100 900;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url(/phx/ui/fonts/fricolage-grotesque.var.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Mackinac";
+  src: url("/phx/ui/fonts/mackinac-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Mackinac";
+  src: url("/phx/ui/fonts/mackinac-medium-italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Mackinac";
+  src: url("/phx/ui/fonts/mackinac-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Mackinac";
+  src: url("/phx/ui/fonts/mackinac-bold-italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Fragment Mono";
+  src: url("/phx/ui/fonts/fragment-mono-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Fragment Mono";
+  src: url("/phx/ui/fonts/fragment-mono-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: block;
+}
+
+/* Burmese font */
+@font-face {
+  font-family: "seesai";
+  src: url("/assets/fonts/burmese/seesai.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.burmese-text {
+  font-family: "seesai", "Fricolage Grotesque", sans-serif;
+  line-height: 1.8;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.burmese-text p,
+.burmese-text li,
+.burmese-text span,
+.burmese-text div {
+  font-family: inherit !important;
+  color: inherit !important;
+}
