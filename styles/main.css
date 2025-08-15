@@ -1,0 +1,536 @@
+/* bootstrap css */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css");
+
+/* bootstrap icon */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+/* Font Faces */
+@import url("./font.css");
+
+/* Base Styles */
+:root {
+  --dark-purple: #1c1436;
+  --deep-purple: #300c5c;
+  --medium-purple: #6a4da3;
+  --light-lavender: #f1ddf8;
+  --white: #ffffff;
+  --navy: var(--dark-purple);
+  --navy-950: #0f0f17;
+  --soft-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+::selection {
+  background: var(--white);
+  color: var(--deep-purple);
+  text-shadow: none;
+}
+
+html:not(.motion-on) * {
+  transition: none !important;
+  animation: none !important;
+}
+
+.no-js [data-src] {
+  display: none;
+}
+
+[data-scroll-disabled="on"],
+[data-scroll-disabled="on"] body {
+  touch-action: none;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto;
+  overflow: hidden;
+}
+
+.text-glow,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-shadow: #f1ddf8 1px 0 10px;
+}
+
+body {
+  font-family: "Fricolage Grotesque", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: var(--dark-purple);
+  font-size: 0.875rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  animation: twinkle var(--duration) infinite ease-in-out;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.star-normal {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.star-glowing {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.7);
+  animation: glow var(--duration) infinite ease-in-out;
+}
+
+.star-colored {
+  box-shadow: 0 0 8px 1px currentColor;
+}
+
+.star-shooting {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0;
+  z-index: 1;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: var(--opacity);
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+    box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.9);
+  }
+}
+
+@keyframes shooting {
+  0% {
+    opacity: 0;
+    transform: translateX(0) translateY(0) rotate(var(--rotation));
+  }
+  10% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px) translateY(50px) rotate(var(--rotation));
+  }
+}
+
+/* Header Styles */
+.navbar {
+  height: 80px;
+  background-color: transparent;
+  position: relative;
+  z-index: 500;
+}
+
+.header-logo {
+  height: 60px;
+  width: auto;
+  opacity: 0.9;
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.2s ease;
+}
+
+.nav-gradient {
+  background: linear-gradient(to right, rgba(241, 221, 248, 0.25), rgba(96, 58, 150, 0.15));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: var(--soft-shadow);
+  border-radius: 9999px;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  padding: 0.5rem 0.625rem;
+  position: relative;
+  font-family: "Fricolage Grotesque", sans-serif;
+  font-size: 0.875rem;
+}
+
+.nav-link:hover {
+  color: var(--white);
+}
+
+.nav-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: -2px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--light-lavender), transparent);
+  opacity: 0.7;
+  transform: scaleX(1);
+}
+
+.btn-signin {
+  border-radius: 20px 8px 8px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  padding: 0.2rem 0.625rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Fricolage Grotesque", sans-serif;
+  font-weight: 500;
+  font-size: 0.8125rem;
+}
+
+.btn-signin:hover {
+  background-color: rgba(106, 77, 163, 0.3);
+  border-color: rgba(106, 77, 163, 0.4);
+  color: var(--white);
+}
+
+.btn-getstarted {
+  border-radius: 8px 20px 20px 8px;
+  background-color: rgba(106, 77, 163, 0.8);
+  padding: 0.2rem 0.625rem;
+  color: var(--white);
+  font-family: "Fricolage Grotesque", sans-serif;
+  font-weight: 500;
+  font-size: 0.8125rem;
+}
+
+.btn-getstarted:hover {
+  background-color: rgba(48, 12, 92, 0.9);
+  color: var(--white);
+}
+
+/* Articles Dropdown Styles */
+.articles-dropdown {
+  width: 220px;
+  border: 2px solid var(--white) !important;
+  border-radius: 16px;
+  padding: 6px;
+  background-color: var(--dark-purple);
+  box-shadow: var(--soft-shadow);
+  margin-top: 10px;
+  transform: translateX(-50%) translateY(0);
+  left: 50%;
+}
+
+.articles-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -7.5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: var(--dark-purple);
+  border-top-left-radius: 4px;
+  border-top: 2px solid var(--white) !important;
+  border-left: 2px solid var(--white) !important;
+  z-index: -1;
+}
+
+.dropdown-item {
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin: 2px 0;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(106, 77, 163, 0.3);
+  color: var(--white);
+}
+
+.dropdown-menu {
+  border: none;
+  padding: 0;
+  top: 150% !important;
+  left: 50% !important;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+/* Cross-shaped close button */
+.navbar-toggler {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-toggler-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 4px 0;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0px 0px 0px 0.15rem rgba(241, 221, 248, 1);
+}
+
+/* Initial hamburger state (three bars) */
+.navbar-toggler .top-bar {
+  transform: translateY(0) rotate(0);
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 1;
+}
+
+.navbar-toggler .bottom-bar {
+  transform: translateY(0) rotate(0);
+}
+
+/* X state when menu is open */
+.navbar-toggler:not(.collapsed) .top-bar {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) .middle-bar {
+  opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) .bottom-bar {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 900;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 85%;
+  max-width: 320px;
+  height: 100%;
+  background: linear-gradient(135deg, #2a1b52 0%, #1e143e 100%);
+  z-index: 950;
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  padding: 1.5rem;
+  overflow-y: auto;
+  box-shadow: 4px 0 30px rgba(0, 0, 0, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.mobile-menu.show {
+  transform: translateX(0);
+}
+
+.mobile-menu-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Menu content styles */
+.mobile-menu .logo {
+  height: 28px;
+  margin-bottom: 2rem;
+  padding-left: 0.5rem;
+  fill: rgba(255, 255, 255, 0.9);
+}
+
+.mobile-menu a {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9375rem;
+  padding: 0.75rem 1rem;
+  margin: 0.25rem 0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile-menu a:not(.btn)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--medium-purple);
+  transform: translateX(-10px);
+  transition: transform 0.3s ease;
+  opacity: 0;
+}
+
+.mobile-menu a:hover {
+  color: var(--white);
+  background: rgba(106, 77, 163, 0.3);
+}
+
+.mobile-menu a:hover::before {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.mobile-menu .btn {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu .btn-outline-primary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.mobile-menu .btn-outline-primary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--white);
+}
+
+.mobile-menu .btn-primary {
+  background: var(--medium-purple);
+  border: none;
+  color: var(--white);
+}
+
+.mobile-menu .btn-primary:hover {
+  background: var(--deep-purple);
+  transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.show a {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: rgba(28, 20, 54, 0.9);
+  background-image: linear-gradient(to bottom right, rgba(28, 20, 54, 0.7), rgba(15, 15, 23, 0.7));
+  color: rgba(255, 255, 255, 0.9);
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.footer-logo {
+  height: 120px;
+}
+
+.footer-title {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.625rem;
+  font-family: "Fricolage Grotesque", sans-serif;
+}
+
+.footer-list li {
+  margin: 9px 0 !important;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  margin-bottom: 0.375rem;
+  font-family: "Fricolage Grotesque", sans-serif;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 0.8125rem;
+}
+
+.footer-link:hover {
+  color: var(--light-lavender);
+  text-decoration: none;
+}
+
+.copyright {
+  font-size: 0.6875rem;
+  text-align: center;
+  margin-bottom: 0;
+  font-family: "Fricolage Grotesque", sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Font loading states */
+.wf-loading body {
+  visibility: hidden;
+}
+
+.wf-loaded-stage2 body {
+  visibility: visible;
+}
