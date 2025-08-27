@@ -4,30 +4,591 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>ရာသီခွင် | YarTheKhwin Astrology</title>
 
-    <link rel="shortcut icon" href="./assets/images/logo/yarthekhwin.svg" type="image/x-icon" />
-
+    <link rel="shortcut icon" href="/assets/images/logo/yarthekhwin.svg" type="image/x-icon" />
     <link href="/styles/home.css" rel="stylesheet" />
   </head>
   <body>
     <header id="header"></header>
 
-    <main class="container my-5">
-      <p class="burmese-text">
-        တစ်နှစ်တွင် နေသည် အမြင်အားဖြင့် ကောင်းကင်၌ ရှိသော နက္ခတ်ခေါ် ကြယ်စု ၁၂ ခုကို ဖြတ်ကျော်သွား၍
-        ထိုနက္ခတ်များ တည်နေရာ နယ်နိမိတ်များကို ရာသီခွင်များအဖြစ်ဖြင့် ရှေးနက္ခတ်ဆရာများ လက်ထက်ကစ၍
-        သတ်မှတ်ထားခဲ့ကြသည်။ ရာသီခွင် တစ်ခွင်တွင် နက္ခတ်တလုံး(ကြယ်တစ်စု)ရှိ၍ အဆိုပါ
-        ရာသီခွင်တစ်ခုစီကို ရုပ်ပုံတစ်ခုစီဖြင့် ခွဲခြားသတ်မှတ်ထားသည်။ ထို ၁၂ ရာသီခွင်ကို နေသာမက၊ ကျန်
-        အခြားဂြိုဟ်များလည်း ဖြတ်သန်းသွားလာကြသည်။ လက်တင်အမည်များဖြင့် ခွဲခြားထားသော ၁၂ ရာသီခွင်မှာ
-        အောက်ပါအတိုင်းဖြစ်၍ ရာသီခွင်အတွင်းရှိ နက္ခတ်တို့၏ ရုပ်ပုံများကိုလည်း ယှဉ်တွဲဖော်ပြထားသည်။
-        အဆိုပါ လက်တင် အမည်များသည် ရှေးဂရိလူမျိုးတို့၏ အခေါ်အဝေါ်များမှ ဆင်းသက်လာခြင်း ဖြစ်လေသည်။
-      </p>
+    <main id="main" class="container-fluid px-0">
+      <!-- HERO SECTION -->
+      <section class="hero position-relative overflow-hidden">
+        <div class="stars-container" aria-hidden="true"></div>
+
+        <div class="container position-relative py-7 py-lg-9">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-2 order-lg-1 p-5">
+              <div class="eyebrow fade-up">YarTheKhwin · Astrology for the present moment</div>
+              <h1 class="display-4 fw-light mb-3 fade-up" style="--d: 0.05s">
+                Decode your
+                <span class="text-gradient fw-bold d-block mt-2">Cosmic Blueprint</span>
+              </h1>
+              <p class="lead opacity-85 mb-4 fade-up" style="--d: 0.1s">
+                Intimate, minimalist guidance—personalized through Western & Burmese astrology.
+              </p>
+
+              <div class="d-flex flex-wrap gap-3 fade-up" style="--d: 0.15s">
+                <a href="/register" class="btn btn-gradient btn-lg btn-hover-effect">
+                  <i class="bi bi-stars me-2"></i> Get your reading
+                </a>
+                <a href="/signs" class="btn btn-outline btn-lg">Explore signs</a>
+              </div>
+
+              <!-- LIVE FEED / TICKER -->
+              <div
+                class="luxe-ticker mt-5 fade-up"
+                style="--d: 0.2s"
+                role="region"
+                aria-label="Astrology ticker"
+              >
+                <div class="ticker-track">
+                  <span class="ticker-pill"
+                    ><i class="bi bi-moon-stars"></i> Today · <span id="ticker-date"></span
+                  ></span>
+                  <span class="ticker-pill"
+                    >Mercury sextile Moon — speak softly, think clearly</span
+                  >
+                  <span class="ticker-pill"
+                    >Sun trine Jupiter — momentum for learning & growth</span
+                  >
+                  <span class="ticker-pill">Saturn reminds: boundaries are sacred practice</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Orb / Constellation Sculpture -->
+            <div class="col-lg-6 order-1 order-lg-2">
+              <div class="cosmic-orb mx-auto">
+                <div class="orb ring r1"></div>
+                <div class="orb ring r2"></div>
+                <div class="orb ring r3"></div>
+                <div class="orb glow"></div>
+                <img
+                  class="orb wheel"
+                  src="/assets/images/home/zodiac-wheel.png"
+                  alt="Zodiac wheel"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ZODIAC GRID --->
+      <section class="container py-6">
+        <div class="row align-items-end mb-6 px-3">
+          <div class="col-md-8">
+            <h2 class="display-5 fw-light mb-2 fade-up">
+              The <span class="text-gradient fw-bold">12 Zodiac Signs</span>
+            </h2>
+            <p class="lead opacity-85 fade-up" style="--d: 0.05s">
+              Clean lines. Quiet color. Precision over noise.
+            </p>
+          </div>
+          <div class="col-md-4 text-md-end mt-3 mt-md-0">
+            <a href="/signs" class="btn btn-outline btn-arrow fade-up" style="--d: 0.1s">
+              Explore all <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="zodiac-grid-container">
+          <div class="row g-4 justify-content-center">
+            <template id="z-card">
+              <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                <a class="zodiac-card luxe" href="#">
+                  <div class="zodiac-icon"><img alt="" width="28" height="28" /></div>
+                  <h3 class="h6 text-center mt-3 mb-1 fw-medium name">—</h3>
+                  <p class="text-center small opacity-75 range">—</p>
+                </a>
+              </div>
+            </template>
+
+            <div id="z-grid" class="contents row g-4 justify-content-center"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DAILY HOROSCOPE -->
+      <section class="horoscope-split position-relative overflow-hidden">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-lg-6 d-flex align-items-center horoscope-content">
+              <div class="p-5 p-lg-7">
+                <span class="eyebrow fade-up">Daily Guidance</span>
+                <h2 class="display-5 fw-light mb-3 fade-up">
+                  Your <span class="fw-bold text-gradient">Daily Horoscope</span>
+                </h2>
+                <p class="lead opacity-85 mb-4 fade-up" style="--d: 0.05s">
+                  Personalized, quietly confident guidance. Updated daily.
+                </p>
+
+                <div class="horoscope-card p-4 rounded-3 mb-4 fade-up" style="--d: 0.1s">
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="horoscope-icon"><i class="bi bi-moon-stars-fill"></i></div>
+                    <div class="ms-3">
+                      <h3 class="h5 mb-0">Today's Guidance</h3>
+                      <p class="small opacity-75 mb-0" id="current-date"></p>
+                    </div>
+                  </div>
+                  <p class="mb-0 opacity-85" id="daily-copy">
+                    The stars align to bring opportunities for growth. Mercury's position suggests
+                    excellent timing for communication.
+                  </p>
+                </div>
+
+                <a href="/horoscope" class="btn btn-icon fade-up" style="--d: 0.15s">
+                  <i class="bi bi-moon-stars"></i> Read full horoscope
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-6 planet-side">
+              <div class="p-5 p-lg-7 h-100 d-flex align-items-center">
+                <div class="w-100">
+                  <h3 class="h5 fw-medium mb-4 fade-up">Current Planetary Positions</h3>
+                  <div class="planet-grid fade-up" style="--d: 0.1s">
+                    <div class="planet-item">
+                      <div class="planet-icon bg-sun"><i class="bi bi-sun-fill"></i></div>
+                      <div class="planet-info">
+                        <span class="planet-name">Sun</span
+                        ><span class="planet-position">Taurus</span>
+                      </div>
+                    </div>
+                    <div class="planet-item">
+                      <div class="planet-icon bg-moon"><i class="bi bi-moon-fill"></i></div>
+                      <div class="planet-info">
+                        <span class="planet-name">Moon</span
+                        ><span class="planet-position">Leo</span>
+                      </div>
+                    </div>
+                    <div class="planet-item">
+                      <div class="planet-icon bg-mercury">☿</div>
+                      <div class="planet-info">
+                        <span class="planet-name">Mercury</span>
+                        <span class="planet-position">Gemini</span>
+                      </div>
+                    </div>
+                    <div class="planet-item">
+                      <div class="planet-icon bg-venus p-2">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M9 18H15M12 13V21M12 13C14.7614 13 17 10.7614 17 8C17 5.23858 14.7614 3 12 3C9.23858 3 7 5.23858 7 8C7 10.7614 9.23858 13 12 13Z"
+                              stroke="#ffffff"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="planet-info">
+                        <span class="planet-name">Venus</span>
+                        <span class="planet-position">Cancer</span>
+                      </div>
+                    </div>
+                    <div class="planet-item">
+                      <div class="planet-icon bg-mars p-2">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          transform="rotate(45)"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M12 11C9.23858 11 7 13.2386 7 16C7 18.7614 9.23858 21 12 21C14.7614 21 17 18.7614 17 16C17 13.2386 14.7614 11 12 11ZM12 11V3M12 3L16 7M12 3L8 7"
+                              stroke="#ffffff"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="planet-info">
+                        <span class="planet-name">Mars</span
+                        ><span class="planet-position">Virgo</span>
+                      </div>
+                    </div>
+                    <div class="planet-item">
+                      <div class="planet-icon bg-jupiter">♃</div>
+                      <div class="planet-info">
+                        <span class="planet-name">Jupiter</span>
+                        <span class="planet-position">Gemini</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMPATIBILITY -->
+      <section class="compatibility-section py-6">
+        <div class="container">
+          <div class="text-center mb-6">
+            <span class="eyebrow fade-up">Relationships</span>
+            <h2 class="display-5 fw-light mb-2 fade-up">
+              Zodiac <span class="text-gradient fw-bold">Compatibility</span>
+            </h2>
+            <p class="lead opacity-85 mx-auto fade-up" style="max-width: 640px; --d: 0.05s">
+              Discover which signs align best with your energy.
+            </p>
+          </div>
+
+          <div class="compatibility-carousel p-4">
+            <div class="compatibility-slider row flex-nowrap overflow-auto py-4">
+              <div class="col-10 col-md-6 col-lg-4">
+                <div class="pair-card card-good h-100">
+                  <div class="pair-flag d-flex justify-content-between align-items-center">
+                    <span>Highly Compatible</span>
+                    <img src="/assets/images/home/flags/green.svg" alt="green" />
+                  </div>
+                  <div class="pair-signs">
+                    <span class="sign-1">Aries</span>
+                    <span class="pair-plus">+</span>
+                    <span class="sign-2">Leo</span>
+                  </div>
+                  <p class="pair-desc">A dynamic, fiery match full of passion and energy</p>
+                  <div class="pair-rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-10 col-md-6 col-lg-4">
+                <div class="pair-card card-good h-100">
+                  <div class="pair-flag d-flex justify-content-between align-items-center">
+                    <span>Highly Compatible</span>
+                    <img src="/assets/images/home/flags/green.svg" alt="green" />
+                  </div>
+                  <div class="pair-signs">
+                    <span class="sign-1">Taurus</span>
+                    <span class="pair-plus">+</span>
+                    <span class="sign-2">Cancer</span>
+                  </div>
+                  <p class="pair-desc">A nurturing, stable connection built on trust</p>
+                  <div class="pair-rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-10 col-md-6 col-lg-4">
+                <div class="pair-card card-challenging h-100">
+                  <div class="pair-flag d-flex justify-content-between align-items-center">
+                    <span>Challenging</span>
+                    <img src="/assets/images/home/flags/red.svg" alt="red" />
+                  </div>
+                  <div class="pair-signs">
+                    <span class="sign-1">Virgo</span>
+                    <span class="pair-plus">+</span>
+                    <span class="sign-2">Sagittarius</span>
+                  </div>
+                  <p class="pair-desc">Different approaches may create tension</p>
+                  <div class="pair-rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <a href="/compatibility" class="btn btn-lg btn-hover-effect fade-up" style="--d: 0.15s">
+              Full Compatibility Guide
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHINESE ZODIAC -->
+      <section class="chinese-zodiac-section py-6 position-relative">
+        <div class="container">
+          <div class="text-center mb-6">
+            <span class="eyebrow fade-up">Eastern Astrology</span>
+            <h2 class="display-5 fw-light mb-2 fade-up">
+              The <span class="text-gradient fw-bold">Chinese Zodiac</span>
+            </h2>
+            <p class="lead opacity-85 mx-auto fade-up" style="max-width: 640px; --d: 0.05s">
+              12-year cycle of animals, each with unique characteristics and symbolism.
+            </p>
+          </div>
+          <div style="width: 100%" class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <div class="zodiac-timeline">
+                <div class="timeline-bar"></div>
+
+                <div class="row timeline-item">
+                  <div class="col-md-6">
+                    <div class="timeline-content left">
+                      <div class="zodiac-animal">
+                        <div class="animal-icon">🐀</div>
+                        <p>Rat</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row timeline-item">
+                  <div class="col-md-6"></div>
+                  <div class="col-md-6">
+                    <div class="timeline-content right">
+                      <div class="zodiac-animal">
+                        <div class="animal-icon">🐂</div>
+                        <p>Ox</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row timeline-item">
+                  <div class="col-md-6">
+                    <div class="timeline-content left">
+                      <div class="zodiac-animal">
+                        <div class="animal-icon">🐅</div>
+                        <p>Tiger</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row timeline-item">
+                  <div class="col-md-6"></div>
+                  <div class="col-md-6">
+                    <div class="timeline-content right">
+                      <div class="zodiac-animal">
+                        <div class="animal-icon">🐇</div>
+                        <p>Rabbit</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center mt-5">
+                <a
+                  href="/chinese-zodiac"
+                  class="btn btn-lg btn-hover-effect fade-up"
+                  style="--d: 0.15s"
+                >
+                  Explore Chinese Zodiac
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+              <div class="z-frame fade-up">
+                <img
+                  src="/assets/images/home/chinese-zodiac-wheel.png"
+                  alt="Chinese Zodiac"
+                  class="z-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BURMESE ZODIAC -->
+      <section class="burmese-zodiac-section py-6 p-4">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+              <span class="eyebrow fade-up">Myanmar Tradition</span>
+              <h2 class="display-5 fw-light mb-3 fade-up">
+                <span class="burmese-text" style="font-size: 35px">မြန်မာ ရာသီခွင်</span>
+              </h2>
+              <p class="lead opacity-85 mb-4 fade-up" style="--d: 0.05s">
+                Eight signs, lunar rhythm, Buddhist cadence.
+              </p>
+              <p class="opacity-85 mb-4 fade-up" style="--d: 0.1s">
+                The Burmese zodiac offers distinct insights through its 8‑sign system, deeply
+                connected to lunar cycles and tradition. Find your day sign and temple animal.
+              </p>
+              <a
+                href="/burmese-zodiac"
+                class="btn btn-lg btn-hover-effect fade-up"
+                style="--d: 0.15s"
+              >
+                Explore Burmese Astrology
+              </a>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="burmese-cards">
+                <div class="row g-4">
+                  <div class="col-6 col-md-4">
+                    <div class="burmese-card">
+                      <div class="card-inner">
+                        <div class="card-front">
+                          <div class="animal-icon">🐘</div>
+                          <h4>Wednesday</h4>
+                        </div>
+                        <div class="card-back">
+                          <h4>Elephant</h4>
+                          <p>Wisdom and strength</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-md-4">
+                    <div class="burmese-card">
+                      <div class="card-inner">
+                        <div class="card-front">
+                          <div class="animal-icon">🐀</div>
+                          <h4>Monday</h4>
+                        </div>
+                        <div class="card-back">
+                          <h4>Rat</h4>
+                          <p>Resourcefulness</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-md-4">
+                    <div class="burmese-card">
+                      <div class="card-inner">
+                        <div class="card-front">
+                          <div class="animal-icon">🐅</div>
+                          <h4>Tuesday</h4>
+                        </div>
+                        <div class="card-back">
+                          <h4>Tiger</h4>
+                          <p>Courage and power</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-md-4">
+                    <div class="burmese-card">
+                      <div class="card-inner">
+                        <div class="card-front">
+                          <div class="animal-icon">🦁</div>
+                          <h4>Sunday</h4>
+                        </div>
+                        <div class="card-back">
+                          <h4>Lion</h4>
+                          <p>Leadership</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-md-4">
+                    <div class="burmese-card">
+                      <div class="card-inner">
+                        <div class="card-front">
+                          <div class="animal-icon">🐘</div>
+                          <h4>Thursday</h4>
+                        </div>
+                        <div class="card-back">
+                          <h4>Elephant</h4>
+                          <p>With tusks</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-md-4">
+                    <div class="burmese-card">
+                      <div class="card-inner">
+                        <div class="card-front">
+                          <div class="animal-icon">🐭</div>
+                          <h4>Friday</h4>
+                        </div>
+                        <div class="card-back">
+                          <h4>Guinea Pig</h4>
+                          <p>Gentleness</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAROT -->
+      <section class="container bg-dark-purple position-relative py-6">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-light mb-2 fade-up">
+            Daily <span class="fw-bold text-gradient">Tarot Guidance</span>
+          </h2>
+          <p class="lead opacity-85 mx-auto fade-up" style="max-width: 600px; --d: 0.05s">
+            Draw one card. Breathe. Name the pattern you're in today.
+          </p>
+        </div>
+
+        <div class="tarot-zone mx-auto fade-up" style="--d: 0.1s">
+          <div id="draw-card" role="button">
+            <div class="tarot-stack" id="tarot-stack">
+              <div class="tarot-card tarot-back"><i class="bi bi-question-lg"></i></div>
+              <div class="tarot-card tarot-front">
+                <img id="tarot-img" src="/assets/images/tarot/the-moon.jpg" alt="Tarot Card" />
+              </div>
+            </div>
+          </div>
+          <a href="/tarot" class="btn btn-lg btn-hover-effect fade-up mt-4" style="--d: 0.15s">
+            Full Tarot Deck
+          </a>
+        </div>
+      </section>
+
+      <!-- CTA  -->
+      <section class="cta-section py-7 position-relative overflow-hidden">
+        <div class="container position-relative text-center">
+          <h2 class="display-5 fw-light mb-3 fade-up">
+            Begin your <span class="fw-bold text-gradient">Astrological Journey</span>
+          </h2>
+          <p class="lead opacity-85 mb-4 fade-up" style="--d: 0.05s">
+            Join a quiet, thoughtful community of stargazers.
+          </p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center fade-up" style="--d: 0.1s">
+            <a href="/register" class="btn btn-lg btn-gradient">Begin</a>
+            <a href="/about" class="btn btn-outline btn-lg">How it works</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer id="footer"></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="/js/index.js"></script>
   </body>
 </html>

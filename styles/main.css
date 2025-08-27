@@ -22,6 +22,7 @@
 ::selection {
   background: var(--white);
   color: var(--deep-purple);
+  -webkit-text-fill-color: var(--deep-purple);
   text-shadow: none;
 }
 
@@ -483,6 +484,10 @@ a {
   color: rgba(255, 255, 255, 0.9);
   padding-top: 2.5rem;
   padding-bottom: 1.5rem;
+}
+
+.footer .container {
+  padding: 25px;
 }
 
 .footer-logo {
