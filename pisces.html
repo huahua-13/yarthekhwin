@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PISCES Profile</title>
+
+<style>
+    /* ===== English Fonts ===== */
+    @font-face {
+      font-family: "Fricolage Grotesque";
+      font-weight: 100 900;
+      font-display: block;
+      font-style: normal;
+      font-named-instance: "Regular";
+      src: url("/phx/ui/fonts/fricolage-grotesque.var.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: "Mackinac";
+      src: url("/phx/ui/fonts/mackinac-medium.woff2") format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: "Mackinac";
+      src: url("/phx/ui/fonts/mackinac-bold.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: "Fragment Mono";
+      src: url("/phx/ui/fonts/fragment-mono-regular.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: block;
+    }
+
+    /* ===== Burmese Font ===== */
+    @font-face {
+      font-family: "Seesai";
+      src: url("/assets/fonts/burmese/seesai.ttf") format("truetype");
+      src: url("/assets/fonts/burmese/seesai.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ===== Base Styles ===== */
+    body {
+      margin: 0;
+      font-family: "Fricolage Grotesque", sans-serif;
+      color: rgba(246, 221, 255, 0.85);
+      background: url('https://i.pinimg.com/originals/7c/f1/b2/7cf1b20bfe5f1e70dcf1dad004a9b73b.gif') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.0);
+    }
+
+    .title {
+      font-family: "Mackinac";
+      font-size: 2.8em;
+      font-weight: 700;
+      color: rgba(246, 221, 255, 0.85);
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    .burmese-title {
+      font-family: "Seesai";
+      font-size: 1em;
+      color: rgba(246, 221, 255, 0.85);
+      margin-left: 12px;
+    }
+
+    .profile-image {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      position: relative;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .profile-image img {
+      width: 80%;
+      height: auto;
+    }
+
+    .section {
+      margin: 30px 0;
+      background-color: rgba(216,176,231,0.35);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    }
+
+    .section h2 {
+      font-family: "Mackinac";
+      font-size: 1.5em;
+      font-weight: 500;
+      border-bottom: 2px solid rgba(246, 221, 255, 0.85);
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      color: rgba(246, 221, 255, 0.85);
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-family: "Fragment Mono";
+      font-size: 1em;
+      color: rgba(246, 221, 255, 0.85);
+      border-bottom: 1px solid rgba(246, 221, 255, 0.142);
+    }
+
+    .burmese-text {
+      font-family: "Seesai";
+      line-height: 1.8;
+      font-size: 1rem;
+      color: rgba(246, 221, 255, 0.85);
+    }
+
+    .meme-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .meme-gallery img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .meme-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .footer {
+      background: rgba(216,176,231,0.35);
+      color: rgba(246, 221, 255, 0.85);
+      text-align: center;
+      padding: 40px 20px;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+    }
+
+    .footer-logo {
+      font-size: 5em;
+      margin-bottom: 15px;
+    }
+
+    .about {
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1em;
+      line-height: 1.7;
+    }
+
+    .about h2 {
+      font-family: "Mackinac";
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .about p {
+      margin: 0;
+    }
+
+    /* ===== Responsive ===== */
+    @media screen and (max-width: 600px) {
+      .title {
+        font-size: 2em;
+      }
+      .burmese-title {
+        font-size: 0.9em;
+      }
+      .profile-image {
+        max-width: 100%;
+      }
+      .section {
+        padding: 15px;
+      }
+      .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+      .section h2 {
+        font-size: 1.3em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">PISCES<span class="burmese-title">မိန်ရာသီ</span></div>
+
+    <div class="profile-image">
+      <img src="https://www.costarastrology.com/8a42d3178033c4259d6918164176b3d1.svg" 
+           alt="Pisces Zodiac Sign" 
+           class="zodiac-sign">
+    </div>
+
+    <div class="section">
+      <h2>CREATIVE, SENSITIVE, ARTISTIC</h2>
+      <div class="info-row"><span>SYMBOL</span><span>Fish</span></div>
+      <div class="info-row"><span>DATES</span><span>February 19 - March 20</span></div>
+      <div class="info-row"><span>ELEMENT</span><span>Water</span></div>
+      <div class="info-row"><span>MODALITY</span><span>Mutable</span></div>
+      <div class="info-row"><span>RULING PLANET</span><span>Neptune</span></div>
+      <div class="info-row"><span>SPIRIT COLOR</span><span>Sea Green</span></div>
+      <div class="info-row"><span>LUCKY GEMS</span><span>Moonstone</span></div>
+      <div class="info-row"><span>FLOWER</span><span>Water Lily</span></div>
+      <div class="info-row"><span>TOP LOVE MATCHES</span><span>Virgo</span></div>
+    </div>
+
+    <div class="section">
+      <h2>TOP REASONS TO LOVE BEING A PISCES</h2>
+      <div class="info-row"><span>Intuition is spot-on</div>
+      <div class="info-row"><span>Playful sense of fun</div>
+      <div class="info-row"><span>Lack of judgment</div>
+      <div class="info-row"><span>Love of nature</div>
+      <div class="info-row"><span>Cool factor</div>
+    </div>
+
+    <div class="section">
+      <h2>CAREER</h2>
+      <div class="info-row"><span>Artist / Creative Professional 🎨</div>
+      <div class="info-row"><span>Psychologist / Therapist 🧠</div>
+      <div class="info-row"><span>Healthcare Professional 🏥</div>
+      <div class="info-row"><span>Non-Profit / Humanitarian Work 🌍</div>
+      <div class="info-row"><span>Spiritual or Creative Healer 🔮</div>
+    </div>
+
+    <div class="section">
+  <h2>PISCES TRAITS</h2>
+  <div class="meme-gallery">
+    <img src="https://i.pinimg.com/1200x/ec/3c/39/ec3c39125afb5a248f60fb00f7f594eb.jpg" alt="Meme 1">
+    <img src="https://i.pinimg.com/736x/39/54/00/395400dccbc9b43a8b60db0e1bec587c.jpg" alt="Meme 2">
+    <img src="https://i.pinimg.com/1200x/6e/9e/28/6e9e28749149cc6b8efc3197762a1ec3.jpg" alt="Meme 3">
+    <img src="https://i.pinimg.com/1200x/1c/47/39/1c47392e8b23c5090080d73bcd1d18bb.jpg" alt="Meme 4">
+  </div>
+
+  <div class="section">
+  <h2><span class="burmese-text">PISCES မိန်ရာသီအကြောင်းတစ်စေ့တစ်စောင်း♓🐟</span></h2>
+  <p class="burmese-text">
+    Neptune ဖြစ်တဲ့အတွက်ကြောင့်မို့လို့ ဒီရာသီသမားတွေဟာ သူများတွေထက် intution ပိုကောင်းတာ ၊ spirituality ပိုကောင်းတာမျိုးတွေ ရှိတတ်သလို အိမ်မက်ထူးထူးခြားခြားတွေ မက်တတ်တာမျိုးလည်း ရှိတတ်ပါတယ်။ ဆန့်ကျင်ဘက် အနေနဲ့ကတော့ တစ်ခါတစ်ရံမှာ အတွေးတွေက အိမ်မက်ဆန်လွန်းတာ ၊ စိတ်ကူးယဥ်လွန်းတာ ၊ လက်တွေ့မကျတတ်တာ ရှိတတ်ပါတယ်။ 
+    ရေရာသီခွင် ဖြစ်တာကြောင့် တစ်ခုခု ဆိုရင် ခံစားလွယ်ပြီး ငိုတတ်ကြပါတယ်။ မာကြောတဲ့ စကားတွေကို ခံနိုင်ရည် မရှိကြပါဘူး။ သူများတွေထက်ကိုပိုပြီး ပတ်ဝန်းကျင်ရဲ့ ခံစားချက် အတက်အကျတွေကို ကောင်းကောင်းsense လုပ်နိုင်ကြပါတယ်။ 
+   မေတ္တာတရား ကြီးမားသူတွေ ဖြစ်ပါတယ်။ သူတို့ဘက်က မေတ္တာပေးသလောက် ဘဝမှာလည်း အချစ်ခံချင်ကြပါတယ်။ သူတို့ဘဝမှာ သူတို့ကို နူးညံ့စွာ ပြောပေးပြီး သူတို့ကို ချီးကျုးပေး အသိအမှတ်ပြုပေးမယ့်လူတွေကို အလိုရှိပါတယ်။ မှားနေရင်တောင်မှ တစ်ဖက်လူရဲ့ စကားမာရင် မကြိုက်တတ်ကြပါဘူး။ အေးအေးဆေးဆေး ဖြေရှင်းရတာပဲ ကြိုက်ပါတယ်။ 
+   တစ်ခါတစ်ရံမှာ ကိုယ့်ရဲ့စိတ်က ဘာဖြစ်မှန်းမသိလို့ လုပ်မိလုပ်ရာ လုပ်တတ်ပါတယ်။ အဲ့တာကြောင့် ဘဝမှာ တချို့ ဆုံးဖြတ်ချက်တွေကို နောင်တရနေတတ်ပါတယ်။
+   ဒီရာသီဖွားတွေဟာ များသောအားဖြင့် ဖော်ရွေတတ်ကြပြီး ပေါင်းသင်းဆက်ဆံရေးကောင်းပါတယ်။ strictဖြစ်တာမျိုး သိပ်မရှိဘဲ အတွေးအခေါ် လွတ်လွတ်လပ်လပ်တွေးတတ်ပါတယ်။ flexibleဖြစ်ပါတယ်။သူများကို ကိုယ်ချင်းစာနားလည်ပေးနိုင်စွမ်း မြင့်မားပါတယ်။ အဲ့တာကြောင့် သူငယ်ချင်းတွေကြား မိတ်ဆွေတွေကြားမှာဆိုရင် Piscesတွေဟာ good listenerဖြစ်နေတတ်ပါတယ်။ 
+   အတွေးများတာ ၊ ခံစားချက်တွေ များတာမျိုး ရှိတတ်ပါတယ်။ ဒါပေမယ့် သူတို့ဟာ ခံစားရတာတွေကို မြိုသိပ်ထားတတ်ပါတယ်။ ထိုအရာတွေ ပေါက်ကွဲထွက်လာမယ်ဆိုရင်တောင် မျက်ရည်အနေနဲ့ ငိုကြွေးခြင်းသာ ဖြစ်ပါလိမ့်မယ်။ အဲ့တာကြောင့် တစ်ခါတစ်ရံမှာ emotionsတွေကြောင့် စိတ်ဓါတ်ကျနေတဲ့ အချိန်တွေ ဆတ်ဆတ်အထိမခံတဲ့ အချိန်တွေ ရှိတတ်ပါတယ်။ 
+   ဒီရာသီဖွားတွေထဲက တချို့ဟာ သူများကိုလည်း ကုစားနိုင်တဲ့ healing powerမျိုး ရှိတတ်ပါတယ်။ ကိုယ်နဲ့ စကားပြောလိုက်ရင် စိတ်သက်သာရာရသွားတာမျိုးပါ။ လူတွေကို ကူညီတတ်ပြီး ရက်ရောသူများ ဖြစ်ကြပါတယ်။သနားတတ်ကြပါတယ်။ ငွေကို အရမ်းကျစ်ကျစ်ပါအောင် စုဖို့ ခဲယဥ်းတတ်ပါတယ်။ 
+   motivationမရှိဘူးဆိုရင် ဘာမှမလုပ်ဘဲ အိပ်နေချင်ကြပါတယ်။ ဥပမာ Capricorn ရာသီဖွားတွေက တစ်နေ့ကို ဒါလုပ်တယ်ဆိုရင် နောက်ရက်လည်း ဒါပဲ လုပ်နေမှာပါ။ သူတို့အတွက်က ပုံမှန်ပါပဲ။ လုပ်ကို လုပ်ရမယ့် အလုပ်တွေကို လုပ်တဲ့သူများဖြစ်ပါတယ်။ ဒါပေမယ့် Pisces ရာသီဖွားတွေကတော့ မလုပ်ချင်ရင် မလုပ်ဖို့ကို ရွေးချယ်ကြပါတယ်။ 
+   သူတို့ရဲ့ စိတ်က အစွန်း ၂ဖက်မှာ ရှိတတ်ပါတယ်။ ဥပမာ လူတစ်ယောက်ကို ချစ်နေစဥ်ကာလတုန်းကတော့ အကောင်းဆုံး နေ့းထွေးမှုတွေ ပေးတယ်။ မြတ်နိုးပေးတယ် ချစ်ပေးတယ် စသည်ဖြင့်ပေါ့နော်။ ဒါပေမယ့် တစ်နေ့မှာ အဲ့လူက သူ့ရဲ့ သတ်မှတ်ချက်ကို ကျော်လွန်ပြီး သစ္စာဖောက်သွားတာမျိုးဆိုရင်တော့ လုံးဝ သွေးအေးသွားန်ိုင်တာမျိုးပါ။ အရင်တုန်းက နွေးထွေးပေးတဲ့သူက နင်လားလို့ မေးရတဲ့ အေးတိအေးစက်နိုင်တဲ့ ၊ လူတွေကို ဥပက္ခာပြုနိုင်တဲ့ အပိုင်းတစ်ခုလည်း သူတို့မှာ ရှိပါတယ်။ စကားနားထောင်တယ် ထင်ရပေမယ့် ခေါင်းမာပါတယ်။ ရည်မှန်းချက်ရှိတယ် သို့သော်လည်း အချိန်ဆွဲတတ်ပါတယ်။ 
+   ဘဝမှာ အေးအေးဆေးဆေးပဲ နေလိုကြပါတယ်။ သူတို့ကို အရမ်းလောတာမျိုးကို မနှစ်သက်ကြပါဘူး။ နားအေးပါးအေး နေချင်ကြပြီး တစ်ယောက်ထဲ အချိန်ဖြုန်းရမှာကို မကြောက်ကြပါဘူး။ 
+   တစ်ခါတစ်ရံမှာ ငယ်ဘဝနဲ့ ပတ်သက်ပြီး စိတ်ဒဏ်ရာရတာမျိုး ရှိခဲ့တတ်ပါတယ်။ toxic environment  toxic people တွေနားမှာပဲ တဝဲလည်လည် ဖြစ်ပြီး ထွက်မသွားနိုင်တာမျိုးလည်း ရှိတတ်ပါတယ်။ အခြေအနေ တော်တော်များများကို ဖြတ်ကျော်လာနိုင်ခဲ့တာမို့ Pisces တွေဟာ cry babyလေးတွေပေမယ့် strongဖြစ်ပါတယ်။ 
+   ချစ်တဲ့သူတွေကို ကာကွယ်တတ်ပြီး သူများတွေထက် အကွက်တွေ ကြိုမြင်တတ်တာကြောင့် သူတို့ကို လှည့်စားဖို့ မလွယ်ပါဘူး။ 
+   Pisces ထဲက တချို့တွေဟာ အဖြစ်အပျက်တွေနဲ့ သူတို့ နာကျင်ခဲ့ရတာတွေကို တစ်သက်မမေ့ဘဲ မှတ်မိသလောက် နာမည်နဲ့ လမ်းတွေကိုတော့ မကြာမကြာ မေ့တတ်ကြပါတယ်။ 
+   Pisces တွေဟာ သူတို့ ချစ်မိသွားတဲ့အခါ တော်တော်လေး အနွံတာ ခံတတ်ကြပါတယ်။ တစ်ဖက်လူအတွက် ဘာလုပ်ပေးရ ပေးရ ကြိုးစားပြီး လုပ်ပေးတတ်ကြပါတယ်။ သူတို့ တစ်ဖက်လူဆီက ပြန်လိုချင်တာကတော့ ချစ်ခြင်းမေတ္တာနဲ့ သူတို့ကြိုးစားမှုကို အသိအမှတ်ပြုတဲ့ စကားလေးတွေပဲ ဖြစ်ပါတယ်။ 
+   ဥပမာ ပြောရရင် ဟင်းမချက်တတ်တဲ့ Piscesတစ်ယောက်က သူ ချစ်ရသူက ဟင်းစားချင်တယ်ဆို မရရအောင် ကြိုးစားသင်ပြီး ချက်ကျွေးပါလိမ့်မယ်။ သူလိုချင်တာက မင်း လုပ်ကျွေးတာ စားကောင်းတယ်။ မင်းပင်ပန်းသွားပြီဆိုတဲ့ စကားလေးတွေပါပဲ။ 
+   ချစ်မိသွားတဲ့ ငါးလေးတွေဟာ သဝန်လည်း တိုတတ်ပါသေးတယ်။ဒါ့အပြင် မပြောမဆိုနဲ့ silent treatmentကို သုံးပြီး စိတ်ကောက်တတ်ပါတယ်။ 
+   တစ်ခုရှိတာက ငါးလေးတွေရဲ့ တစ်ဖက်ကိုပဲ ကြည့်ပြီး ကောင်းတယ် ဆိုးတယ် မဆုံးဖြတ်သင့်ပါဘူး။ သူတို့်မှာ ကိုယ်မထင်ထားလောက်အောင် ကြောက်ဖို့ကောင်းတဲ့ ဆန့်ကျင်ဖက် ပုံစံတစ်မျိုးရှိတတ်ပါတယ်။ တစ်ဖက်က ချစ်တတ်ပေမယ့် တစ်ဖက်မှာတော့ သွေးအေးတာမျိုးပါနော်။ 
+   သူတို့ကို ချစ်တယ်ဆိုရင်တော့ မလိမ်ပါနဲ့။ စစ်မှန်တဲ့ ခံစားချက်နဲ့ပဲ ချဥ်းကပ်ဖို့လိုပါတယ်။ အကြောင်းကတော့ ခံစားချက်တွေကို သူတို့က သူများထက် ပိုပြီး အာရုံခံနိုင်လို့ ဖြစ်ပါတယ်။ သူတို့ လုပ်သမျှကို supportပေးနိုင်မယ့် သူတို့ကို စိတ်လုံခြုံမှု ပေးနိုင်မယ့်သူမျိုးကို မျှော်လင့်ကြတတ်ပါတယ်။ 
+  </p>
+</div>
+</div>
+
+    <div class="footer">
+      <div class="footer-logo">🐟</div>
+      <div class="PISCES">
+        <h2>PISCES's MOTTO</h2>
+        <p>
+          “I feel, I heal.” 
+
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
