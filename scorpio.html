@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SCORPIO Profile</title>
+
+<style>
+    /* ===== English Fonts ===== */
+    @font-face {
+      font-family: "Fricolage Grotesque";
+      font-weight: 100 900;
+      font-display: block;
+      font-style: normal;
+      font-named-instance: "Regular";
+      src: url("/phx/ui/fonts/fricolage-grotesque.var.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: "Mackinac";
+      src: url("/phx/ui/fonts/mackinac-medium.woff2") format("woff2");
+      font-weight: 500;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: "Mackinac";
+      src: url("/phx/ui/fonts/mackinac-bold.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: "Fragment Mono";
+      src: url("/phx/ui/fonts/fragment-mono-regular.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: block;
+    }
+
+    /* ===== Burmese Font ===== */
+    @font-face {
+      font-family: "Seesai";
+      src: url("/assets/fonts/burmese/seesai.ttf") format("truetype");
+      src: url("/assets/fonts/burmese/seesai.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ===== Base Styles ===== */
+    body {
+      margin: 0;
+      font-family: "Fricolage Grotesque", sans-serif;
+      color: rgba(246, 221, 255, 0.85);
+      background: url('https://i.pinimg.com/originals/7c/f1/b2/7cf1b20bfe5f1e70dcf1dad004a9b73b.gif') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.0);
+    }
+
+    .title {
+      font-family: "Mackinac";
+      font-size: 2.8em;
+      font-weight: 700;
+      color: rgba(246, 221, 255, 0.85);
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    .burmese-title {
+      font-family: "Seesai";
+      font-size: 1em;
+      color: rgba(246, 221, 255, 0.85);
+      margin-left: 12px;
+    }
+
+    .profile-image {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      position: relative;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .profile-image img {
+      width: 80%;
+      height: auto;
+    }
+
+    .section {
+      margin: 30px 0;
+      background-color: rgba(216,176,231,0.35);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    }
+
+    .section h2 {
+      font-family: "Mackinac";
+      font-size: 1.5em;
+      font-weight: 500;
+      border-bottom: 2px solid rgba(246, 221, 255, 0.85);
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      color: rgba(246, 221, 255, 0.85);
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-family: "Fragment Mono";
+      font-size: 1em;
+      color: rgba(246, 221, 255, 0.85);
+      border-bottom: 1px solid rgba(246, 221, 255, 0.142);
+    }
+
+    .burmese-text {
+      font-family: "Seesai";
+      line-height: 1.8;
+      font-size: 1rem;
+      color: rgba(246, 221, 255, 0.85);
+    }
+
+    .meme-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .meme-gallery img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .meme-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .footer {
+      background: rgba(216,176,231,0.35);
+      color: rgba(246, 221, 255, 0.85);
+      text-align: center;
+      padding: 40px 20px;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+    }
+
+    .footer-logo {
+      font-size: 5em;
+      margin-bottom: 15px;
+    }
+
+    .about {
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1em;
+      line-height: 1.7;
+    }
+
+    .about h2 {
+      font-family: "Mackinac";
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .about p {
+      margin: 0;
+    }
+
+    /* ===== Responsive ===== */
+    @media screen and (max-width: 600px) {
+      .title {
+        font-size: 2em;
+      }
+      .burmese-title {
+        font-size: 0.9em;
+      }
+      .profile-image {
+        max-width: 100%;
+      }
+      .section {
+        padding: 15px;
+      }
+      .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+      .section h2 {
+        font-size: 1.3em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">SCORPIO<span class="burmese-title">ဗြိစ္ဆာရာသီ</span></div>
+
+    <div class="profile-image">
+      <img src="https://www.costarastrology.com/0b80628ba9d2dff40d371cb2a0f69e23.svg" 
+           alt="Scorpio Zodiac Sign" 
+           class="zodiac-sign">
+    </div>
+
+    <div class="section">
+      <h2>SEDUCTIVE, PASSIONATE, INDEPENDENT</h2>
+      <div class="info-row"><span>SYMBOL</span><span>The Scorpion </span></div>
+      <div class="info-row"><span>DATES</span><span>October 23 - November 21</span></div>
+      <div class="info-row"><span>ELEMENT</span><span>Water</span></div>
+      <div class="info-row"><span>MODALITY</span><span> Fixed</span></div>
+      <div class="info-row"><span>RULING PLANET</span><span>Pluto</span></div>
+      <div class="info-row"><span>SPIRIT COLOR</span><span>Black</span></div>
+      <div class="info-row"><span>LUCKY GEMS</span><span>Topaz , Opal</span></div>
+      <div class="info-row"><span>FLOWER</span><span>Hibiscus , Geraniums</span></div>
+      <div class="info-row"><span>TOP LOVE MATCHES</span><span>Cancer</span></div>
+    </div>
+
+    <div class="section">
+      <h2>TOP REASONS TO LOVE BEING A SCORPIO</h2>
+      <div class="info-row"><span>Passionate and Intense</div>
+      <div class="info-row"><span>Know what you want and go after it</div>
+      <div class="info-row"><span>Don't get intimidated easily and Stand up for injustice</div>
+      <div class="info-row"><span>Unique sense of humor</div>
+      <div class="info-row"><span>Sign is sexy with a capital S. Don't even have to try and Know sexy is an attitude </div>
+    </div>
+
+    <div class="section">
+      <h2>CAREER</h2>
+      <div class="info-row"><span>Research Scientist 🔬📊</div>
+      <div class="info-row"><span>Surgeon / Medical Specialist 🏥⚕️</div>
+      <div class="info-row"><span>Detective / Investigator 🕵️‍♂️🔍</div>
+      <div class="info-row"><span>Entrepreneur / CEO 💼🚀</div>
+      <div class="info-row"><span>Psychologist / Therapist 🧠💬</div>
+    </div>
+
+    <div class="section">
+  <h2>SCORPIO TRAITS</h2>
+  <div class="meme-gallery">
+    <img src="https://i.pinimg.com/1200x/ef/c6/de/efc6de744322bce4470ca104457b714c.jpg" alt="Meme 1">
+    <img src="https://i.pinimg.com/736x/d3/e7/38/d3e7388148f76885da2850f0324782ae.jpg" alt="Meme 2">
+    <img src="https://i.pinimg.com/736x/19/af/68/19af68a561f423943dee1a8e269df2cf.jpg" alt="Meme 3">
+    <img src="https://i.pinimg.com/1200x/14/c3/ac/14c3ac70f6bb34dc087ad9f58276e35a.jpg" alt="Meme 4">
+  </div>
+
+  <div class="section">
+  <h2><span class="burmese-text">SCORPIO ဗြိစ္ဆာရာသီအကြောင်းတစ်စေ့တစ်စောင်း♏️🦂</span></h2>
+  <p class="burmese-text">
+    scorpio တွေဟာ ရေဓါတ်သမားများဖြစ်ကြပြီး လွှမ်းမိုးတဲ့ ဂြိုဟ်က Pluto ဂြိုဟ်ဖြစ်ပါတယ်။အဲ့တာကြောင့် Pluto ဂြိုဟ်ရဲ့ လွှမ်းမိုးမှုတွေကို ဒီရာသီခွင်မှာ တွေ့နိုင်ပါတယ်။ Pluto ရဲ့ effectsက weakဖြစ်တဲ့ အရာတွေကို ဖျက်စီးပြီး ပိုပြီး သန်မာလာအောင် လုပ်ပေးပါတယ်။ အဲ့တာကြောင့် Scorpioတွေရဲ့ ဘဝမှာ ကိုယ့်ကို ပိုသန်မာလာစေတဲ့ ရိုက်ချက်တွေကို ပိုပြီး ကြုံရလေ့ရှိပါတယ်။ ငယ်ရွယ်စဥ်က အိမ်တွင်းရေးအဆင်မပြေတာ ၊ breakup ,bully case ,betrayalစတဲ့ အရာတွေကို ကြုံခဲ့ရတတ်ပါတယ်။ 
+    ရေဓါတ်သမားတွေ ဖြစ်တာကြောင့်  ဘေးပတ်ဝန်းကျင်က အရာတွေကို senseလုပ်နိုင်စွမ်း ၊ emotionallyခံစားနိုင်စွမ်းရှိပါတယ်။
+    Symbolက ကင်းမြီးကောက်နဲ့ ပြဆိုတာကြောင့် Scorpio ရာသီဖွားတွေဟာ inner လျို့ဝှက်ချက်တွေများတတ်ပြီး အဆိပ်ရှိတဲ့သူတွေလို့ ပြောနိုင်ပါတယ်။ Scorpioတစ်ယောက်ရဲ့ အတွင်းစိတ်ကို အားလုံးသိနိုင်ဖို့ ၊ သူ့ရဲ့ လျို့ဝှက်ချက်တွေကို အကုန်ပြောပြနိုင်ဖို့ဆိုတာ မဖြစ်နိုင်တဲ့ အရာပါ။ အဲ့တာကြောင့် သူတို့ကို ရိုးရှင်းတယ်ထင်ပြီး မဆင်မခြင် သွားထိပါးနှောင့်ယှက်တာမျိုးကို သတိထားသင့်ပါတယ်။ 
+    Scorpioတွေဟာ စိတ်ဓါတ်ပိုင်းဆိုင်ရာ အေးစက်မာကြောတယ်လို့ ထင်ရပေမယ့် သူတို့က Strongly emotionalသမားတွေ ဖြစ်ပါတယ်။ တစ်ခါတစ်လေ တည့်ပြောချတတ်တာကလည်း သူတို့ရဲ့ တစ်စိတ်တစ်ပိုင်းဖြစ်ပါတယ်။ 
+    Scorpioတချို့ဟာ အိပ်ရေးမက်ကြပေမယ့် ညနက်တဲ့အထိ နေနိုင်ကြပါတယ်။ ညနက်တဲ့အထိ အလုပ်လုပ်တာ ၊ ဝတ္ထုဖတ်တာ၊ ဇာတ်ကားကြည့်တာ စတဲ့အရာတွေကြောင့် ညဘက်မှာ သူတို့က ပိုactiveဖြစ်ကြပါတယ်။ (more active at nightပါ)
+    လူတွေကို ယုံဖို့ခက်ပါတယ်။ ဘေးနားရှိသမျှ လူတိုင်းကို မယုံပါဘူး။ စမ်းသပ်စစ်ဆေးချက်တွေနဲ့ စောင့်ကြည့်လေ့ရှိပြီး အဲ့တာတွေ အောင်မြင်မှသာလျှင် အဲ့လူကို ယုံကြည်လေ့ရှိပါတယ်။ စကော်တွေရဲ့ ယုံကြည်မှုကို ရဖို့ရာ ခက်ခဲပါတယ်လို့ ဆိုလိုချင်တာပါ။ 
+    အကယ်၍ ရခဲ့ရင်တော့ အဲ့လူအတွက်က တကယ်ကျေနပ်စရာပါ။ ဘာလို့လဲဆိုတော့ စကော်ပီယိုတွေက သူတို့ တကယ်ချစ်ရ ခင်ရသူတွေအတွက်ဆို ဘာပဲလုပ်ပေးရ ပေးရ ပေးဆပ်မယ့်သူတွေ ဖြစ်ပါတယ်။ အဲ့လိုလူကလည်း သူတို့ဘဝမှာ တစ်ယောက် ၂ယောက်လောက်ပဲရှိတာမို့ မလွယ်ဘူး ပြောလို့ရပါတယ်။ 
+    တစ်ဖက်စွန်းမှာ လူကြောက်တယ်လို့ ထင်ရတတ်ပေမယ့် တကယ်တမ်း ရင်ဆိုင်လာရရင် ထွက်မပြေးတတ်တဲ့ signပါ။ mysteryတွေ challengeတွေနဲ့ ရင်ဆိုင်နိုင်သူများဖြစ်ပါတယ်။ 
+    Some Scorpio တွေဟာ crime dramaတွေ ကြိုက်နှစ်သက်တတ်သလို အဲ့လို crime scene တွေကို စိတ်ကူးတတ်ကြပါတယ်။ 
+    သူတို့ဟာ သစ္စာတရားရှိတဲ့သူတွေကို သဘောကျပါတယ်။ အပေါ်ယံ မျက်နှာပြင်ပဲ ကြည့်တာ မဟုတ်ဘဲ သူတို့ မျက်နှာပြင်အောက်ထဲမှာ သိမ်းထားရတဲ့ ခံစားချက်တွေထိ မြင်နိုင်သူများကိုတော့ ခင်တွယ်လေ့ရှိပါတယ်။ 
+    deep thoughtsတွေနဲ့ emotionalဖြစ်တတ်တာမို့ သူတို့ ပြိုလဲနေချိန်မှာ တိတ်တိတ်လေး ဘေးနားက ရှိပေးမယ့် သူတို့ကို နွေးထွေးမှုပေးမယ့် တစ်ယောက်ယောက်ကို မျှော်လင့်တတ်ကြပါတယ်။Scorpioတွေ အလိုအပ်ဆုံးက သူတို့ကို နွေးထွေးမှုပေးပြီး ရယ်မောအောင် လုပ်ပေးတတ်တဲ့သူပါ။
+    Scorpioတစ်ချို့ဟာ ရင်းနှီးသွားတဲ့အခါကျရင် သူတို့ရဲ့ အမှောင်လောကကို ထုတ်ပြတတ်ပါတယ်။(including their sexual desires and what type they like)
+    အကြာကြီး တစ်ယောက်ထဲ ပစ်ထားရင် စိတ်ကောက်ပါတယ်။ ဒါပေမယ့် စိတ်ကောက်တယ်လို့ မပြောဘဲနဲ့ ဘူးခံငြင်းပြီး ကောက်တတ်ပါတယ်။ စိတ်မကောက်ဖူး ပြောပေမယ့် လေသံက မိုးချုန်းသံလို မာနေပြီး psychopathရဲ့ အကြည့်တွေ လွှတ်နေတာမျိုးပါ။ သူတို့ စိတ်ကောက်တာကို တစ်ဖက်သူ မသိရင်လည်း တွေးတွေးပြီး ကြိတ်မနိုင်ခဲမရ ဖြစ်တတ်ကြပါတယ်။  
+    Scorpioတွေက fall in love သွားရင် ချွဲတတ်ပါတယ်။ ချွဲတတ်တယ်ဆိုတာက ချစ်စရာကောင်းတဲ့ ပုံစံတစ်ခုရှိနေတာမျိုး၊ ပုံမှန်လူတွေနဲ့ ပြောတဲ့ အသံမျိုးမဟုတ်ဘဲ cute toneဖြစ်သွားတာမျိုးပါ။ 
+    အဝေးဝေးထားလို့လည်း မရသလို အနားမှာ နီးနီးကပ်ကပ် တွယ်ကပ်နေရင်လည်း မကြိုက်ကြပါဘူး။ သူတို့ ပျောက်သွားတာကိုတော့ နားလည်ပေးရပါမယ်။ may be စိတ်ရှုပ်လို့ ၊ အိမ်က case စသည်ဖြင့်ပါ။ တစ်ဖက်လူကတော့ အကြောင်းမရှိ ပျောက်သွားလို့ မရပါဘူး။ ghost တာ မကြိုက်လို့ပါ။ 
+    ဒုက္ခပေးခံရရင် တစ်သက်မမေ့တတ်ကြပါဘူး။ သူတို့ကို နာကျင်စေခဲ့တဲ့သူတွေကို ခွင့်မလွှတ်ပေးနိုင်ကြသလို  ကလဲ့စားချေတတ်တဲ့ signတစ်ခုလည်း ဖြစ်ပါတယ်။ 
+    innocentလို့ ထင်ရပေမယ့် innocentမဟုတ်ပါဘူး။ သူတို့ဟာ မျက်နှာထားတည်တည်နေတတ်ပေမယ့် scorpioတွေဟာ ရှက်တတ်ကြပါတယ်။ 
+    privacyကို အရမ်းဦးစားပေးတဲ့ signပါ။ သူတို့ဘဝမှာ သိမ်းဆည်းထားတဲ့ လျှို့ဝှက်ချက်တွေ ၊ အတွင်း စိတ်ခံစားချက်တွေများတာမို့ privacyလိုကို လိုပါတယ်။ပြီးတော့ သူတို့ ယုံသင့်လား မယုံသင့်လားဆိုတာကို သင် မထင်ထားတဲ့အချိန်မှာ မေးခွန်းတွေနဲ့ စမ်းသပ်တတ်ပါတယ်။ မေးခွန်းတွေမှာ မူမမှန်ရင်တော့ သင်လိမ်နေတာပေါ်သွားပြီမို့ ပြေးလို့ရပါပြီ။
+    ဒရမ်မာချိုးတဲ့သူတွေကို မကြိုက်သလို dramaထဲကို သူတို့ ဆွဲထည့်ခံရရင် ပိုလို့တောင် စိတ်ဆိုးတတ်ပါတယ်။ 
+    တချို့Scorpioတွေရဲ့ judge လုပ်တတ်ပြီး ဘယ်သူ့ကိုမှ အဖက်မလုပ်တတ်တဲ့ အကြည့်ကြောင့်မို့လို့ လူတွေက မနားမကပ်ရဲတာဖြစ်တတ်ပါတယ်။
+    မထင်ထားတဲ့အချိန်မှာ တစ်ဖက်လူ ရှက်သွားအောင် flirtနိုင်စွမ်းရှိပါတယ်။ ချစ်ရသူကိုတော့ တကယ် ကာကွယ်ပေးတဲ့သူများ ဖြစ်ပါတယ်။
+    တကယ်တော့ Scorpio တွေဟာ အတွင်းစိတ်က နွေးထွေးနူးညံ့ကြသူတွေဖြစ်ပါတယ်။ သူတို့ဟာ ရယ်မောရတာကိုလည်း နှစ်သက်ကြပါတယ်။ Taurusတွေနဲ့ ဆင်တဲ့ အချက်တစ်ခုက သူတို့ကို ရည်ရွယ်ထားတဲ့ စိတ်ရင်းနဲ့ရေးထားတဲ့ hand letterတွေကို သဘောကျတတ်ကြပါတယ်။
+    Scorpioတွေဟာ လူရွေးပြီး ကြိုက်တတ်ပါတယ်။ ချောတိုင်း လှတိုင်းလည်း မကြိုက်တတ်သလို သူတို့tasteနဲ့ ကိုက်မှပဲ ကြိုက်တတ်ပါတယ်။ သူတို့သဘောကျနေတဲ့သူနားရောက်ရင်တော့ ဖလစ်တတ်တဲ့ စကေးတွေပျောက်ပြီး ရှက်တဲ့သူများအဖြစ် ပထမဆုံး မြင်နိုင်ပါတယ်။ တစ်ခါတစ်လေ ရှက်ရမ်းရမ်းပြီး လုပ်မိလုပ်ရာတွေလုပ်ရင်း ထွက်ပြေးတတ်ပါတယ်။ တစ်ဖက်လူရဲ့ စိတ်အခြေအနေကို ကောင်းကောင်း senseလုပ်နိုင်ပါတယ်။ 
+    မိန်းကလေး Scorpioထဲက တချို့ဟာ  သူတို့ သဘောကျတဲ့ စတိုင်က အစွန်းနှစ်ဖက်မှာ ရှိတတ်ပါတယ်။ ဖြူဖြူချောချော ချစ်စရာကောင်းတဲ့ ပုံစံမျိုးကိုလည်း သဘောကျတတ်သလို စတိုင်မလိုင်အပြည့်နဲ့ လက်မှာ သွေးကြောတွေ ပေါ်နေတဲ့ ယောကျာ်းဆန်တဲ့ပုံစံမျိုးကိုလည်း သဘောကျတတ်ကြပါတယ်။ သူတို့ရဲ့ သဘောကျနိုင်တဲ့ rangeက ကျယ်ပါတယ်။ ပေါက်ကရတွေ လိုက်တွေးတတ်တာက တစ်ပိုင်းပေါ့နော်။ 
+    Scorpioတွေကို ချဥ်းကပ်ဖို့အတွက် ဆိုရင်တော့ ကိုယ့်ဘက်က စစ်မှန်ဖို့က ပထမပါ။ စစ်မှန်တာနဲ့ သစ္စာရှိတာက သူတို့အတွက် အရေးကြီးပါတယ်။ 
+    ဒုတိယအရေးကြီးတာကတော့ မလိမ်ပါနဲ့။သူတို့က လိမ်ရင် intution အရရော သူတို့ရဲ့ လူတွေကို လေ့လာမှုနဲ့ပါ သိနိုင်တာကြောင့်ပါ။ 
+    လူတွေကို မယုံတတ်တာကြောင့် သူတို့ ကြိုကြား ကြိုကြားမေးတတ်တဲ့ မေးခွန်းတွေနဲ့ စာမေးပွဲတွေကို အောင်မြင်မှ သူတို့ရဲ့ ယုံကြည်မှုကို ရမှာပါ။ 
+    စကော်တွေနားနေရင်တော့ ရစ်ရင်လည်း ခံနိုင်ရပါမယ်။ သူတို့ မှတ်မိနေတဲ့အရာတွေကို ကိုယ်မေ့သွားရင် တကယ် ရစ်တတ်ကြပါတယ်။ (ဥပမာ Anniversary date)အဲ့ကျရင် စိတ်ပြေတဲ့အထိ တောင်းပန်ပြီးသာ လိုက်ချော့ပါ။ မချော့ရင် သူတို့ဘက်ကတော့ လျော့မှာ မဟုတ်ပါဘူး။ 
+    တကယ်တမ်းသိသွားရင် နွေးထွေးတဲ့ စကော်တွေဟာ ချစ်တဲ့သူတွေကို ဖက်တာ လက်လိုက်ဆွဲတာ စတဲ့ skinshipတွေလည်း လုပ်တတ်ကြပါတယ်။ 
+   သူတို့ကို တစ်ယောက်ထဲ ပစ်မထားဘဲနဲ့ ရယ်မောအောင် လုပ်ပေးတာ၊ သူတို့ပြောချင်တဲ့ အကြောင်းအရာတွေကို နားထောင်ပေးတာ၊ လိုအပ်တိုင်း အမြဲရှိနေပေးတာ ၊ me timeပေးတာမျိုးတွေ လုပ်ပေးသင့်ပါတယ်။ 
+  </p>
+</div>
+</div>
+
+    <div class="footer">
+      <div class="footer-logo">🦂</div>
+      <div class="SCORPIO">
+        <h2>SCORPIO's MOTTO</h2>
+        <p>
+          "You never know what you are capable of until you try." 
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
