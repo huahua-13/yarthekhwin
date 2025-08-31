@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo/yarthekhwin_transparent.png"
+      type="image/x-icon"
+    />
+
+    <link href="/styles/index.css" rel="stylesheet" />
+  </head>
+  <style>
+     :root{
+      --bg:white;    /* page background (very dark) */
+      --card:rgb(233, 184, 233);         /* card background */
+      --text:#520654;         /* main text */
+      --muted:#360337;        /* muted text */
+      --line:#832492;         /* subtle borders */
+      --brand:#aa1ce1;        /* primary brand */
+      --brand-700:#7b34f5;
+      --brand-800:#942cda;
+      --surface:#9210c5;      /* soft purple surface */
+      --shadow: 0 20px 40px rgba(236, 160, 234, 0.25);
+      --radius: 16px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Myanmar Khyay", "Noto Sans Myanmar", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 800px at 20% -10%, #ecb7ef 0%, rgba(144, 22, 160, 0) 60%),
+        radial-gradient(1200px 800px at 120% 10%, #d49cd7 0%, rgba(200, 18, 213, 0) 55%),
+        var(--bg);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+    .container{
+      width:100%;
+      max-width: 420px;
+    }
+    header{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom: 28px;
+    }
+    .card{
+      background: white(240, 240, 243, 0.55);
+      backdrop-filter: blur(8px);
+      border:1px solid var(--line);
+      border-radius: calc(var(--radius) + 2px);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .brand{
+      margin:0 ;color:var(--muted);font-size:35px;color: #5d024b;justify-content: center;text-align: right;
+      justify-content: center;text-align: center;align-items: center;display: grid;place-items: center;
+    }
+    
+    h1{
+      margin:0 0 14px 0;
+      font-size: 28px;
+      letter-spacing:.3px;
+      text-align: center;
+      color: #530351;
+    }
+    .subtitle{
+      margin:0 0 18px 0;color:var(--muted);font-size:14px;text-align: center;
+    }
+
+    .btn{
+      width:100%;
+      appearance:none;
+      border:1px solid #5d027d;
+      background:rgb(251, 223, 255);
+      color:#5d024b;
+      padding: 14px 16px;
+      border-radius: 14px;
+      font-weight:600;
+      display:flex; align-items:center; justify-content:center;
+      gap:10px;
+      cursor:pointer;
+      transition: transform .06s ease, box-shadow .2s ease, background .2s;
+      box-shadow: 0 8px 18px rgba(237, 124, 237, 0.25);
+    }
+    .btn:hover{ transform: translateY(-1px) }
+    .btn svg{width:20px;height:20px}
+    .btn:active{ transform: translateY(0) scale(.99) }
+    .btn-google{ background:#f3e4fc }
+    .or{
+      margin: 12px 0;
+      display:flex; align-items:center; gap:12px; color:#5d024b; font-weight:600;
+    }
+    .or::before,.or::after{
+      content:""; height:1px; flex:1; background: linear-gradient(90deg,transparent, #7f0bad, transparent);
+    }
+
+    label{
+      display:block; margin:14px 0 8px 2px; font-size:14px; color:#5d024b;
+    }
+    .input{
+      width:100%;
+      background:#f3e4fc ;
+      color:#5d024b;
+      border:1px solid #eb7fec;
+      border-radius: 12px;
+      padding: 14px 14px;
+      outline:none;
+      transition: border .2s, box-shadow .2s, background .2s;
+    }
+    .input::placeholder{ color:#4d0264 }
+    .input:focus{
+      border-color: #ad17ce;
+      box-shadow: 0 0 0 4px rgba(223, 135, 235, 0.15);
+      background:none;
+    }
+    .forgot{
+      display:inline-block; margin-top:8px; color:#420139; text-decoration:none; font-size:14px;
+    }
+    .forgot:hover{ text-decoration:underline }
+
+    .submit{
+      margin-top:18px;
+      background: linear-gradient(180deg, var(--brand) 0%, var(--brand-700) 60%, var(--brand-800) 100%);
+      border: none;
+      color:white;
+      padding: 14px 16px;
+      border-radius: 14px;
+      font-weight:800;
+      letter-spacing:.2px;
+      box-shadow: 0 12px 28px rgba(238, 130, 238, 0.45);
+      cursor:pointer;
+      transition: transform .06s ease, box-shadow .2s ease, filter .2s ease;
+      width:100%;
+     
+    }
+    .submit:hover{ filter: brightness(1.02) }
+    .submit:active{ transform: translateY(1px) }
+
+    .bottom{
+      text-align:center; margin-top:18px; color:#380232;
+    }
+    .bottom a{
+      color:#530351; font-weight:600; text-decoration:none;
+    }
+    .bottom a:hover{ text-decoration:underline; }
+    .provider{
+      display:grid; gap:12px; margin-bottom: 8px;
+    }
+  </style>
+  
+  <body>
+    <header id="header"></header>
+
+    <main class="container my-5">
+      <div class="container">
+      <div class="card" role="region" aria-labelledby="title">
+      <h1 id="title">Sign in to Your Account</h1>
+      <p class="subtitle">Choose a provider or use your email.</p><div class="provider">
+        
+      <button class="btn" type="button">
+          <!-- GitHub mark -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.35-1.78-1.35-1.78-1.1-.74.08-.73.08-.73 1.2.09 1.83 1.25 1.83 1.25 1.08 1.85 2.83 1.32 3.52 1.01.11-.8.42-1.33.76-1.63-2.67-.3-5.48-1.37-5.48-6.1 0-1.35.48-2.45 1.25-3.31-.12-.31-.54-1.56.12-3.25 0 0 1.01-.32 3.3 1.26a11.5 11.5 0 0 1 6.01 0c2.29-1.58 3.3-1.26 3.3-1.26.66 1.69.24 2.94.12 3.25.78.86 1.25 1.96 1.25 3.31 0 4.74-2.82 5.79-5.5 6.1.43.36.81 1.08.81 2.18v3.24c0 .32.21.7.83.58A12 12 0 0 0 12 .5z"/></svg>
+          <span>Sign in with GitHub</span>
+      </button>
+          <!-- Google G -->
+      <button class="btn btn-google" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#EA4335" d="M12 10.2v3.9h5.44c-.23 1.24-.98 2.29-2.08 3.01l3.36 2.61C20.46 18.26 21.6 15.9 21.6 13c0-.65-.06-1.27-.18-1.86H12z"/>
+            <path fill="#34A853" d="M6.53 14.32a6.8 6.8 0 0 0 0-4.64l-3.4-2.64A10.6 10.6 0 0 0 2.4 13c0 1.71.41 3.32 1.14 4.73l3-2.41z"/>
+            <path fill="#4A90E2" d="M12 21.6c2.88 0 5.3-.95 7.07-2.58l-3.36-2.61c-.93.62-2.12.99-3.71.99-2.85 0-5.27-1.92-6.13-4.49l-3 2.41A10.59 10.59 0 0 0 12 21.6z"/>
+            <path fill="#FBBC05" d="M5.87 7.49A6.35 6.35 0 0 1 12 4.8c1.56 0 2.98.54 4.09 1.6l3.06-3.06A10.53 10.53 0 0 0 12 2.4 10.59 10.59 0 0 0 4.47 6.68l3.4 2.64z"/>
+            <path fill="currentColor" d="M2.4 2.4h19.2v19.2H2.4z" fill-opacity="0"/>
+          </svg>
+          <span>Sign in with Google</span>
+      </button>
+  </div>
+      <div class="or">or</div>
+
+      <form action="#" method="post" novalidate>
+        <label for="email">Email Address</label>
+        <input id="email" class="input" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="password">Password</label>
+        <input id="password" class="input" name="password" type="password" placeholder="••••••••" required>
+
+        <a class="forgot" href="#">Forgotten password?</a>
+
+        <button class="submit" type="submit">Sign In</button>
+      </form>
+
+      <p class="bottom">Need an Account? <a href="#">Create One</a></p>
+  </div>
+  </div>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
