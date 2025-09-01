@@ -30,9 +30,7 @@ function toggleCards() {
   extras.forEach((card) => {
     card.style.display = card.style.display === "block" ? "none" : "block";
   });
-  btn.textContent = btn.textContent.includes("see")
-    ? "Hide signs ▲"
-    : "Click to see other signs ▼";
+  btn.textContent = btn.textContent.includes("see") ? "Hide signs ▲" : "Click to see other signs ▼";
 }
 // ---------------------------------------------------------------------------------------
 
@@ -40,75 +38,75 @@ function toggleCards() {
 const tarotDeck = [
   {
     name: "The Fool",
-    image: "/assets/tarot/filename/the-fool.svg",
+    image: "/assets/images/tarot/the-fool.svg",
     meaning:
-      "စိတ်လှုပ်ရှားဖွယ် ခရီးစတင်သည် ၊ ခရီးထွက်သည် ၊ လမ်းသစ် ၊ စပြီးကိစ္စအတွက်ဆိုလျှင်တော့ မအောင်မြင်ပါ။",
+      "သင့်ရဲ့ စိတ်အားထက်သန်မှုဟာ ခရီးလမ်းသစ်ဆီ ဦးတည်နေပြီ။ စွန့်စားခန်းအသစ်တစ်ခုကို စတင်ဖို့ မကြောက်ပါနဲ့။ ယုံကြည်မှုနဲ့ ရှေ့ဆက်လိုက်ပါ။ အတွေ့အကြုံသစ်တွေက သင့်ကို အများကြီး သင်ပေးလိမ့်မယ်။",
   },
   {
     name: "The Magician",
-    image: "/assets/tarot/filename/the-magician.svg",
+    image: "/assets/images/tarot/the-magician.svg",
     meaning:
-      "လိုအပ်သော ပစ္စည်းစုံလင်စွာ ရရှိနေသည် လုပ်ရန်အသင့်ဖြစ်ခြင်း ၊ လုပ်ဆောင်မည်အရာ အဆင့်သင့်အခြေအနေရောက်နေသည် စတင်လှုပ်ရှားပါ။",
+      "သင့်လက်ထဲမှာ အရာရာ အဆင်သင့်ဖြစ်နေပြီ။ သင့်ရဲ့အရည်အချင်းတွေ၊ ကိရိယာတွေအားလုံးကို ပေါင်းစပ်ပြီး စိတ်ကူးတွေကို လက်တွေ့အဖြစ် ဖန်တီးလိုက်ပါ။ စတင်လုပ်ဆောင်ဖို့ အချိန်တန်ပြီ။",
   },
   {
     name: "The High Priestess",
-    image: "/assets/tarot/filename/the-high-priestess.svg",
+    image: "/assets/images/tarot/the-high-priestess.svg",
     meaning:
-      " စိတ်ကိုတည်ငြိမ်စွာထားပြီ အဖြေရှာဖွေပါ ၊ တရားထိုင်ခြင်းဖြင့် မိမိလိုအပ်သော အနေအထား စည်းချက်ကျနမှုကို ရှာဖွေခြင်း။",
+      "ဆုံးဖြတ်ချက်မချခင် ခဏလောက် ရပ်နားပြီး အတွင်းစိတ်ကို နားထောင်ကြည့်ပါ။ တိတ်ဆိတ်တဲ့အချိန်ယူပြီး သင့်ရဲ့ အလိုလိုသိစိတ်က ဘာပြောနေလဲဆိုတာကို ရှာဖွေပါ။ လျှို့ဝှက်အသိပညာတွေက သင့်ကို လမ်းပြလိမ့်မယ်။",
   },
   {
     name: "The Empress",
-    image: "/assets/tarot/filename/the-empress.svg",
+    image: "/assets/images/tarot/the-empress.svg",
     meaning:
-      "ပြုစုပျိုးထောင်ရန် ဖန်တီးရန် အင်အားပြည့်သည် ၊ အရာရာပြည့်စုံနေလို့ သက်တောင့်သက်သာဖြစ်သည်။",
+      "ကြွယ်ဝမှု၊ ပေါကြွယ်မှုနဲ့ ပျော်ရွှင်မှုတွေက သင့်ဆီကို စီးဝင်နေပြီ။ ကိုယ့်ပတ်ဝန်းကျင်ကို ပြုစုပျိုးထောင်ရင်း အေးချမ်းသာယာမှုကို ခံစားလိုက်ပါ။ ဖန်တီးမှုအသစ်တွေ ပေါ်ထွက်လာဖို့လည်း အချိန်ကောင်းပဲ။",
   },
   {
     name: "The Emperor",
-    image: "/assets/tarot/filename/the-emperor.svg",
+    image: "/assets/images/tarot/the-emperor.svg",
     meaning:
-      "ကိစ္စများ တရားဥပဒေကြောင်းအရ ဖြစ်သွားမည် ၊ နောက်လိုက်များအတွက် ဦးဆောင်ရမည့်အချိန်ဖြစ်သည် ၊ ကိစ္စတစ်ခုကိုဦးဆောင် ဆုံးဖြတ်ရမည်။",
+      "သင့်ရဲ့ ခေါင်းဆောင်နိုင်စွမ်းကို ပြသရမယ့်အချိန် ရောက်ပြီ။ ခိုင်မာတဲ့ ဆုံးဖြတ်ချက်တွေ ချမှတ်ပြီး ကိစ္စတွေကို စနစ်တကျ ထိန်းချုပ်လိုက်ပါ။ တည်ငြိမ်မှုနဲ့ စည်းကမ်းတွေက သင့်ကို အောင်မြင်မှုဆီ ပို့ဆောင်ပေးပါလိမ့်မယ်။",
   },
   {
     name: "The Hierophant",
-    image: "/assets/tarot/filename/the-hierophant.svg",
+    image: "/assets/images/tarot/the-hierophant.svg",
     meaning:
-      "အလှူအတန်း၊ ဘုရားဖူး၊ ရိပ်သာစသည့်ဓမ္မကိစ္စအောင်မြင် ၊ တိုးတက်မှုရရန် ဘာလုပ်သင့်သည်ကို သက်ဝင်ယုံကြည်မှုဖြင့် ဆုံးဖြတ်ပါ။",
+      "ရိုးရာဓလေ့တွေ၊ ဘာသာရေးအယူဝါဒတွေ ဒါမှမဟုတ် သင့်ရဲ့ဆရာသမားတွေဆီက လမ်းညွှန်မှု ရယူပါ။ မှန်ကန်တဲ့လမ်းကြောင်းပေါ် ရောက်ရှိဖို့အတွက် ယုံကြည်မှုရှိရှိနဲ့ လေ့လာလိုက်ပါ။",
   },
   {
     name: "The Lovers",
-    image: "/assets/tarot/filename/the-lovers.svg",
+    image: "/assets/images/tarot/the-lovers.svg",
     meaning:
-      "အကျိုးတူပူးပေါင်းခြင်း စပ်တူလုပ်ခြင်း ၊  အချစ်ကိစ္စအတွက်ဆိုလျှင် လမ်းမှန်ပေါ်ရောက်နေသည် ၊ ကိုယ်ရွေးချယ်သည့်ကိစ္စအတွက် တာဝန်ယူရမည်။",
+      "ဒီကတ်က ဆက်ဆံရေးတွေနဲ့ ပူးပေါင်းဆောင်ရွက်မှုတွေကို ပြနေတယ်။ သင့်ရဲ့နှလုံးသားက ဘာကိုရွေးချယ်ချင်လဲဆိုတာ သေချာစဉ်းစားပါ။ ရွေးချယ်မှုတိုင်းအတွက် တာဝန်ယူရမှာ ဖြစ်လို့ သတိထားဆုံးဖြတ်ပါ။",
   },
   {
     name: "The Chariot",
-    image: "/assets/tarot/filename/the-chariot.svg",
+    image: "/assets/images/tarot/the-chariot.svg",
     meaning:
-      "အတိုက်အခံများစွာကြားမှ တိုးတက်မှုရရှိမည်၊ အခက်အခဲကြားမှ မယိုင်းမယိုင်ဘဲ ထိန်းချုပ်နိုင်ခြင်း ၊ အရှုံးမပေးဘဲ အခဲအခက်ကြားမှ အေးဆေးတည်ငြိမ်စွာ စိတ်ရှည်စွာ ဆက်လုပ်ကိုင်နိုင်မည်။",
+      "သင့်ရဲ့ ရည်မှန်းချက်တွေကို အရောက်လှမ်းဖို့ အတိုက်အခံတွေ ရှိနေပေမဲ့ စိတ်အားမလျှော့ပါနဲ့။ အခက်အခဲတွေကို အေးအေးဆေးဆေး ထိန်းချုပ်ပြီး သင့်ရဲ့ စိတ်ဆန္ဒအင်အားနဲ့ ရှေ့ဆက်သွားပါ။ အောင်မြင်မှုက သင့်ကို စောင့်ကြိုနေတယ်။",
   },
   {
     name: "Strength",
-    image: "/assets/tarot/filename/strength.svg",
+    image: "/assets/images/tarot/strength.svg",
     meaning:
-      "တွေးခေါ် အယူအဆမြင့်မားလာရန် တစ်ခုခုတွေကြုံနိုင်သည် ၊ အရှုံပေးခြင်းမဟုတ်ပါ အချိန်ယူ ထိန်းကျောင်းပြီး ပိုမြင့်သော လမ်းကို ရှာနေခြင်းသာဖြစ်သည် ၊ သူတပါးစိတ်အခြေအနေကိုနားလည်ခြင်း။",
+      "ရုပ်ပိုင်းဆိုင်ရာ ခွန်အားတင်မကဘဲ စိတ်ပိုင်းဆိုင်ရာ ခွန်အားကလည်း အရေးကြီးတယ်။ သင့်ရဲ့စိတ်ခံစားမှုတွေကို ထိန်းချုပ်နိုင်စွမ်းနဲ့ စိတ်ရှည်သည်းခံမှုက ပြဿနာတွေကို ဖြေရှင်းဖို့ အကောင်းဆုံး အထောက်အကူ ဖြစ်ပါလိမ့်မယ်။",
   },
   {
     name: "The Hermit",
-    image: "/assets/tarot/filename/the-hermit.svg",
+    image: "/assets/images/tarot/the-hermit.svg",
     meaning:
-      "လမ်းပြနိုင်သည့် ဆရာကောင်းတွေမည် ၊ ပြည်ပ သင်တန်း၊ ပြည်ပပညာသင် ရတတ်သည်။",
+      "အချိန်ယူပြီး တစ်ယောက်တည်း ဆန်းစစ်သုံးသပ်ဖို့ လိုအပ်တယ်။ လောကဓံကနေ ခဏရှောင်ပြီး ကိုယ့်ရဲ့ အတွင်းစိတ်ကို လေ့လာပါ။ သင့်ရဲ့ဉာဏ်ပညာနဲ့ အသိတရားအသစ်တွေ ရရှိပါလိမ့်မယ်။",
   },
   {
     name: "Wheel of Fortune",
-    image: "/assets/tarot/filename/wheel-of-fortune.svg",
+    image: "/assets/images/tarot/wheel-of-fortune.svg",
     meaning:
-      "ရည်မှန်းချက်ပန်းတိုင် ၊ ကိုယ့်ကိုကို အေးဆေးစွာ ဆုံးဖြတ်ချက်များချဖို့ လုပ်ဖို့လိုသည် ကံကတော့ အမျိုးမျိုးထိန်းလို့မရဘူးလို့ ထင်ရလောက်အောင် ပြောင်းလဲပြနေမှာပါ။",
+      "ကံတရားက မကြာခင် အလှည့်အပြောင်းတွေ ဖြစ်လာတော့မယ်။ အကောင်းအဆိုး ပြောင်းလဲမှုတွေ ကြုံနိုင်ပေမဲ့ အဲဒီအခြေအနေတွေကို လက်ခံပြီး စီးမြောလိုက်ပါ။ ကံကြမ္မာရဲ့ လှည့်ကွက်တွေကို အကောင်းဆုံး အသုံးချလိုက်ပါ။",
   },
   {
     name: "Justice",
-    image: "/assets/tarot/filename/justice.svg",
+    image: "/assets/images/tarot/justice.svg",
     meaning:
-      "အမှန်အတိုင်းဝန်ခံခြင်း ၊ အမှန်ပြောသည် ၊ အမှန်အတိုင်းလုပ်မှ အောင်မြင်မည် ၊ ခံစားချက်ရှေ့တန်းမတင်ရ ၊ တရားဥပဒေရင်ဆိုင်ရတတ်သည်။",
+      "မျှတမှုနဲ့ မှန်ကန်တဲ့ ဆုံးဖြတ်ချက်တွေ ချမှတ်ရမယ့်အချိန် ဖြစ်တယ်။ သင့်ရဲ့ လုပ်ရပ်တိုင်းအတွက် ရလဒ်တွေက ပေါ်ထွက်လာလိမ့်မယ်။ ဘယ်လိုအခြေအနေမျိုးမှာမဆို မှန်ကန်တဲ့လမ်းကြောင်းကို ရွေးချယ်ဖို့မမေ့ပါနဲ့။",
   },
 ];
 
@@ -192,18 +190,14 @@ function drawCards() {
 
 // Display the reading results
 function displayResults(cards) {
-  document.getElementById("card1-name").textContent = `Past: ${cards[0].name}`;
-  document.getElementById("card1-desc").textContent = cards[0].meaning;
+  document.getElementById("card1-name").innerHTML = `<span>Past</span> <br/> ${cards[0].name}`;
+  document.getElementById("card1-desc").innerHTML = cards[0].meaning;
 
-  document.getElementById(
-    "card2-name"
-  ).textContent = `Present: ${cards[1].name}`;
-  document.getElementById("card2-desc").textContent = cards[1].meaning;
+  document.getElementById("card2-name").innerHTML = `<span>Present</span> <br/> ${cards[1].name}`;
+  document.getElementById("card2-desc").innerHTML = cards[1].meaning;
 
-  document.getElementById(
-    "card3-name"
-  ).textContent = `Future: ${cards[2].name}`;
-  document.getElementById("card3-desc").textContent = cards[2].meaning;
+  document.getElementById("card3-name").innerHTML = `<span>Future</span> <br/> ${cards[2].name}`;
+  document.getElementById("card3-desc").innerHTML = cards[2].meaning;
 
   tarotResultsEl.classList.add("show");
 }
