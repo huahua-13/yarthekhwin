@@ -12,7 +12,7 @@
   <body>
     <header id="header"></header>
 
-    <main id="main" class="container-fluid px-0">
+    <main id="main" class="container-fluid py-0">
       <!-- HERO SECTION -->
       <section class="hero position-relative overflow-hidden">
         <div class="stars-container" aria-hidden="true"></div>
@@ -21,19 +21,24 @@
           <div class="row align-items-center g-5">
             <div class="col-lg-6 order-2 order-lg-1 p-5">
               <div class="eyebrow fade-up">YarTheKhwin · Astrology for the present moment</div>
-              <h1 class="display-4 fw-light mb-3 fade-up" style="--d: 0.05s">
-                Decode your
-                <span class="text-gradient fw-bold d-block mt-2">Cosmic Blueprint</span>
+              <h1 class="display-4 fw-light mb-3 fade-up burmese-text" style="--d: 0.05s">
+                သင့်ရဲ့
+                <span class="text-gradient fw-bold mt-2">ကံကြမ္မာကို </span> ပုံဖော်ပါ
               </h1>
-              <p class="lead opacity-85 mb-4 fade-up" style="--d: 0.1s">
-                Intimate, minimalist guidance—personalized through Western & Burmese astrology.
+              <p
+                class="lead opacity-85 mb-4 fade-up burmese-text"
+                style="--d: 0.1s; font-size: 1.05rem"
+              >
+                အနောက်တိုင်း၊ တရုတ်ရိုးရာ နဲ့ မြန်မာ့ဗေဒင်ပညာတွေကို ပေါင်းစပ်ထားတဲ့
+                ရာသီခွင်အမှတ်လက္ခဏာအလိုက် ဟောစာတမ်းများကို ရယူလိုက်ပါ။
               </p>
 
-              <div class="d-flex flex-wrap gap-3 fade-up" style="--d: 0.15s">
+              <div class="d-flex flex-wrap gap-3 fade-up burmese-text" style="--d: 0.15s">
                 <a href="/register" class="btn btn-gradient btn-lg btn-hover-effect">
-                  <i class="bi bi-stars me-2"></i> Get your reading
+                  <i class="bi bi-stars me-2"></i>
+                  ဟောစာတမ်း
                 </a>
-                <a href="/signs" class="btn btn-outline btn-lg">Explore signs</a>
+                <a href="/signs" class="btn btn-outline btn-lg">ရာသီခွင်များအကြောင်း</a>
               </div>
 
               <!-- LIVE FEED / TICKER -->
@@ -43,17 +48,22 @@
                 role="region"
                 aria-label="Astrology ticker"
               >
-                <div class="ticker-track">
+                <div class="ticker-track burmese-text">
                   <span class="ticker-pill"
                     ><i class="bi bi-moon-stars"></i> Today · <span id="ticker-date"></span
                   ></span>
+                  <span class="ticker-pill">
+                    မာကျူရီနဲ့ လမင်း ခြောက်ထောင့်ချိုး ကျနေတာကြောင့် ညင်သာစွာ ပြောဆိုပြီး
+                    ရှင်းလင်းစွာ တွေးခေါ်ပါ။
+                  </span>
+                  <span class="ticker-pill">
+                    နေနဲ့ ဂျူပီတာ သုံးထောင့်ချိုး ကျနေတာကြောင့် သင်ယူမှုနဲ့ ဖွံ့ဖြိုးတိုးတက်မှုအတွက်
+                    အရှိန်အဟုန်ကောင်းတွေ ရပါလိမ့်မယ်။
+                  </span>
                   <span class="ticker-pill"
-                    >Mercury sextile Moon — speak softly, think clearly</span
+                    >စနေဂြိုဟ်က သင့်ကို သတိပေးနေပါတယ်- ကိုယ်ပိုင် boundary သတ်မှတ်ခြင်းဟာ
+                    ကောင်းမွန်တဲ့ လုပ်ဆောင်မှုပါ။</span
                   >
-                  <span class="ticker-pill"
-                    >Sun trine Jupiter — momentum for learning & growth</span
-                  >
-                  <span class="ticker-pill">Saturn reminds: boundaries are sacred practice</span>
                 </div>
               </div>
             </div>
@@ -80,16 +90,17 @@
       <section class="container py-6">
         <div class="row align-items-end mb-6 px-3">
           <div class="col-md-8">
-            <h2 class="display-5 fw-light mb-2 fade-up">
-              The <span class="text-gradient fw-bold">12 Zodiac Signs</span>
+            <h2 class="display-5 fw-light mb-2 fade-up burmese-text">
+              ရာသီခွင်<span class="text-gradient fw-bold"> ၁၂ မျိုး</span>
             </h2>
-            <p class="lead opacity-85 fade-up" style="--d: 0.05s">
-              Clean lines. Quiet color. Precision over noise.
-            </p>
           </div>
           <div class="col-md-4 text-md-end mt-3 mt-md-0">
-            <a href="/signs" class="btn btn-outline btn-arrow fade-up" style="--d: 0.1s">
-              Explore all <i class="bi bi-arrow-right ms-2"></i>
+            <a
+              href="/signs"
+              class="btn btn-outline btn-arrow fade-up burmese-text"
+              style="--d: 0.1s"
+            >
+              ပိုမို ‌လေ့လာရန် <i class="bi bi-arrow-right ms-2"></i>
             </a>
           </div>
         </div>
@@ -101,6 +112,7 @@
                 <a class="zodiac-card luxe" href="#">
                   <div class="zodiac-icon"><img alt="" width="28" height="28" /></div>
                   <h3 class="h6 text-center mt-3 mb-1 fw-medium name">—</h3>
+                  <h3 class="h6 text-center mb-1 fw-medium burmese-text burmese">—</h3>
                   <p class="text-center small opacity-75 range">—</p>
                 </a>
               </div>
@@ -113,62 +125,56 @@
 
       <!-- DAILY HOROSCOPE -->
       <section class="horoscope-split position-relative overflow-hidden">
-        <div class="container-fluid p-0">
+        <div class="container p-0">
           <div class="row g-0">
             <div class="col-lg-6 d-flex align-items-center horoscope-content">
               <div class="p-5 p-lg-7">
                 <span class="eyebrow fade-up">Daily Guidance</span>
-                <h2 class="display-5 fw-light mb-3 fade-up">
-                  Your <span class="fw-bold text-gradient">Daily Horoscope</span>
+                <h2 class="display-5 fw-light mb-3 fade-up burmese-text">
+                  နေ့စဉ်
+                  <span class="fw-bold text-gradient">ဟောစာတမ်း</span>
                 </h2>
-                <p class="lead opacity-85 mb-4 fade-up" style="--d: 0.05s">
-                  Personalized, quietly confident guidance. Updated daily.
-                </p>
 
-                <div class="horoscope-card p-4 rounded-3 mb-4 fade-up" style="--d: 0.1s">
+                <div class="horoscope-card p-4 rounded-3 fade-up" style="--d: 0.1s">
                   <div class="d-flex align-items-center mb-3">
                     <div class="horoscope-icon"><i class="bi bi-moon-stars-fill"></i></div>
                     <div class="ms-3">
-                      <h3 class="h5 mb-0">Today's Guidance</h3>
+                      <h3 class="h5 mb-0 burmese-text">ယနေ့ ဟောစာတမ်း</h3>
                       <p class="small opacity-75 mb-0" id="current-date"></p>
                     </div>
                   </div>
-                  <p class="mb-0 opacity-85" id="daily-copy">
-                    The stars align to bring opportunities for growth. Mercury's position suggests
-                    excellent timing for communication.
+                  <p class="mb-0 opacity-85 burmese-text" id="daily-copy">
+                    ကြီးပွားတိုးတက်ဖို့ အခွင့်အရေးတွေ ရလာပါလိမ့်မယ်။ အခုအချိန်ဟာ ဆက်သွယ်ပြောဆိုဖို့
+                    အကောင်းဆုံးအချိန်ပါပဲ။
                   </p>
                 </div>
-
-                <a href="/horoscope" class="btn btn-icon fade-up" style="--d: 0.15s">
-                  <i class="bi bi-moon-stars"></i> Read full horoscope
-                </a>
               </div>
             </div>
 
             <div class="col-lg-6 planet-side">
               <div class="p-5 p-lg-7 h-100 d-flex align-items-center">
-                <div class="w-100">
-                  <h3 class="h5 fw-medium mb-4 fade-up">Current Planetary Positions</h3>
+                <div class="w-100 burmese-text">
+                  <h3 class="h5 fw-medium mb-4 fade-up">လက်ရှိ ဂြိုဟ်အနေအထား</h3>
                   <div class="planet-grid fade-up" style="--d: 0.1s">
                     <div class="planet-item">
                       <div class="planet-icon bg-sun"><i class="bi bi-sun-fill"></i></div>
                       <div class="planet-info">
-                        <span class="planet-name">Sun</span
-                        ><span class="planet-position">Taurus</span>
+                        <span class="planet-name">နေ</span
+                        ><span class="planet-position">ပြိဿရာသီ</span>
                       </div>
                     </div>
                     <div class="planet-item">
                       <div class="planet-icon bg-moon"><i class="bi bi-moon-fill"></i></div>
                       <div class="planet-info">
-                        <span class="planet-name">Moon</span
-                        ><span class="planet-position">Leo</span>
+                        <span class="planet-name">လ</span
+                        ><span class="planet-position">သိဟ်ရာသီ</span>
                       </div>
                     </div>
                     <div class="planet-item">
                       <div class="planet-icon bg-mercury">☿</div>
                       <div class="planet-info">
-                        <span class="planet-name">Mercury</span>
-                        <span class="planet-position">Gemini</span>
+                        <span class="planet-name">ဗုဒ္ဓဟူး</span>
+                        <span class="planet-position">မေထုန်ရာသီ</span>
                       </div>
                     </div>
                     <div class="planet-item">
@@ -192,8 +198,8 @@
                         </svg>
                       </div>
                       <div class="planet-info">
-                        <span class="planet-name">Venus</span>
-                        <span class="planet-position">Cancer</span>
+                        <span class="planet-name">သောကြာ</span>
+                        <span class="planet-position">ကရကဋ်ရာသီ</span>
                       </div>
                     </div>
                     <div class="planet-item">
@@ -222,15 +228,15 @@
                         </svg>
                       </div>
                       <div class="planet-info">
-                        <span class="planet-name">Mars</span
-                        ><span class="planet-position">Virgo</span>
+                        <span class="planet-name">အင်္ဂါ</span
+                        ><span class="planet-position">ကန်ရာသီ</span>
                       </div>
                     </div>
                     <div class="planet-item">
                       <div class="planet-icon bg-jupiter">♃</div>
                       <div class="planet-info">
-                        <span class="planet-name">Jupiter</span>
-                        <span class="planet-position">Gemini</span>
+                        <span class="planet-name">ကြာသပတေး</span>
+                        <span class="planet-position">မေထုန်ရာသီ</span>
                       </div>
                     </div>
                   </div>
@@ -244,13 +250,13 @@
       <!-- COMPATIBILITY -->
       <section class="compatibility-section py-6">
         <div class="container">
-          <div class="text-center mb-6">
-            <span class="eyebrow fade-up">Relationships</span>
+          <div class="text-center mb-6 burmese-text">
+            <span class="eyebrow fade-up">ဆက်ဆံ‌ေရး</span>
             <h2 class="display-5 fw-light mb-2 fade-up">
-              Zodiac <span class="text-gradient fw-bold">Compatibility</span>
+              ရာသီခွင် <span class="text-gradient fw-bold">တွဲဖက်ညီမှု</span>
             </h2>
             <p class="lead opacity-85 mx-auto fade-up" style="max-width: 640px; --d: 0.05s">
-              Discover which signs align best with your energy.
+              သင့်ရဲ့ စွမ်းအင်နဲ့ အသင့်တော်ဆုံး ရာသီခွင်တွေကို ရှာဖွေပါ။
             </p>
           </div>
 
@@ -258,8 +264,10 @@
             <div class="compatibility-slider row flex-nowrap overflow-auto py-4">
               <div class="col-10 col-md-6 col-lg-4">
                 <div class="pair-card card-good h-100">
-                  <div class="pair-flag d-flex justify-content-between align-items-center">
-                    <span>Highly Compatible</span>
+                  <div
+                    class="pair-flag d-flex justify-content-between align-items-center burmese-text"
+                  >
+                    <span>အလွန်တွဲဖက်ညီ</span>
                     <img src="/assets/images/home/flags/green.svg" alt="green" />
                   </div>
                   <div class="pair-signs">
@@ -267,7 +275,10 @@
                     <span class="pair-plus">+</span>
                     <span class="sign-2">Leo</span>
                   </div>
-                  <p class="pair-desc">A dynamic, fiery match full of passion and energy</p>
+                  <p class="pair-desc burmese-text">
+                    စိတ်အားထက်သန်မှုနှင့် စွမ်းအင်အပြည့်ရှိသော တက်ကြွပြီး လောင်မြိုက်နေသည့်
+                    တွဲဖက်မှု
+                  </p>
                   <div class="pair-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -280,8 +291,10 @@
 
               <div class="col-10 col-md-6 col-lg-4">
                 <div class="pair-card card-good h-100">
-                  <div class="pair-flag d-flex justify-content-between align-items-center">
-                    <span>Highly Compatible</span>
+                  <div
+                    class="pair-flag d-flex justify-content-between align-items-center burmese-text"
+                  >
+                    <span>အလွန်တွဲဖက်ညီ</span>
                     <img src="/assets/images/home/flags/green.svg" alt="green" />
                   </div>
                   <div class="pair-signs">
@@ -289,7 +302,9 @@
                     <span class="pair-plus">+</span>
                     <span class="sign-2">Cancer</span>
                   </div>
-                  <p class="pair-desc">A nurturing, stable connection built on trust</p>
+                  <p class="pair-desc burmese-text">
+                    ယုံကြည်မှုအပေါ် အခြေခံထားသည့် ထိန်းကျောင်းပေးသော၊ တည်ငြိမ်သော ဆက်ဆံရေး
+                  </p>
                   <div class="pair-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -302,8 +317,10 @@
 
               <div class="col-10 col-md-6 col-lg-4">
                 <div class="pair-card card-challenging h-100">
-                  <div class="pair-flag d-flex justify-content-between align-items-center">
-                    <span>Challenging</span>
+                  <div
+                    class="pair-flag d-flex justify-content-between align-items-center burmese-text"
+                  >
+                    <span>စိန်‌ေခါ်မှုများရှိနိုင်</span>
                     <img src="/assets/images/home/flags/red.svg" alt="red" />
                   </div>
                   <div class="pair-signs">
@@ -311,7 +328,9 @@
                     <span class="pair-plus">+</span>
                     <span class="sign-2">Sagittarius</span>
                   </div>
-                  <p class="pair-desc">Different approaches may create tension</p>
+                  <p class="pair-desc burmese-text">
+                    ကွဲပြားသော ချဉ်းကပ်မှုများကြောင့် တင်းမာမှုများ ဖြစ်ပေါ်နိုင်သည်
+                  </p>
                   <div class="pair-rating">
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
@@ -325,8 +344,12 @@
           </div>
 
           <div class="text-center mt-5">
-            <a href="/compatibility" class="btn btn-lg btn-hover-effect fade-up" style="--d: 0.15s">
-              Full Compatibility Guide
+            <a
+              href="/compatibility"
+              class="btn btn-lg btn-hover-effect fade-up burmese-text"
+              style="--d: 0.15s"
+            >
+              ရာသီခွင် တွဲဖက်ညီမှု အပြည့်အစုံ
             </a>
           </div>
         </div>
@@ -337,16 +360,19 @@
         <div class="container">
           <div class="text-center mb-6">
             <span class="eyebrow fade-up">Eastern Astrology</span>
-            <h2 class="display-5 fw-light mb-2 fade-up">
-              The <span class="text-gradient fw-bold">Chinese Zodiac</span>
-            </h2>
-            <p class="lead opacity-85 mx-auto fade-up" style="max-width: 640px; --d: 0.05s">
-              12-year cycle of animals, each with unique characteristics and symbolism.
+            <h2 class="display-5 fw-light mb-2 fade-up burmese-text">တရုတ် ရာသီခွင်</h2>
+            <p
+              class="lead opacity-85 mx-auto fade-up burmese-text"
+              style="max-width: 640px; --d: 0.05s; font-size: 1.05rem"
+            >
+              တရုတ်ရာသီခွင်စက်ဝန်း တပတ်သည် ရာသီခွင် (၅)မျိုးဖြင့် သတ်မှတ်ထားပြီး နှစ်
+              (၆၀)ကြာမြင့်သည်။ ရာသီခွင်တပတ်သည် (၁၂)နှစ်ဖြစ်ပြီး ကြွက်နှစ်မှစ၍ ဝက်နှစ်ထိဟူ၍ တိရစ္ဆာန်
+              (၁၂)ကောင်ဖြင့် ကိုယ်စားပြုသည်။
             </p>
           </div>
-          <div style="width: 100%" class="row align-items-center g-5">
+          <div class="row align-items-center g-5">
             <div class="col-lg-6">
-              <div class="zodiac-timeline">
+              <div class="zodiac-timeline burmese-text">
                 <div class="timeline-bar"></div>
 
                 <div class="row timeline-item">
@@ -354,7 +380,7 @@
                     <div class="timeline-content left">
                       <div class="zodiac-animal">
                         <div class="animal-icon">🐀</div>
-                        <p>Rat</p>
+                        <p>ကြွက်</p>
                       </div>
                     </div>
                   </div>
@@ -366,7 +392,7 @@
                     <div class="timeline-content right">
                       <div class="zodiac-animal">
                         <div class="animal-icon">🐂</div>
-                        <p>Ox</p>
+                        <p>နွား</p>
                       </div>
                     </div>
                   </div>
@@ -377,7 +403,7 @@
                     <div class="timeline-content left">
                       <div class="zodiac-animal">
                         <div class="animal-icon">🐅</div>
-                        <p>Tiger</p>
+                        <p>ကျား</p>
                       </div>
                     </div>
                   </div>
@@ -389,7 +415,7 @@
                     <div class="timeline-content right">
                       <div class="zodiac-animal">
                         <div class="animal-icon">🐇</div>
-                        <p>Rabbit</p>
+                        <p>ယုန်</p>
                       </div>
                     </div>
                   </div>
@@ -399,10 +425,10 @@
               <div class="text-center mt-5">
                 <a
                   href="/chinese-zodiac"
-                  class="btn btn-lg btn-hover-effect fade-up"
+                  class="btn btn-lg btn-hover-effect fade-up burmese-text"
                   style="--d: 0.15s"
                 >
-                  Explore Chinese Zodiac
+                  တရုတ်ရာသီခွင်များကို လေ့လာပါ
                 </a>
               </div>
             </div>
@@ -420,118 +446,149 @@
       </section>
 
       <!-- BURMESE ZODIAC -->
-      <section class="burmese-zodiac-section py-6 p-4">
+      <section class="burmese-zodiac-section">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-5 mb-5 mb-lg-0">
               <span class="eyebrow fade-up">Myanmar Tradition</span>
               <h2 class="display-5 fw-light mb-3 fade-up">
-                <span class="burmese-text" style="font-size: 35px">မြန်မာ ရာသီခွင်</span>
+                <span class="burmese-text">မြန်မာ ရာသီခွင်</span>
               </h2>
-              <p class="lead opacity-85 mb-4 fade-up" style="--d: 0.05s">
-                Eight signs, lunar rhythm, Buddhist cadence.
+              <p class="lead opacity-85 mb-4 fade-up burmese-text fs-6" style="--d: 0.05s">
+                ဂြိုဟ်စွမ်းအား ရှစ်ခု, မြန်မာ့ရာသီခွင်ပါ တိရစ္ဆာန် အမှတ်အသား ရှစ်ခု
               </p>
-              <p class="opacity-85 mb-4 fade-up" style="--d: 0.1s">
-                The Burmese zodiac offers distinct insights through its 8‑sign system, deeply
-                connected to lunar cycles and tradition. Find your day sign and temple animal.
+              <p class="opacity-85 mb-4 fade-up burmese-text" style="--d: 0.1s; font-size: 1.05rem">
+                မြန်မာနိုင်ငံတွင် အသုံးပြုသော မြန်မာ့ရိုးရာ ရာသီခွင်ဖြစ်သည်။ ကောင်းကင်နှင့် သတ္တလောက
+                ဗဟုသုတ(တွေးခေါ်မြော်မြင်မှု) များဖြင့် ပေါင်းစည်းထားသည်။ မြန်မာနက္ခတ္တဗေဒပညာသည်
+                နံပါတ် ရှစ်ဂဏန်းကို အခြေခံကာ စကြဝဠာကြီး၏ဟန်ချက်ကို ကိုယ်စားပြုသည်။
               </p>
               <a
                 href="/burmese-zodiac"
-                class="btn btn-lg btn-hover-effect fade-up"
+                class="btn btn-lg btn-hover-effect fade-up burmese-text"
                 style="--d: 0.15s"
               >
-                Explore Burmese Astrology
+                မြန်မာရာသီခွင်များကို လေ့လာပါ
               </a>
             </div>
 
             <div class="col-lg-7">
               <div class="burmese-cards">
-                <div class="row g-4">
-                  <div class="col-6 col-md-4">
+                <div class="row g-4 burmese-text">
+                  <div class="col-6 col-md-3">
                     <div class="burmese-card">
                       <div class="card-inner">
                         <div class="card-front">
-                          <div class="animal-icon">🐘</div>
-                          <h4>Wednesday</h4>
+                          <div class="animal-icon">🐦‍🔥</div>
+                          <h5>တနင်္ဂနွေ</h5>
                         </div>
                         <div class="card-back">
-                          <h4>Elephant</h4>
-                          <p>Wisdom and strength</p>
+                          <h5>ဂဠုန်</h5>
+                          <p>(သြဇာအာဏာနှင့် အောင်မြင်မှု)</p>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="col-6 col-md-4">
-                    <div class="burmese-card">
-                      <div class="card-inner">
-                        <div class="card-front">
-                          <div class="animal-icon">🐀</div>
-                          <h4>Monday</h4>
-                        </div>
-                        <div class="card-back">
-                          <h4>Rat</h4>
-                          <p>Resourcefulness</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-6 col-md-4">
+                  <div class="col-6 col-md-3">
                     <div class="burmese-card">
                       <div class="card-inner">
                         <div class="card-front">
                           <div class="animal-icon">🐅</div>
-                          <h4>Tuesday</h4>
+                          <h5>တနင်္လာ</h5>
                         </div>
                         <div class="card-back">
-                          <h4>Tiger</h4>
-                          <p>Courage and power</p>
+                          <h5>ကျား</h5>
+                          <p>(သတ္တိနှင့် ခွန်အား)</p>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="col-6 col-md-4">
+                  <div class="col-6 col-md-3">
                     <div class="burmese-card">
                       <div class="card-inner">
                         <div class="card-front">
-                          <div class="animal-icon">🦁</div>
-                          <h4>Sunday</h4>
+                          <div class="animal-icon">🐆</div>
+                          <h5>အင်္ဂါ</h5>
                         </div>
                         <div class="card-back">
-                          <h4>Lion</h4>
-                          <p>Leadership</p>
+                          <h5>ခြင်္သေ့</h5>
+                          <p>(ခေါင်းဆောင်မှု)</p>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="col-6 col-md-4">
+                  <div class="col-6 col-md-3">
                     <div class="burmese-card">
                       <div class="card-inner">
                         <div class="card-front">
                           <div class="animal-icon">🐘</div>
-                          <h4>Thursday</h4>
+                          <h5>ဗုဒ္ဓဟူး</h5>
                         </div>
                         <div class="card-back">
-                          <h4>Elephant</h4>
-                          <p>With tusks</p>
+                          <h5>ဆင်</h5>
+                          <p>(ဉာဏ်ပညာနှင့် ခွန်အား)</p>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="col-6 col-md-4">
+                  <div class="col-6 col-md-3">
                     <div class="burmese-card">
                       <div class="card-inner">
                         <div class="card-front">
-                          <div class="animal-icon">🐭</div>
-                          <h4>Friday</h4>
+                          <div class="animal-icon">🦣</div>
+                          <h5>ရာဟု</h5>
                         </div>
                         <div class="card-back">
-                          <h4>Guinea Pig</h4>
-                          <p>Gentleness</p>
+                          <h5>ဟိုင်းဆင်</h5>
+                          <p>(ဉာဏ်ပညာနှင့် နက်နဲမှု)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-md-3">
+                    <div class="burmese-card">
+                      <div class="card-inner">
+                        <div class="card-front">
+                          <div class="animal-icon">🐁</div>
+                          <h5>ကြာသပတေး</h5>
+                        </div>
+                        <div class="card-back">
+                          <h5>ကြွက်</h5>
+                          <p>(အရင်းအမြစ် ရှာဖွေနိုင်စွမ်း)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-md-3">
+                    <div class="burmese-card">
+                      <div class="card-inner">
+                        <div class="card-front">
+                          <div class="animal-icon">🦫</div>
+                          <h5>သောကြာ</h5>
+                        </div>
+                        <div class="card-back">
+                          <h5>ပူး</h5>
+                          <p>(အလှအပနှင့် နူးညံ့သိမ်မွေ့မှု)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-md-3">
+                    <div class="burmese-card">
+                      <div class="card-inner">
+                        <div class="card-front">
+                          <div class="animal-icon">🐉</div>
+                          <h5>စနေ</h5>
+                        </div>
+                        <div class="card-back">
+                          <h5>နဂါး</h5>
+                          <p>(အောင်မြင်မှုနှင့် ခွန်အား)</p>
                         </div>
                       </div>
                     </div>
@@ -544,44 +601,32 @@
       </section>
 
       <!-- TAROT -->
-      <section class="container bg-dark-purple position-relative py-6">
-        <div class="text-center mb-5">
-          <h2 class="display-5 fw-light mb-2 fade-up">
-            Daily <span class="fw-bold text-gradient">Tarot Guidance</span>
+      <section class="container bg-dark-purple position-relative">
+        <div class="text-center my-5 burmese-text">
+          <h2 class="display-5 fw-light mb-2 fade-u">
+            နေ့စဉ် <span class="fw-bold text-gradient">တားရော့ ဟောစာတမ်း</span>
           </h2>
           <p class="lead opacity-85 mx-auto fade-up" style="max-width: 600px; --d: 0.05s">
-            Draw one card. Breathe. Name the pattern you're in today.
+            အသက်ဝဝရှူ သေချာအာရုံပြုပြီး ကတ်တစ်ချပ်ကို ရွေးပါ။
           </p>
         </div>
 
         <div class="tarot-zone mx-auto fade-up" style="--d: 0.1s">
-          <div id="draw-card" role="button">
+          <div id="draw-card" class="mb-2" role="button">
             <div class="tarot-stack" id="tarot-stack">
-              <div class="tarot-card tarot-back"><i class="bi bi-question-lg"></i></div>
+              <div class="tarot-card tarot-back"><i class="bi bi-question-lg fs-1"></i></div>
               <div class="tarot-card tarot-front">
                 <img id="tarot-img" src="/assets/images/tarot/the-moon.jpg" alt="Tarot Card" />
               </div>
             </div>
           </div>
-          <a href="/tarot" class="btn btn-lg btn-hover-effect fade-up mt-4" style="--d: 0.15s">
-            Full Tarot Deck
+          <a
+            href="/tarot"
+            class="btn btn-lg btn-hover-effect fade-up mt-5 burmese-text"
+            style="--d: 0.15s"
+          >
+            တားရော့ကတ် အပြည့်အစုံ
           </a>
-        </div>
-      </section>
-
-      <!-- CTA  -->
-      <section class="cta-section py-7 position-relative overflow-hidden">
-        <div class="container position-relative text-center">
-          <h2 class="display-5 fw-light mb-3 fade-up">
-            Begin your <span class="fw-bold text-gradient">Astrological Journey</span>
-          </h2>
-          <p class="lead opacity-85 mb-4 fade-up" style="--d: 0.05s">
-            Join a quiet, thoughtful community of stargazers.
-          </p>
-          <div class="d-flex flex-wrap gap-3 justify-content-center fade-up" style="--d: 0.1s">
-            <a href="/register" class="btn btn-lg btn-gradient">Begin</a>
-            <a href="/about" class="btn btn-outline btn-lg">How it works</a>
-          </div>
         </div>
       </section>
     </main>
@@ -589,6 +634,6 @@
     <footer id="footer"></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="/js/index.js"></script>
+    <script type="module" src="/js/main.js"></script>
   </body>
 </html>

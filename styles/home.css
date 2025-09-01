@@ -79,7 +79,12 @@ section:not(:first-child) {
   height: 64%;
   object-fit: contain;
   animation: spin 180s linear infinite;
+  transition: all 0.3s ease;
   opacity: 0.9;
+}
+
+.cosmic-orb .wheel:hover {
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
@@ -118,7 +123,7 @@ section:not(:first-child) {
   border-radius: 9999px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.8rem;
+  font-size: 0.86rem;
 }
 @keyframes marquee {
   0% {
@@ -251,13 +256,12 @@ section:not(:first-child) {
 .planet-info {
   display: flex;
   flex-direction: column;
+  font-size: 0.86rem;
 }
 .planet-name {
   font-weight: 500;
-  font-size: 0.8125rem;
 }
 .planet-position {
-  font-size: 0.75rem;
   opacity: 0.7;
 }
 
@@ -281,104 +285,6 @@ section:not(:first-child) {
   background: rgba(184, 134, 11, 0.15);
 }
 
-/* Buttons */
-.btn {
-  color: var(--white);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 1;
-  text-decoration: none;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  user-select: none;
-  border: none;
-  border-radius: 50px;
-  padding: 0.75rem 1.5rem;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  box-shadow: 0 0 15px var(--light-lavender);
-  transition: transform 0.3s ease, box-shadow 0.3s;
-}
-.btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 25px rgba(120, 115, 245, 0.9);
-}
-.btn-icon i {
-  margin-right: 0.5rem;
-  font-size: 1.1em;
-}
-
-/* Outline Button */
-.btn-outline {
-  background-color: transparent;
-  color: var(--light-lavender);
-  border: 1px solid rgba(241, 221, 248, 0.3);
-  backdrop-filter: blur(5px);
-}
-.btn-outline:hover {
-  background-color: rgba(241, 221, 248, 0.1);
-  border-color: rgba(241, 221, 248, 0.5);
-  color: white;
-  transform: translateY(-2px);
-}
-
-/* Gradient Button */
-.btn-gradient {
-  background: linear-gradient(135deg, #a37bff 0%, var(--medium-purple) 100%);
-  color: white;
-  border: none;
-  box-shadow: 0 4px 15px rgba(106, 77, 163, 0.4);
-  position: relative;
-}
-.btn-gradient::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, #b18bff 0%, #7b5db3 100%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -1;
-  border-radius: 50px;
-}
-.btn-gradient:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(106, 77, 163, 0.5);
-}
-.btn-gradient:hover::before {
-  opacity: 1;
-}
-
-/* Button Sizes */
-.btn-lg {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-}
-
-/* Button Hover Effects */
-.btn-hover-effect::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transition: 0.5s;
-  z-index: -1;
-}
-.btn-hover-effect:hover::after {
-  left: 100%;
-}
-
 /* Reveal on scroll */
 .fade-up {
   opacity: 0;
@@ -397,8 +303,8 @@ section:not(:first-child) {
 }
 .tarot-stack {
   position: relative;
-  width: 120px;
-  height: 200px;
+  width: 200px;
+  height: 350px;
   margin: 0 auto;
   perspective: 1000px;
 }
@@ -408,8 +314,7 @@ section:not(:first-child) {
   inset: 0;
   border-radius: 5px;
   backface-visibility: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 2px solid var(--light-lavender);
   overflow: hidden;
   box-shadow: 0 0 25px rgba(120, 115, 245, 0.9);
   transition: transform 0.9s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s ease;
@@ -522,7 +427,7 @@ section:not(:first-child) {
 }
 
 .pair-flag {
-  font-size: 0.75rem;
+  font-size: 0.86rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 1rem;
@@ -629,7 +534,7 @@ section:not(:first-child) {
 }
 
 .animal-icon {
-  font-size: 1rem;
+  font-size: 2rem;
   margin-right: 1rem;
 }
 
@@ -655,7 +560,7 @@ section:not(:first-child) {
   height: 100%;
   text-align: center;
   border-radius: 12px;
-  transition: transform 0.8s;
+  transition: transform 1s;
   transform-style: preserve-3d;
 }
 
@@ -680,18 +585,13 @@ section:not(:first-child) {
 
 .card-front {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--light-lavender);
 }
 
 .card-back {
   background: linear-gradient(145deg, #6a4da3 0%, #300c5c 100%);
-  border: 1px solid rgba(163, 123, 255, 0.3);
+  border: 2px solid var(--light-lavender);
   transform: rotateY(180deg);
-}
-
-.btn-arrow {
-  display: inline-flex;
-  align-items: center;
 }
 
 /* Responsive adjustments */
