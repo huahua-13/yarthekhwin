@@ -7,7 +7,7 @@
   transform: translate(-50%, -50%);
   width: 100vmax;
   height: 100vmax;
-  z-index: 0;
+  z-index: -2;
   opacity: 0.8;
   pointer-events: none;
   animation: spin 120s linear infinite;
@@ -112,20 +112,30 @@
 }
 
 /* Shooting stars animation */
-@keyframes shooting {
+.shooting-star {
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #fff);
+  transform-origin: left;
+  z-index: 10;
+  opacity: 0;
+}
+
+@keyframes shootingStar {
   0% {
     opacity: 0;
-    transform: translateX(0) translateY(0) rotate(var(--rotation)) scaleX(0.6);
+    transform: translate(0, 0) rotate(var(--angle)) scaleX(0);
   }
-  10% {
+  5% {
     opacity: 1;
   }
-  70% {
-    opacity: 1;
+  90% {
+    opacity: 0.8;
   }
   100% {
     opacity: 0;
-    transform: translateX(-200px) translateY(200px) rotate(var(--rotation)) scaleX(1.2);
+    transform: translate(var(--translateX), var(--translateY)) rotate(var(--angle)) scaleX(1);
   }
 }
 

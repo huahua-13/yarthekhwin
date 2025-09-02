@@ -1,4 +1,5 @@
 const container = document.getElementById("stars");
+
 for (let i = 0; i < 150; i++) {
   const star = document.createElement("div");
 
@@ -28,43 +29,61 @@ for (let i = 0; i < 150; i++) {
 }
 
 function createShootingStar() {
-  const shooting = document.createElement("div");
-  shooting.className = "star star-shooting";
+  const shootingStar = document.createElement("div");
+  shootingStar.className = "shooting-star";
 
-  const fromTop = Math.random() > 0.5;
-  if (fromTop) {
-    shooting.style.top = "0%";
-    shooting.style.left = Math.random() * 100 + "%";
-  } else {
-    shooting.style.top = Math.random() * 100 + "%";
-    shooting.style.left = "100%";
-  }
+  // direction
+  const angle = 45;
+  const distance = 1000;
 
-  const angle = Math.random() * 60 + 15;
-  shooting.style.setProperty("--rotation", angle + "deg");
+  const radians = (angle * Math.PI) / 180;
+  const translateX = Math.cos(radians) * distance + "px";
+  const translateY = Math.sin(radians) * distance + "px";
 
-  const length = Math.random() * 220 + 80;
-  shooting.style.width = length + "px";
+  // starting position
+  const startX = Math.random() * 100;
+  const startY = Math.random() * 30;
+  shootingStar.style.left = startX + "%";
+  shootingStar.style.top = startY + "%";
 
-  const duration = Math.random() * 1.7 + 0.8;
-  shooting.style.animation = `shooting ${duration}s ease-out forwards`;
+  // size
+  const length = Math.random() * 80 + 200;
+  shootingStar.style.width = length + "px";
 
+  // color
   const colors = ["#cba6f7", "#f38ba8", "#a6e3a1", "#f9e2af", "#89b4fa", "#ffffff"];
-  shooting.style.background = `linear-gradient(to right, transparent, ${
-    colors[Math.floor(Math.random() * colors.length)]
-  })`;
+  const color = colors[Math.floor(Math.random() * colors.length)];
+  shootingStar.style.background = `linear-gradient(to right, transparent, ${color})`;
 
-  container.appendChild(shooting);
-  setTimeout(() => shooting.remove(), duration * 1000);
+  // duration
+  const duration = Math.random() * 10 + 10;
+
+  shootingStar.style.setProperty("--angle", angle + "deg");
+  shootingStar.style.setProperty("--translateX", translateX);
+  shootingStar.style.setProperty("--translateY", translateY);
+
+  shootingStar.style.animation = `shootingStar ${duration}s ease-out forwards`;
+
+  container.appendChild(shootingStar);
+
+  setTimeout(() => {
+    if (shootingStar.parentNode) {
+      shootingStar.parentNode.removeChild(shootingStar);
+    }
+  }, duration * 1000);
 }
 
-for (let i = 0; i < 10; i++) {
-  setTimeout(createShootingStar, i * 600);
+function createInitialStarShower() {
+  for (let i = 0; i < 10; i++) {
+    createShootingStar();
+  }
 }
+
+createInitialStarShower();
 
 setInterval(() => {
-  const count = Math.floor(Math.random() * 5) + 1;
+  const count = Math.floor(Math.random() * 5) + 2;
   for (let i = 0; i < count; i++) {
-    setTimeout(createShootingStar, i * 200);
+    setTimeout(createShootingStar, i * 300);
   }
-}, 1000);
+}, 3000);
