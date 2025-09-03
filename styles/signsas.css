@@ -4,7 +4,9 @@
   padding: 0;
   scroll-behavior: smooth;
 }
-
+ .h1{
+  text-align: center;
+ }
 /* For air signs and fire signs */
 
 .a_f {
@@ -96,4 +98,59 @@
 .e_w .sign:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: var(--medium-purple);
+}
+
+/* For Toxic SignsMatch  */
+#second {
+  margin: 20px;
+}
+#second .toxic{
+    width: 100%;
+    height: auto;
+    
+
+   margin-top: 30px;
+   
+}
+#second .toxic .first-one{
+  width: 100%;
+  height: fit-content;
+ 
+
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.toxic .first-one div:not(.pics){
+  width: 50%;
+  height: fit-content;
+ 
+  margin: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+
+}
+.toxic .first-one .pics{
+  margin-left: 90px;
+  
+}
+
+.toxic .first-one img{
+  width: 25%;
+  height: 100px;
+  margin: 15px;
+ 
+}
+.toxic .first-one svg{
+  width: 30%;
+  
+}
+.toxic .first-one h5{
+  text-align: center;
+}
+.toxic .first-one p{
+  text-align: center;
+  padding: 15px;
 }
