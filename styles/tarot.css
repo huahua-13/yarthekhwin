@@ -41,7 +41,6 @@
 }
 .card {
   padding: 20px;
-  /* padding: 0px; */
   text-align: center;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
@@ -153,7 +152,7 @@
 }
 @media (max-width: 1024px) {
   .card-grid {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 30px;
     padding: 0 15px;
   }
@@ -587,7 +586,7 @@
   }
 
   .tarot-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .tarot-subtitle {
@@ -598,7 +597,9 @@
     flex-direction: column;
     align-items: center;
   }
-
+  .major{
+    font-size: 0.5rem;
+  }
   .tarot-card,
   .tarot-card-placeholder {
     width: 100px;
@@ -615,9 +616,6 @@
 }
 
 @media (max-width: 520px) {
-  h2 {
-    font-size: 1.3rem;
-  }
   .card-image {
     max-height: 220px;
   }

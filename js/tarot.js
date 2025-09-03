@@ -1,40 +1,3 @@
-const cards = document.querySelectorAll(".card");
-const overlay = document.getElementById("overlay");
-const popupImg = document.getElementById("popupImg");
-const popupTitle = document.getElementById("popupTitle");
-const popupDates = document.getElementById("popupDates");
-const popupText = document.getElementById("popupText");
-const closeBtn = document.getElementById("closeBtn");
-
-cards.forEach((card) => {
-  card.addEventListener("click", () => {
-    popupImg.src = card.getAttribute("data-img");
-    popupTitle.textContent = card.getAttribute("data-title");
-    popupDates.textContent = card.getAttribute("data-dates") || "";
-    popupText.textContent = card.getAttribute("data-text");
-    overlay.classList.add("active");
-  });
-});
-
-closeBtn.addEventListener("click", () => {
-  overlay.classList.remove("active");
-});
-
-overlay.addEventListener("click", (e) => {
-  if (e.target === overlay) overlay.classList.remove("active");
-});
-
-function toggleCards() {
-  const extras = document.querySelectorAll(".extra-cards");
-  const btn = document.querySelector(".toggle-btn");
-  extras.forEach((card) => {
-    card.style.display = card.style.display === "block" ? "none" : "block";
-  });
-  btn.textContent = btn.textContent.includes("see") ? "Hide signs ▲" : "Click to see other signs ▼";
-}
-// ---------------------------------------------------------------------------------------
-
-// Sample tarot card data
 const tarotDeck = [
   {
     name: "The Fool",
@@ -110,28 +73,22 @@ const tarotDeck = [
   },
 ];
 
-// DOM elements
 const tarotDeckEl = document.getElementById("tarot-deck");
 const tarotCardsEl = document.getElementById("tarot-cards");
 const drawCardsBtn = document.getElementById("draw-cards");
 const resetReadingBtn = document.getElementById("reset-reading");
 const tarotResultsEl = document.getElementById("tarot-results");
 
-// Track if cards have been drawn
 let cardsDrawn = false;
 
-// Draw three random cards
 function drawCards() {
-  // If cards have already been drawn, reset first
   if (cardsDrawn) {
     resetReading();
   }
 
-  // Create a copy of the deck to avoid duplicates
   const availableCards = [...tarotDeck];
   const drawnCards = [];
 
-  // Draw three unique cards
   for (let i = 0; i < 3; i++) {
     if (availableCards.length === 0) break;
 
@@ -140,10 +97,8 @@ function drawCards() {
     availableCards.splice(randomIndex, 1);
   }
 
-  // Clear existing placeholders
   tarotCardsEl.innerHTML = "";
 
-  // Create and add new cards
   drawnCards.forEach((card, index) => {
     const cardElement = document.createElement("div");
     cardElement.className = "tarot-card";
@@ -159,20 +114,16 @@ function drawCards() {
 
     tarotCardsEl.appendChild(cardElement);
 
-    // Apply spread effect after a short delay
     setTimeout(() => {
       cardElement.classList.add(`spread-${index}`);
 
-      // Animate the card drawing after a short delay
       setTimeout(() => {
         cardElement.classList.add("draw-animation");
 
-        // Flip the card after animation completes
         setTimeout(() => {
           cardElement.classList.add("flipped");
           cardElement.classList.add("card-glow");
 
-          // Show results after the last card is flipped
           if (index === 2) {
             setTimeout(() => {
               displayResults(drawnCards);
@@ -184,30 +135,31 @@ function drawCards() {
     }, 100);
   });
 
-  // Disable the draw button
   drawCardsBtn.disabled = true;
 }
 
-// Display the reading results
 function displayResults(cards) {
-  document.getElementById("card1-name").innerHTML = `<span>Past</span> <br/> ${cards[0].name}`;
+  document.getElementById(
+    "card1-name"
+  ).innerHTML = `<span>Past</span> <br/> ${cards[0].name}`;
   document.getElementById("card1-desc").innerHTML = cards[0].meaning;
 
-  document.getElementById("card2-name").innerHTML = `<span>Present</span> <br/> ${cards[1].name}`;
+  document.getElementById(
+    "card2-name"
+  ).innerHTML = `<span>Present</span> <br/> ${cards[1].name}`;
   document.getElementById("card2-desc").innerHTML = cards[1].meaning;
 
-  document.getElementById("card3-name").innerHTML = `<span>Future</span> <br/> ${cards[2].name}`;
+  document.getElementById(
+    "card3-name"
+  ).innerHTML = `<span>Future</span> <br/> ${cards[2].name}`;
   document.getElementById("card3-desc").innerHTML = cards[2].meaning;
 
   tarotResultsEl.classList.add("show");
 }
 
-// Reset the reading
 function resetReading() {
-  // Clear all cards
   tarotCardsEl.innerHTML = "";
 
-  // Add back placeholders
   for (let i = 0; i < 3; i++) {
     const placeholder = document.createElement("div");
     placeholder.className = "tarot-card-placeholder";
@@ -215,64 +167,13 @@ function resetReading() {
     tarotCardsEl.appendChild(placeholder);
   }
 
-  // Hide results
   tarotResultsEl.classList.remove("show");
 
-  // Enable the draw button
   drawCardsBtn.disabled = false;
 
-  // Reset the cards drawn flag
   cardsDrawn = false;
 }
 
-// Event listeners
 tarotDeckEl.addEventListener("click", drawCards);
 drawCardsBtn.addEventListener("click", drawCards);
 resetReadingBtn.addEventListener("click", resetReading);
-
-// Stars background animation
-function createStars() {
-  const starsContainer = document.getElementById("stars-container");
-  const starCount = 150;
-
-  for (let i = 0; i < starCount; i++) {
-    const star = document.createElement("div");
-    star.classList.add("star");
-
-    // Randomize star properties
-    const size = Math.random() * 3;
-    const posX = Math.random() * 100;
-    const posY = Math.random() * 100;
-    const duration = 3 + Math.random() * 10;
-    const delay = Math.random() * 5;
-    const opacity = 0.2 + Math.random() * 0.8;
-
-    // Apply random properties
-    star.style.width = `${size}px`;
-    star.style.height = `${size}px`;
-    star.style.left = `${posX}%`;
-    star.style.top = `${posY}%`;
-    star.style.animationDelay = `${delay}s`;
-    star.style.setProperty("--duration", `${duration}s`);
-    star.style.setProperty("--opacity", opacity);
-
-    // Randomly assign star types
-    const starType = Math.random();
-    if (starType < 0.7) {
-      star.classList.add("star-normal");
-    } else if (starType < 0.9) {
-      star.classList.add("star-glowing");
-    } else {
-      star.classList.add("star-colored");
-      const hue = Math.random() * 360;
-      star.style.color = `hsl(${hue}, 100%, 80%)`;
-    }
-
-    starsContainer.appendChild(star);
-  }
-}
-
-// Initialize
-window.addEventListener("DOMContentLoaded", () => {
-  createStars();
-});
