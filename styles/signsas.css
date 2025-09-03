@@ -1,157 +1,122 @@
 @import url("./main.css");
+
 * {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
+
 .h1 {
   text-align: center;
 }
-/* For air signs and fire signs */
 
-.a_f {
-  /* background-color: rgb(124, 43, 191);  */
-  width: 100%;
-  height: auto;
-
+.air-fire .first-one,
+.earth-water .first-one {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.a_f .signs {
-  width: 30%;
-  height: fit-content;
+.air-fire .first-one > div,
+.earth-water .first-one > div {
+  width: unset !important;
 }
 
-.a_f .signs div:not(.pair-rating) {
-  display: flex;
-  justify-content: space-around;
-
-  margin-left: 25px;
-  margin-right: 25px;
-}
-
-.a_f .signs img {
-  width: 25%;
-  height: 100px;
-}
-
-.a_f .signs svg {
-  width: 10%;
-  height: 100px;
-}
-.a_f .signs:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: var(--medium-purple);
-}
-.a_f .signs h5 {
-  margin-left: 30px;
-  margin-right: 30px;
-  text-align: center;
-}
-
-.a_f .signs .pair-rating {
-  text-align: center;
-}
-
-/* For Water signs and Earth signs */
-
-.e_w {
-  width: 100%;
-  height: fit-content;
-
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.e_w .sign {
-  width: 30%;
-  height: fit-content;
-}
-
-.e_w .sign div:not(.pair-rating) {
-  display: flex;
-  justify-content: space-evenly;
-
-  margin-left: 25px;
-  margin-right: 25px;
-}
-
-.e_w .sign img {
-  width: 25%;
-  height: 100px;
-}
-
-.e_w .sign svg {
-  width: 10%;
-  height: 100px;
-}
-.e_w .sign h5 {
-  text-align: center;
-  margin-left: 30px;
-  margin-right: 30px;
-}
-.e_w .sign .pair-rating {
-  text-align: center;
-}
-
-.e_w .sign:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: var(--medium-purple);
-}
-
-/* For Toxic SignsMatch  */
 #second {
-  margin: 20px;
+  margin: 20px 0;
 }
-#second .toxic {
+
+#second .compatibility {
   width: 100%;
   height: auto;
-
   margin-top: 30px;
 }
-#second .toxic .first-one {
+
+#second .compatibility .first-one {
   width: 100%;
   height: fit-content;
-
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  gap: 20px;
 }
 
-.toxic .first-one div:not(.pics) {
-  width: 50%;
+.compatibility .first-one div:not(.pics) {
+  width: 100%;
+  max-width: 600px;
   height: fit-content;
   border-radius: 15px;
-  margin: 25px;
+  margin: 10px;
+  padding: 15px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.02);
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
 }
-.toxic .first-one .pics {
+
+.compatibility .first-one .pics {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-@media (width <= 1000px) {
-  .toxic .first-one .pics {
-    flex-direction: column;
+.compatibility .first-one img {
+  width: 25%;
+  max-width: 80px;
+  height: auto;
+  margin: 10px;
+}
+
+.compatibility .first-one svg {
+  width: 30px;
+  height: 30px;
+}
+
+.compatibility .first-one h5 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.compatibility .first-one p {
+  text-align: center;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .a_f .signs,
+  .e_w .sign {
+    width: 45%;
+  }
+
+  #second .compatibility .first-one div:not(.pics) {
+    width: 45%;
   }
 }
 
-.toxic .first-one img {
-  width: 25%;
-  height: 100px;
-  margin: 15px;
+@media (min-width: 1024px) {
+  .a_f .signs,
+  .e_w .sign {
+    width: 30%;
+  }
+
+  .compatibility .first-one div:not(.pics) {
+    width: 45%;
+  }
 }
-.toxic .first-one svg {
-  width: 30%;
-}
-.toxic .first-one h5 {
-  text-align: center;
-}
-.toxic .first-one p {
-  text-align: center;
-  padding: 15px;
+
+@media (max-width: 480px) {
+  .a_f .signs div:not(.pair-rating),
+  .e_w .sign div:not(.pair-rating) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .a_f .signs svg,
+  .e_w .sign svg {
+    margin: 10px 0;
+    transform: rotate(90deg);
+  }
 }
