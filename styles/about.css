@@ -22,12 +22,8 @@
   gap: 50px;
 }
 .aboutTexts {
-  margin: 70px 50px;
+  margin: 80px 50px;
   padding: 40px 30px;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.02);
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
 }
 .texts {
   padding: 20px 200px;
@@ -64,6 +60,9 @@
 }
 
 /* Opinions Section*/
+#opinions{
+  margin-bottom: 30px;
+}
 .wrap {
   display: flex;
   justify-content: center;

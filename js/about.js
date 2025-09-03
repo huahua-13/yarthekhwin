@@ -1,15 +1,22 @@
 const reviews = [
   {
-    name: "May",
-    sign: "♈︎ Aries",
-    text: "Best service I’ve used. Highly recommend.",
-    img: "./assets/images/about/may.png",
+    name: "Scarlett",
+    sign: "♊︎ Gemini",
+    text: "ဖော်ရွေတာဟာ မျက်နှာများတာမဟုတ် အားလုံးထဲချစ်စရာကောင်းနေခြင်းသာဖြစ်သည်။",
+    img: "./assets/images/about/scarlett.png",
   },
+  
   {
     name: "Newbee",
     sign: "♊︎ Gemini",
     text: "Geminiများသည် စိတ်ဂဏာမငြိမ်ဘူးဟုထင်ရသော်လည်း တကယ်တမ်းတွင် စိတ်တည်ငြိမ်သောသူများဖြစ်ကြပါသည်။",
     img: "./assets/images/about/newbee.png",
+  },
+  {
+    name: "May",
+    sign: "♈︎ Aries",
+    text: "Best service I’ve used. Highly recommend.",
+    img: "./assets/images/about/may.png",
   },
   {
     name: "Hua",
@@ -22,12 +29,6 @@ const reviews = [
     sign: "♉︎ Taurus",
     text: "Development went smoothly. Great experience.",
     img: "./assets/images/about/shoon.png",
-  },
-  {
-    name: "Scarlett",
-    sign: "♊︎ Gemini",
-    text: "ဖော်ရွေတာဟာ မျက်နှာများတာမဟုတ် အားလုံးထဲချစ်စရာကောင်းနေခြင်းသာဖြစ်သည်။",
-    img: "./assets/images/about/scarlett.png",
   },
   {
     name: "Myuu",
