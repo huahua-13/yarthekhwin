@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YarTheKhwin</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo/yarthekhwin_transparent.png"
+      type="image/x-icon"
+    />
+
+    <link href="/styles/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <main class="container my-5 text-center">
+      <div class="burmese-text" style="margin-bottom: 60px">
+        <img
+          src="./assets/images/logo/yarthekhwin_transparent.png"
+          alt=""
+          style="width: 20%; margin-bottom: 20px"
+        />
+        <h1>ရာသီခွင်</h1>
+        <p class="texts">
+          "YarTheKwin" ဝက်ဘ်ဆိုက်သည် နက္ခတ္တဗေဒနှင့် ဗေဒင်ပညာရပ်များကို
+          စိတ်ဝင်စားသူများအတွက် လှပပြီး ရာသီခွင်ဆိုင်ရာ အနုပညာလက်ရာများဖြင့်
+          ရာသီခွင်အမှတ်အသားများ (Zodiac Signs)၊ တာရော့ဗေဒင် (Tarot)၊ တရုတ်နှင့်
+          မြန်မာ ဗေဒင်ပညာရပ်ဆိုင်ရာ အကြောင်းအရာများကို တစ်နေရာတည်းတွင်
+          စုံစုံလင်လင် ရှာဖွေဖတ်ရှုနိုင်ရန် ဖန်တီးရေးဆွဲထားပါသည်။
+        </p>
+        <span>✦ ✧ ✦</span>
+      </div>
+      <div class="aboutTexts">
+        <div class="burmese-text">
+          <h1>ရေနွေးအိုးများအကြောင်း တစ်စေ့တစ်စောင်း</h1>
+          <p class="texts">
+            ရေနွေးအိုးလေးတွေရဲ့ အဖွဲ့နာမည်အပြည့်အစုံကတော့ "HTTP 418 - We are
+            teapots" ဖြစ်ပါတယ်။ ၁၉၉၈ ခုနှစ်က April Fool's Day အတွက်ဖန်တီးထားတဲ့
+            Internet Error code joke ကိုမှီငြမ်းပေးထားခြင်းဖြစ်ပါတယ်။ "HTTP 418
+            - We are teapots" အဖွဲ့တွင် အဖွဲ့ဝင်စုစုပေါင်း (၁၃)ယောက်ပါဝင်ပါတယ်။
+            အဖွဲ့ဝင်တစ်ယောက်ချင်းစီက pageတစ်ခုစီကိုတာဝန်ယူပြီးရေးသားထားပါတယ်။
+          </p>
+        </div>
+        <div class="tree">
+          <div class="level l1">
+            <div class="photo"><img src="./assets/images/about/newbee.png" /></div>
+            <div class="photo"><img src="./assets/images/about/hua.png" /></div>
+            <div class="photo"><img src="./assets/images/about/shoon.png" /></div>
+            <div class="photo"><img src="./assets/images/about/may.png" /></div>
+            <div class="photo"><img src="./assets/images/about/scarlett.png" /></div>
+            <div class="photo"><img src="./assets/images/about/myuu.png" /></div>
+          </div>
+
+          <div class="level l2">
+            <div class="photo"><img src="./assets/images/about/Martin.png" /></div>
+            <div class="photo"><img src="./assets/images/about/ei ei.png" /></div>
+            <div class="photo"><img src="./assets/images/about/ivy.png" /></div>
+            <div class="photo"><img src="./assets/images/about/shwe.png" /></div>
+            <div class="photo"><img src="./assets/images/about/yun.png" /></div>
+            <div class="photo"><img src="./assets/images/about/tun tun.png" /></div>
+            <div class="photo"><img src="./assets/images/about/kywe kywe.png" /></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section id="opinions" class="burmese-text">
+      <h1 class="text-center">ရေနွေးအိုးများ၏ မိမိ Zodiac Sign အပေါ်အမြင်</h1>
+      <div class="z-cards">
+        <div class="wrap">
+          <!-- LEFT -->
+          <div class="orbit-wrap">
+            <svg class="orbit" viewBox="0 0 240 420" preserveAspectRatio="none">
+              <path id="orbitPath" d="M 170 24 Q 28 210 170 396"></path>
+            </svg>
+
+            <div id="avatars" class="avatars"></div>
+
+            <div class="controls">
+              <button id="up" aria-label="Previous">↑</button>
+              <button id="down" aria-label="Next">↓</button>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+          <div id="panel" class="panel">
+            <h3 class="name"></h3>
+            <div class="meta"></div>
+            <p class="text"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
