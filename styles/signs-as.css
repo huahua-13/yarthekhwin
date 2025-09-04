@@ -1,0 +1,607 @@
+@import url("./main.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.h1 {
+  text-align: center;
+}
+
+.air-fire .first-one,
+.earth-water .first-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.air-fire .first-one > div:not(.pair-rating),
+.earth-water .first-one > div {
+  width: unset !important;
+}
+.compatibility .first-one .pair-rating {
+  text-align: center;
+  margin: 0px 60px;
+}
+
+#second {
+  margin: 20px 0;
+}
+
+#second .compatibility {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+
+#second .compatibility .first-one {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.compatibility .first-one div:not(.pics, .pair-rating) {
+  width: 100%;
+  max-width: 600px;
+  height: fit-content;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+.compatibility .first-one .pics {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.compatibility .first-one img {
+  width: 25%;
+  max-width: 80px;
+  height: auto;
+  margin: 10px;
+}
+
+.compatibility .first-one svg {
+  width: 30px;
+  height: 30px;
+}
+
+.compatibility .first-one h5 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.compatibility .first-one p {
+  text-align: center;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .a_f .signs,
+  .e_w .sign {
+    width: 45%;
+  }
+
+  #second .compatibility .first-one div:not(.pics) {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .a_f .signs,
+  .e_w .sign {
+    width: 30%;
+  }
+
+  .compatibility .first-one div:not(.pics) {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .a_f .signs div:not(.pair-rating),
+  .e_w .sign div:not(.pair-rating) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .a_f .signs svg,
+  .e_w .sign svg {
+    margin: 10px 0;
+    transform: rotate(90deg);
+  }
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+}
+
+/* general styling */
+html {
+  color-scheme: var(--dark-purple);
+}
+
+img {
+  max-width: 100%;
+}
+/* Hide radio buttons */
+input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.h2 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+body {
+  min-height: 100svh;
+  margin: 0;
+  font: 1rem;
+  text-align: center;
+}
+
+.cards {
+  --img-w: 200px;
+  --duration: 300ms;
+  --img-easing: cubic-bezier(0.34, 1.56, 0.64, 1);
+  width: min(100% - 4rem, 800px);
+  margin-inline: auto;
+  display: grid;
+
+  counter-reset: my-counter;
+}
+
+.card {
+  --cards-grid-cols: auto;
+  --cards-grid-rows: var(--img-w) auto;
+  --cards-grid-gap: 2rem;
+  --cards-footer-justify: center;
+
+  grid-area: 1/1;
+  display: grid;
+  place-items: center;
+  grid-template-columns: var(--cards-grid-cols);
+  grid-template-rows: var(--cards-grid-rows);
+  gap: var(--cards-grid-gap);
+  background: transparent;
+  border: 0;
+  color: var(--white);
+}
+
+@media (600px < width) {
+  .card {
+    --cards-grid-cols: var(--img-w) auto;
+    --cards-grid-rows: auto;
+    --cards-grid-gap: 4rem;
+    --cards-footer-justify: start;
+  }
+}
+
+.card-img {
+  width: 200px;
+  height: 200px;
+  aspect-ratio: 1 / 1;
+  rotate: var(--angle, 0deg);
+  border-radius: 10px;
+  border: 3px solid #fff;
+  overflow: hidden;
+  transform-origin: center;
+  object-fit: cover;
+  box-shadow: 0 0 5px 3px rgba(0 0 0 / 0.05);
+}
+
+input:nth-of-type(1):checked + .card ~ .card > .card-img {
+  animation: straighten-img-1 calc(var(--duration) * 2) forwards;
+  animation-timing-function: var(--img-easing);
+}
+.card:has(~ input:nth-of-type(2):checked) > .card-img,
+input:nth-of-type(2):checked + .card ~ .card > .card-img {
+  animation: straighten-img-2 calc(var(--duration) * 2) forwards;
+  animation-timing-function: var(--img-easing);
+}
+.card:has(~ input:nth-of-type(3):checked) > .card-img,
+input:nth-of-type(3):checked + .card ~ .card > .card-img {
+  animation: straighten-img-3 calc(var(--duration) * 2) forwards;
+  animation-timing-function: var(--img-easing);
+}
+.card:has(~ input:nth-of-type(4):checked) > .card-img,
+input:nth-of-type(4):checked + .card ~ .card > .card-img {
+  animation: straighten-img-4 calc(var(--duration) * 2) forwards;
+  animation-timing-function: var(--img-easing);
+}
+.card:has(~ input:nth-of-type(5):checked) > .card-img,
+input:nth-of-type(5):checked + .card ~ .card > .card-img {
+  animation: straighten-img-5 calc(var(--duration) * 2) forwards;
+  animation-timing-function: var(--img-easing);
+}
+.card:has(~ input:nth-of-type(6):checked) > .card-img,
+input:nth-of-type(6):checked + .card ~ .card > .card-img {
+  animation: straighten-img-6 calc(var(--duration) * 2) forwards;
+  animation-timing-function: var(--img-easing);
+}
+.card:has(~ input:nth-of-type(7):checked) > .card-img,
+input:nth-of-type(7):checked + .card ~ .card > .card-img {
+  animation: straighten-img-7 calc(var(--duration) * 2) forwards;
+  animation-timing-function: var(--img-easing);
+}
+
+/* Card animation for images 8 to 12 */
+
+.card:has(~ input:nth-of-type(8):checked) > .card-img,
+input:nth-of-type(8):checked + .card ~ .card > .card-img {
+  animation: straighten-img-8 calc(var(--duration) * 2) forwards;
+  animation-timing-function: var(--img-easing);
+}
+
+.card:has(~ input:nth-of-type(9):checked) > .card-img,
+input:nth-of-type(9):checked + .card ~ .card > .card-img {
+  animation: straighten-img-9 calc(var(--duration) * 2) forwards;
+  animation-timing-function: var(--img-easing);
+}
+
+.card:has(~ input:nth-of-type(10):checked) > .card-img,
+input:nth-of-type(10):checked + .card ~ .card > .card-img {
+  animation: straighten-img-10 calc(var(--duration) * 2) forwards;
+  animation-timing-function: var(--img-easing);
+}
+
+.card:has(~ input:nth-of-type(11):checked) > .card-img,
+input:nth-of-type(11):checked + .card ~ .card > .card-img {
+  animation: straighten-img-11 calc(var(--duration) * 2) forwards;
+  animation-timing-function: var(--img-easing);
+}
+
+.card:has(~ input:nth-of-type(12):checked) > .card-img,
+input:nth-of-type(12):checked + .card ~ .card > .card-img {
+  animation: straighten-img-12 calc(var(--duration) * 2) forwards;
+  animation-timing-function: var(--img-easing);
+}
+/* as CSS can't remove animations, we change the animation according to which checkbox is checked  - all animations are the same (would be simpler with SCSS) */
+@keyframes straighten-img-1 {
+  50% {
+    --angle: 0deg;
+  }
+}
+@keyframes straighten-img-2 {
+  50% {
+    --angle: 0deg;
+  }
+}
+@keyframes straighten-img-3 {
+  50% {
+    --angle: 0deg;
+  }
+}
+@keyframes straighten-img-4 {
+  50% {
+    --angle: 0deg;
+  }
+}
+@keyframes straighten-img-5 {
+  50% {
+    --angle: 0deg;
+  }
+}
+@keyframes straighten-img-6 {
+  50% {
+    --angle: 0deg;
+  }
+}
+@keyframes straighten-img-7 {
+  50% {
+    --angle: 0deg;
+  }
+}
+/* Keyframes for images 8 to 12 */
+
+@keyframes straighten-img-8 {
+  50% {
+    --angle: 0deg;
+  }
+}
+
+@keyframes straighten-img-9 {
+  50% {
+    --angle: 0deg;
+  }
+}
+
+@keyframes straighten-img-10 {
+  50% {
+    --angle: 0deg;
+  }
+}
+
+@keyframes straighten-img-11 {
+  50% {
+    --angle: 0deg;
+  }
+}
+
+@keyframes straighten-img-12 {
+  50% {
+    --angle: 0deg;
+  }
+}
+
+.card {
+  z-index: -1;
+}
+
+input:checked + .card {
+  z-index: 12 !important;
+}
+
+/* next card checked - place behind */
+.card:has(+ input:checked) {
+  z-index: 11;
+}
+
+/* next card +1 checked - place behind */
+.card:has(+ input + .card + input:checked) {
+  z-index: 10;
+}
+
+/* next card +2 checked - place behind */
+.card:has(+ input + .card + input + .card + input:checked) {
+  z-index: 9;
+}
+
+/* next card +3 checked - place behind */
+.card:has(+ input + .card + input + .card + input + .card + input:checked) {
+  z-index: 8;
+}
+
+/* next card +4 checked - place behind */
+.card:has(+ input + .card + input + .card + input + .card + input + .card + input:checked) {
+  z-index: 7;
+}
+
+/* next card +5 checked - place behind */
+.card:has(
+    + input + .card + input + .card + input + .card + input + .card + input + .card + input:checked
+  ) {
+  z-index: 6;
+}
+
+/* next card +6 checked - place behind */
+.card:has(
+    + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input:checked
+  ) {
+  z-index: 5;
+}
+
+/* next card +7 checked - place behind */
+.card:has(
+    + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input:checked
+  ) {
+  z-index: 4;
+}
+
+/* next card +8 checked - place behind */
+.card:has(
+    + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input:checked
+  ) {
+  z-index: 3;
+}
+
+/* next card +9 checked - place behind */
+.card:has(
+    + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input:checked
+  ) {
+  z-index: 2;
+}
+
+/* next card +10 checked - place behind */
+.card:has(
+    + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input:checked
+  ) {
+  z-index: 1;
+}
+
+/* next card +11 checked - place behind */
+.card:has(
+    + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input
+      + .card
+      + input:checked
+  ) {
+  z-index: 0;
+}
+
+.card-data {
+  display: grid;
+  gap: 1rem;
+}
+.card-data > .card-num {
+  opacity: var(--data-opacity, 0);
+  font-size: 0.8rem;
+  color: #666;
+}
+.card-data > p {
+  font-size: 1.05rem;
+  margin: 0 2rem;
+  min-height: 120px;
+}
+
+.card-data > h2,
+.card-data > p {
+  transition: var(--duration) ease-in-out;
+  transition-delay: var(--data-delay, 0ms);
+  opacity: var(--data-opacity, 0);
+  translate: 0 var(--data-y, 20px);
+}
+
+.card-data > footer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card-data > footer label {
+  margin-block-start: auto;
+  cursor: pointer;
+  pointer-events: var(--card-events, none);
+  opacity: var(--data-opacity, 0);
+  transition: color var(--duration) ease-in-out;
+  color: var(--white);
+  background-color: var--label-clr-bg, rgba(48, 12, 92, 0.9);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-content: center;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+input:checked:focus-visible + .card > .card-data > footer label,
+.card-data > footer label:hover {
+  color: var(--deep-purple) !important;
+}
+
+input:checked + .card {
+  --data-opacity: 1;
+  --data-y: 0;
+  --data-delay: var(--duration);
+  --card-events: auto;
+  transition: z-index;
+  transition-delay: 300ms;
+  /*z-index: 1;*/
+}
+
+input:checked + .card > .card-img {
+  animation: reveal-img calc(var(--duration) * 2) forwards;
+}
+
+@keyframes reveal-img {
+  50% {
+    translate: -150% 0;
+    --angle: 0deg;
+  }
+}
