@@ -1,3 +1,5 @@
+import "./index.js";
+
 const reviews = [
   {
     name: "Scarlett",

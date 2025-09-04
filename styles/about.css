@@ -1,3 +1,5 @@
+@import url("./main.css");
+
 :root {
   --card-w: 450px;
   --avatar: 70px;
@@ -22,11 +24,12 @@
   gap: 50px;
 }
 .aboutTexts {
-  margin: 80px 50px;
+  margin: 50px;
   padding: 40px 30px;
 }
 .texts {
   padding: 20px 200px;
+  font-size: 1.1rem;
 }
 .photo {
   width: 100px;
@@ -60,7 +63,7 @@
 }
 
 /* Opinions Section*/
-#opinions{
+#opinions {
   margin-bottom: 30px;
 }
 .wrap {
@@ -179,6 +182,15 @@ svg.orbit {
 @media (max-width: 768px) {
   .texts {
     padding: 20px 10px;
+    font-size: 0.8rem;
+  }
+  .aboutTexts {
+    margin: 20px;
+    padding: 40px 0px;
+  }
+  .photo {
+    width: 80px;
+    height: 80px;
   }
   .wrap {
     flex-direction: column;
@@ -212,5 +224,8 @@ svg.orbit {
   .panel {
     max-width: 90%;
     text-align: center;
+  }
+  .opinions h1{
+    padding: 0px 20px;
   }
 }
