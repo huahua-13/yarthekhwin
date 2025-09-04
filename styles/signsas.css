@@ -19,9 +19,13 @@
   flex-wrap: wrap;
 }
 
-.air-fire .first-one > div,
+.air-fire .first-one > div:not(.pair-rating),
 .earth-water .first-one > div {
   width: unset !important;
+}
+.compatibility .first-one .pair-rating{
+  text-align: center;
+  margin: 0px 60px;
 }
 
 #second {
@@ -43,7 +47,7 @@
   gap: 20px;
 }
 
-.compatibility .first-one div:not(.pics) {
+.compatibility .first-one div:not(.pics,.pair-rating) {
   width: 100%;
   max-width: 600px;
   height: fit-content;
@@ -54,6 +58,7 @@
   background: rgba(255, 255, 255, 0.02);
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
 }
+
 
 .compatibility .first-one .pics {
   display: flex;
@@ -84,6 +89,8 @@
   text-align: center;
   padding: 10px;
 }
+
+
 
 @media (min-width: 768px) {
   .a_f .signs,
