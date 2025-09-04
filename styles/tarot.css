@@ -1,3 +1,5 @@
+@import url("./main.css");
+
 .main {
   display: flex;
   flex-direction: column;
@@ -152,7 +154,7 @@
 }
 @media (max-width: 1024px) {
   .card-grid {
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     padding: 0 15px;
   }
@@ -273,11 +275,11 @@
   margin-top: 10px;
   animation: cardGlow 2s infinite ease-in-out;
 }
-
+/* 
 .minor-card .card-image {
   width: -moz-available;
   width: -webkit-fill-availables;
-}
+} */
 
 .tarot-hero {
   min-height: 80vh;
@@ -370,6 +372,7 @@
   perspective: 1200px;
   position: absolute;
   transition: transform 1s ease;
+  border-radius: 20px;
 }
 
 .tarot-card.spread-0 {
@@ -597,7 +600,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .major{
+  .major {
     font-size: 0.5rem;
   }
   .tarot-card,

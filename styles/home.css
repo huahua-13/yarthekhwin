@@ -197,6 +197,10 @@ section:not(:first-child) {
   transform: scale(1.03);
 }
 
+section#horoscope {
+  padding: 0 !important;
+}
+
 /* Horoscope Card */
 .horoscope-card {
   background: rgba(28, 20, 54, 0.6);

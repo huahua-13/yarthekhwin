@@ -56,7 +56,7 @@
   font-weight: 900;
   letter-spacing: 4px;
   line-height: normal;
-  -webkit-text-fill-color: #1c1436;
+  color: #1c1436;
   text-shadow: 0 0 40px white;
   margin-bottom: 0.5rem;
   font-family: "Mackinac", serif;
@@ -178,7 +178,6 @@
     starPulse 4s ease-in-out infinite;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 3rem;
