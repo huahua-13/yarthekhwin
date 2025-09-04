@@ -1,2 +1,212 @@
 @import url("./main.css");
-@import url("./tarot.css");
+
+.zodiac-wheel-background {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 100vmax;
+  height: 100vmax;
+  z-index: -2;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: spin 120s linear infinite;
+}
+
+.zodiac-wheel-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.zodiac-glow-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(138, 91, 212, 0.2) 0%, transparent 70%);
+  opacity: 0.5;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 83vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 2rem 1rem;
+  z-index: 10;
+}
+
+.hero-content {
+  z-index: 10;
+  text-align: center;
+  animation: fadeInUp 1.5s ease;
+}
+
+.hero-title {
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  line-height: normal;
+  -webkit-text-fill-color: #1c1436;
+  text-shadow: 0 0 40px white;
+  margin-bottom: 0.5rem;
+  font-family: "Mackinac", serif;
+  animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+.hero-subtitle {
+  font-weight: 900;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: fadeIn 2s ease, subtleFloat 4s ease-in-out infinite;
+  font-family: "Fricolage Grotesque", sans-serif;
+}
+
+/* Buttons */
+.btn {
+  background-color: #1c1436;
+}
+.btn:hover {
+  background-color: #1c1436;
+}
+
+/* Animations */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Shooting stars animation */
+.shooting-star {
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #fff);
+  transform-origin: left;
+  z-index: 10;
+  opacity: 0;
+}
+
+@keyframes shootingStar {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(var(--angle)) scaleX(0);
+  }
+  5% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--translateX), var(--translateY)) rotate(var(--angle)) scaleX(1);
+  }
+}
+
+/* Title glow effect */
+@keyframes titleGlow {
+  0% {
+    text-shadow: 0 0 25px white;
+  }
+  100% {
+    text-shadow: 0 0 40px white, 0 0 70px white;
+  }
+}
+
+/* Subtle floating animation */
+@keyframes subtleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes starPulse {
+  0%,
+  100% {
+    opacity: var(--opacity);
+    transform: scale(1);
+  }
+  50% {
+    opacity: calc(var(--opacity) + 0.3);
+    transform: scale(1.2);
+  }
+}
+
+/* Star styles */
+.star-pulsing {
+  animation: twinkle var(--duration) ease-in-out infinite var(--delay),
+    starPulse 4s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .zodiac-wheel-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-purple,
+  .btn-dark {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .constellation-overlay {
+    background-size: 50% 50%;
+  }
+
+  .zodiac-wheel-background {
+    width: 150vmax;
+    height: 150vmax;
+  }
+}

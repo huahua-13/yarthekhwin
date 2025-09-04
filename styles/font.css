@@ -65,9 +65,8 @@
 }
 
 .burmese-text {
-  font-family: "seesai", "Fricolage Grotesque", sans-serif;
+  font-family: "seesai", "Fricolage Grotesque", sans-serif !important;
   line-height: 1.8;
-  font-size: 1rem;
   color: rgba(255, 255, 255, 0.9);
 }
 
