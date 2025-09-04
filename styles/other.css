@@ -1,0 +1,121 @@
+@import url("./main.css");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.content {
+  font-size: 1.2rem;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.tab-button {
+  background-color: transparent;
+  border: 2px solid var(--light-lavender);
+  color: var(--white);
+  font-size: 1.2rem;
+  padding: 5px 25px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab-button:focus,
+.tab-button:hover {
+  background-color: var(--medium-purple);
+  color: var(--white);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.chin-signs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3.7rem;
+}
+
+.tab-btn :focus,
+.tab-btn {
+  cursor: pointer;
+}
+
+.chin-signs h3 {
+  margin-left: 2.5rem;
+}
+
+.rounded-circle {
+  padding: 1rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+.chin-content h1 {
+  text-align: justify;
+  margin-top: 4.5rem;
+  margin-left: 1.5rem;
+} 
+
+.chin-content p {
+  margin: 1.5rem;
+  text-align: justify;
+  line-height: 2rem;
+  font-size: 1.3rem;
+  justify-content: center;
+}
+
+.zodiac-signs h1 {
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: whitesmoke;
+}
+
+.zodiac-signs h2 {
+  margin-top: 4.5rem;
+  margin-left: 1.5rem;
+}
+
+.zodiac-signs p {
+  margin: 1.5rem;
+  text-align: justify;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  border: 1px solid whitesmoke;
+  border-radius: 30px;
+  padding: 1.5rem;
+  justify-content: center;
+  text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  .chin-signs {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+  }
+}
