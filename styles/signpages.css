@@ -83,6 +83,27 @@
   box-shadow: 0 0 25px var(--light-lavender);
 }
 
+.history-row {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.history-row .burmese-text {
+  display: block;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+  transition: box-shadow 0.3s;
+}
+
+.history-row .burmese-text:hover {
+  box-shadow: 0 0 25px var(--light-lavender);
+}
+
 .career-row {
   max-width: 700px;
   margin: 40px auto;
