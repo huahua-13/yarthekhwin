@@ -1,0 +1,129 @@
+@import url("./main.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.h1 {
+  text-align: center;
+}
+
+.air-fire .first-one,
+.earth-water .first-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.air-fire .first-one > div:not(.pair-rating),
+.earth-water .first-one > div {
+  width: unset !important;
+}
+.compatibility .first-one .pair-rating{
+  text-align: center;
+  margin: 0px 60px;
+}
+
+#second {
+  margin: 20px 0;
+}
+
+#second .compatibility {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+
+#second .compatibility .first-one {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.compatibility .first-one div:not(.pics,.pair-rating) {
+  width: 100%;
+  max-width: 600px;
+  height: fit-content;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.compatibility .first-one .pics {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.compatibility .first-one img {
+  width: 25%;
+  max-width: 80px;
+  height: auto;
+  margin: 10px;
+}
+
+.compatibility .first-one svg {
+  width: 30px;
+  height: 30px;
+}
+
+.compatibility .first-one h5 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.compatibility .first-one p {
+  text-align: center;
+  padding: 10px;
+}
+
+
+
+@media (min-width: 768px) {
+  .a_f .signs,
+  .e_w .sign {
+    width: 45%;
+  }
+
+  #second .compatibility .first-one div:not(.pics) {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .a_f .signs,
+  .e_w .sign {
+    width: 30%;
+  }
+
+  .compatibility .first-one div:not(.pics) {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .a_f .signs div:not(.pair-rating),
+  .e_w .sign div:not(.pair-rating) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .a_f .signs svg,
+  .e_w .sign svg {
+    margin: 10px 0;
+    transform: rotate(90deg);
+  }
+}
