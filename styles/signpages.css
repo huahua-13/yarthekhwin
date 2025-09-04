@@ -1,0 +1,240 @@
+@import url("./main.css");
+
+.page-title {
+  font-family: "Fricolage Grotesque", sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: #f1ddf8 1px 0 10px;
+  margin-top: 30px;
+  margin-right: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.burmese-title {
+  font-family: "seesai", "Fricolage Grotesque", sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: #f1ddf8 1px 0 10px;
+  margin-left: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.profile-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.zodiac-sign {
+  width: 300px;
+  height: auto;
+}
+
+.info-row {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.info-title {
+  font-family: "seesai", "Fricolage Grotesque", sans-serif;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.info-text {
+  font-family: "seesai", "Fricolage Grotesque", sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid#eee;
+}
+
+.boxed-row {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.boxed-row .info-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.boxed-row .burmese-text {
+  display: block;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+  transition: box-shadow 0.3s;
+}
+
+.boxed-row .burmese-text:hover {
+  box-shadow: 0 0 25px var(--light-lavender);
+}
+
+.history-row {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.history-row .burmese-text {
+  display: block;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+  transition: box-shadow 0.3s;
+}
+
+.history-row .burmese-text:hover {
+  box-shadow: 0 0 25px var(--light-lavender);
+}
+
+.career-row {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.career-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+  position: relative;
+  font-family: "seesai", "Fricolage Grotesque", sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  column-gap: 20px;
+}
+
+.career-item span {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  text-align: left;
+}
+.career-item span:first-child {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.career-item span:first-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #eee;
+}
+
+.famous-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.flip-card {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.8);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Fricolage Grotesque", sans-serif;
+  font-size: 1rem;
+  padding: 10px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.memes-row {
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.memes-row .row-title {
+  font-family: "Fricolage Grotesque", sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: #f1ddf8 1px 0 10px;
+  margin-top: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.meme-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.meme-gallery img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.meme-gallery img:hover {
+  transform: scale(1.05);
+}
