@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YarTheKhwin - Sign In / Sign Up</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo/yarthekhwin_transparent.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="/styles/sign-in.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <!-- Sign In Page -->
+      <div class="card" id="signinCard">
+        <h1>Sign in to Your Account</h1>
+        <p class="subtitle">Choose a provider or use your email.</p>
+
+        <div class="provider">
+          <a href="/home.html" class="btn" type="button">
+            <!-- GitHub mark -->
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.35-1.78-1.35-1.78-1.1-.74.08-.73.08-.73 1.2.09 1.83 1.25 1.83 1.25 1.08 1.85 2.83 1.32 3.52 1.01.11-.8.42-1.33.76-1.63-2.67-.3-5.48-1.37-5.48-6.1 0-1.35.48-2.45 1.25-3.31-.12-.31-.54-1.56.12-3.25 0 0 1.01-.32 3.3 1.26a11.5 11.5 0 0 1 6.01 0c2.29-1.58 3.3-1.26 3.3-1.26.66 1.69.24 2.94.12 3.25.78.86 1.25 1.96 1.25 3.31 0 4.74-2.82 5.79-5.5 6.1.43.36.81 1.08.81 2.18v3.24c0 .32.21.7.83.58A12 12 0 0 0 12 .5z"
+              />
+            </svg>
+            <span>Sign in with GitHub</span>
+          </a>
+
+          <!-- Google G -->
+          <a href="/home.html" class="btn btn-google" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#EA4335"
+                d="M12 10.2v3.9h5.44c-.23 1.24-.98 2.29-2.08 3.01l3.36 2.61C20.46 18.26 21.6 15.9 21.6 13c0-.65-.06-1.27-.18-1.86H12z"
+              />
+              <path
+                fill="#34A853"
+                d="M6.53 14.32a6.8 6.8 0 0 0 0-4.64l-3.4-2.64A10.6 10.6 0 0 0 2.4 13c0 1.71.41 3.32 1.14 4.73l3-2.41z"
+              />
+              <path
+                fill="#4A90E2"
+                d="M12 21.6c2.88 0 5.3-.95 7.07-2.58l-3.36-2.61c-.93.62-2.12.99-3.71.99-2.85 0-5.27-1.92-6.13-4.49l-3 2.41A10.59 10.59 0 0 0 12 21.6z"
+              />
+              <path
+                fill="#FBBC05"
+                d="M5.87 7.49A6.35 6.35 0 0 1 12 4.8c1.56 0 2.98.54 4.09 1.6l3.06-3.06A10.53 10.53 0 0 0 12 2.4A10.59 10.59 0 0 0 4.47 6.68l3.4 2.64z"
+              />
+              <path fill="currentColor" d="M2.4 2.4h19.2v19.2H2.4z" fill-opacity="0" />
+            </svg>
+            <span>Sign in with Google</span>
+          </a>
+        </div>
+
+        <div class="or">or</div>
+
+        <form id="signinForm" novalidate>
+          <label for="email">Email Address</label>
+          <input
+            id="email"
+            class="input"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <label for="password">Password</label>
+          <input
+            id="password"
+            class="input"
+            name="password"
+            type="password"
+            placeholder="••••••••"
+            required
+          />
+
+          <span class="forgot" onclick="showPage('forgotPasswordCard')">Forgotten password?</span>
+
+          <button class="submit" type="submit">Sign In</button>
+        </form>
+
+        <p class="bottom">Need an Account? <a onclick="showPage('signupCard')">Create One</a></p>
+      </div>
+
+      <!-- Sign Up Page -->
+      <div class="card hidden" id="signupCard">
+        <h1>Create an Account</h1>
+        <p class="subtitle">Join us today and get started.</p>
+
+        <div class="provider">
+          <button class="btn" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.35-1.78-1.35-1.78-1.1-.74.08-.73.08-.73 1.2.09 1.83 1.25 1.83 1.25 1.08 1.85 2.83 1.32 3.52 1.01.11-.8.42-1.33.76-1.63-2.67-.3-5.48-1.37-5.48-6.1 0-1.35.48-2.45 1.25-3.31-.12-.31-.54-1.56.12-3.25 0 0 1.01-.32 3.3 1.26a11.5 11.5 0 0 1 6.01 0c2.29-1.58 3.3-1.26 3.3-1.26.66 1.69.24 2.94.12 3.25.78.86 1.25 1.96 1.25 3.31 0 4.74-2.82 5.79-5.5 6.1.43.36.81 1.08.81 2.18v3.24c0 .32.21.7.83.58A12 12 0 0 0 12 .5z"
+              />
+            </svg>
+            <span>Sign up with GitHub</span>
+          </button>
+
+          <button class="btn btn-google" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#EA4335"
+                d="M12 10.2v3.9h5.44c-.23 1.24-.98 2.29-2.08 3.01l3.36 2.61C20.46 18.26 21.6 15.9 21.6 13c0-.65-.06-1.27-.18-1.86H12z"
+              />
+              <path
+                fill="#34A853"
+                d="M6.53 14.32a6.8 6.8 0 0 0 0-4.64l-3.4-2.64A10.6 10.6 0 0 0 2.4 13c0 1.71.41 3.32 1.14 4.73l3-2.41z"
+              />
+              <path
+                fill="#4A90E2"
+                d="M12 21.6c2.88 0 5.3-.95 7.07-2.58l-3.36-2.61c-.93.62-2.12.99-3.71.99-2.85 0-5.27-1.92-6.13-4.49l-3 2.41A10.59 10.59 0 0 0 12 21.6z"
+              />
+              <path
+                fill="#FBBC05"
+                d="M5.87 7.49A6.35 6.35 0 0 1 12 4.8c1.56 0 2.98.54 4.09 1.6l3.06-3.06A10.53 10.53 0 0 0 12 2.4A10.59 10.59 0 0 0 4.47 6.68l3.4 2.64z"
+              />
+              <path fill="currentColor" d="M2.4 2.4h19.2v19.2H2.4z" fill-opacity="0" />
+            </svg>
+            <span>Sign up with Google</span>
+          </button>
+        </div>
+
+        <div class="or">or</div>
+
+        <form id="signupForm" novalidate>
+          <label for="name">Preferred Name</label>
+          <input id="name" class="input" name="name" type="text" placeholder="Your name" required />
+
+          <label for="signup-email">Email Address</label>
+          <input
+            id="signup-email"
+            class="input"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <label for="signup-password">Password</label>
+          <input
+            id="signup-password"
+            class="input"
+            name="password"
+            type="password"
+            placeholder="••••••••"
+            required
+          />
+
+          <button class="submit" type="submit">Create My Account</button>
+        </form>
+
+        <p class="bottom">
+          Already have an account? <a onclick="showPage('signinCard')">Sign In</a>
+        </p>
+      </div>
+
+      <!-- Forgot Password Page -->
+      <div class="card hidden" id="forgotPasswordCard">
+        <h1>Reset Password</h1>
+        <p class="subtitle">Enter your email to reset your password.</p>
+
+        <form id="forgotPasswordForm" novalidate>
+          <label for="reset-email">Email Address</label>
+          <input
+            id="reset-email"
+            class="input"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <button class="submit" type="submit">Reset Password</button>
+        </form>
+
+        <p class="bottom"><a onclick="showPage('signinCard')">Back to Sign In</a></p>
+      </div>
+    </main>
+
+    <script>
+      function showPage(id) {
+        document.querySelectorAll(".card").forEach((card) => {
+          card.classList.add("hidden");
+        });
+
+        document.getElementById(id).classList.remove("hidden");
+      }
+
+      // Add form submission handlers
+      document.getElementById("signinForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        window.location.href = "/home.html";
+      });
+
+      document.getElementById("signupForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        showPage("signinCard");
+      });
+
+      document.getElementById("forgotPasswordForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Password reset instructions have been sent to your email.");
+        showPage("signinCard");
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

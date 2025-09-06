@@ -1,1 +1,628 @@
 @import url("./main.css");
+
+/* Hero Section */
+.hero {
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #f1ddf8 0%, #a37bff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section Spacing */
+section {
+  padding-bottom: 5rem;
+}
+
+section:not(:first-child) {
+  padding-top: 4rem;
+}
+
+@media (min-width: 992px) {
+  section {
+    padding-bottom: 6rem;
+  }
+}
+
+/* Eyebrow text */
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+
+/* Cosmic Orb */
+.cosmic-orb {
+  position: relative;
+  width: min(520px, 90%);
+  aspect-ratio: 1/1;
+  filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.35));
+}
+.cosmic-orb .orb {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+.cosmic-orb .ring {
+  border: 1px solid rgba(241, 221, 248, 0.18);
+}
+.cosmic-orb .r1 {
+  animation: spin 26s linear infinite;
+}
+.cosmic-orb .r2 {
+  inset: 6%;
+  animation: spinReverse 34s linear infinite;
+  opacity: 0.8;
+}
+.cosmic-orb .r3 {
+  inset: 12%;
+  animation: spin 46s linear infinite;
+  opacity: 0.6;
+}
+.cosmic-orb .glow {
+  inset: 22%;
+  background: radial-gradient(circle at 50% 50%, rgba(161, 121, 255, 0.25), transparent 60%);
+  filter: blur(12px);
+}
+.cosmic-orb .wheel {
+  position: absolute;
+  inset: 18%;
+  width: 64%;
+  height: 64%;
+  object-fit: contain;
+  animation: spin 180s linear infinite;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+}
+
+.cosmic-orb .wheel:hover {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Ticker */
+.luxe-ticker {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  padding: 0.5rem;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.03);
+}
+.luxe-ticker .ticker-track {
+  display: inline-flex;
+  gap: 0.75rem;
+  white-space: nowrap;
+  animation: marquee 28s linear infinite;
+  padding-inline: 0.5rem;
+}
+.luxe-ticker .ticker-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.86rem;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Zodiac Cards */
+.zodiac-card.luxe {
+  display: block;
+  padding: 1rem 0.75rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+.zodiac-card.luxe:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(120, 115, 245, 0.9);
+}
+
+.zodiac-card .zodiac-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-inline: auto;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+.zodiac-card .zodiac-icon img {
+  filter: drop-shadow(0 4px 10px rgba(241, 221, 248, 0.2));
+}
+
+/* Burmese image frame */
+.z-frame {
+  position: relative;
+  border-radius: 50%;
+  max-width: 400px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.z-frame:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(120, 115, 245, 0.9);
+}
+
+.z-img {
+  width: 100%;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.6s ease;
+}
+
+.z-frame:hover .z-img {
+  transform: scale(1.03);
+}
+
+section#horoscope {
+  padding: 0 !important;
+}
+
+/* Horoscope Card */
+.horoscope-card {
+  background: rgba(28, 20, 54, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease;
+}
+.horoscope-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px var(--light-lavender);
+}
+.horoscope-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(106, 77, 163, 0.3);
+  color: var(--light-lavender);
+  font-size: 1.25rem;
+}
+
+/* Planet Positions */
+.planet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+.planet-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.planet-item:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(120, 115, 245, 0.9);
+  background: rgba(106, 77, 163, 0.15);
+  border-color: rgba(106, 77, 163, 0.3);
+}
+.planet-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  font-size: 1rem;
+  color: white;
+}
+.planet-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.86rem;
+}
+.planet-name {
+  font-weight: 500;
+}
+.planet-position {
+  opacity: 0.7;
+}
+
+/* Planet Colors */
+.bg-sun {
+  background: rgba(255, 204, 0, 0.15);
+}
+.bg-moon {
+  background: rgba(200, 200, 200, 0.15);
+}
+.bg-mercury {
+  background: rgba(150, 150, 150, 0.15);
+}
+.bg-venus {
+  background: rgba(255, 165, 0, 0.15);
+}
+.bg-mars {
+  background: rgba(255, 68, 0, 0.15);
+}
+.bg-jupiter {
+  background: rgba(184, 134, 11, 0.15);
+}
+
+/* Reveal on scroll */
+.fade-up {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease var(--d, 0s), transform 0.6s ease var(--d, 0s);
+}
+.fade-up.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Tarot */
+.tarot-zone {
+  max-width: 320px;
+  text-align: center;
+}
+.tarot-stack {
+  position: relative;
+  width: 200px;
+  height: 350px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+.tarot-card {
+  position: absolute;
+  inset: 0;
+  border-radius: 5px;
+  backface-visibility: hidden;
+  border: 2px solid var(--light-lavender);
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(120, 115, 245, 0.9);
+  transition: transform 0.9s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s ease;
+}
+
+#draw-card:hover .tarot-card {
+  box-shadow: 0 0 25px var(--light-lavender);
+}
+
+.tarot-back {
+  background: linear-gradient(145deg, #6a4da3 0%, #300c5c 100%);
+  display: grid;
+  place-items: center;
+}
+.tarot-front {
+  transform: rotateY(180deg);
+  background: rgba(0, 0, 0, 0.2);
+}
+.tarot-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.tarot-stack.flipped .tarot-back {
+  transform: rotateY(-180deg);
+}
+.tarot-stack.flipped .tarot-front {
+  transform: rotateY(0deg);
+}
+
+/* Asymmetrical Zodiac Grid */
+.zodiac-grid-container {
+  position: relative;
+}
+
+.zodiac-grid-container::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(163, 123, 255, 0.15) 0%, transparent 70%);
+  z-index: -1;
+}
+
+/* Split Screen Horoscope */
+.horoscope-split {
+  background: linear-gradient(to right, var(--dark-purple) 50%, rgba(28, 20, 54, 0.95) 50%);
+}
+
+.horoscope-content {
+  background: var(--dark-purple);
+}
+
+.planet-side {
+  background: rgba(28, 20, 54, 0.95);
+}
+
+@media (max-width: 991.98px) {
+  .horoscope-split {
+    background: var(--dark-purple);
+  }
+
+  .horoscope-content,
+  .planet-side {
+    background: transparent;
+  }
+}
+
+/* Compatibility Carousel */
+.compatibility-carousel {
+  overflow: hidden;
+}
+
+.compatibility-slider {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(163, 123, 255, 0.5) transparent;
+}
+
+.compatibility-slider::-webkit-scrollbar {
+  height: 6px;
+}
+
+.compatibility-slider::-webkit-scrollbar-thumb {
+  background: rgba(163, 123, 255, 0.5);
+  border-radius: 3px;
+}
+
+.pair-card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+
+.pair-card:hover {
+  transform: scale(1.08);
+}
+
+.card-good {
+  background: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.card-challenging {
+  background: rgba(244, 67, 54, 0.1);
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.pair-flag {
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.pair-flag img {
+  width: 40px;
+  height: 40px;
+}
+.card-good .pair-flag {
+  color: #4caf50;
+}
+
+.card-challenging .pair-flag {
+  color: #f44336;
+}
+
+.pair-signs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.pair-plus {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pair-desc {
+  text-align: center;
+  margin-bottom: 1rem;
+  opacity: 0.85;
+}
+
+.pair-rating {
+  text-align: center;
+  color: gold;
+}
+
+/* Chinese Zodiac Timeline */
+.chinese-zodiac-section {
+  background: linear-gradient(to bottom, var(--dark-purple), rgba(28, 20, 54, 0.9));
+}
+
+.zodiac-timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline-bar {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--light-lavender), transparent);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.timeline-content {
+  position: relative;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  border: 2px solid #ffd700;
+}
+
+.timeline-content::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background: var(--light-lavender);
+}
+
+.left::before {
+  right: -20px;
+}
+
+.right::before {
+  left: -20px;
+}
+
+.zodiac-animal {
+  display: flex;
+  align-items: center;
+}
+
+.animal-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.zodiac-animal p {
+  font-size: 1rem;
+  text-shadow: #f1ddf8 1px 0 10px;
+  margin: 0;
+}
+
+/* Burmese Flip Cards */
+.burmese-cards {
+  perspective: 1000px;
+}
+
+.burmese-card {
+  height: 180px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-radius: 12px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.burmese-card:hover .card-inner {
+  transform: rotateY(180deg);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card-front {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid var(--light-lavender);
+}
+
+.card-back {
+  background: linear-gradient(145deg, #6a4da3 0%, #300c5c 100%);
+  border: 2px solid var(--light-lavender);
+  transform: rotateY(180deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .timeline-bar {
+    left: 20px;
+  }
+
+  .timeline-content::before {
+    display: none;
+  }
+
+  .left,
+  .right {
+    margin-left: 40px;
+  }
+
+  .burmese-card {
+    height: 150px;
+  }
+
+  .animal-icon {
+    font-size: 1.5rem;
+  }
+}

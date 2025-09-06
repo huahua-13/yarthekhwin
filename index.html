@@ -14,26 +14,30 @@
     <link href="/styles/index.css" rel="stylesheet" />
   </head>
   <body>
-    <header id="header"></header>
+    <div class="stars-container" id="stars"></div>
 
-    <main class="container my-5">
-      <div class="burmese-text">
-        <p>
-          တစ်နှစ်တွင် နေသည် အမြင်အားဖြင့် ကောင်းကင်၌ ရှိသော နက္ခတ်ခေါ် ကြယ်စု ၁၂ ခုကို
-          ဖြတ်ကျော်သွား၍ ထိုနက္ခတ်များ တည်နေရာ နယ်နိမိတ်များကို ရာသီခွင်များအဖြစ်ဖြင့်
-          ရှေးနက္ခတ်ဆရာများ လက်ထက်ကစ၍ သတ်မှတ်ထားခဲ့ကြသည်။ ရာသီခွင် တစ်ခွင်တွင်
-          နက္ခတ်တလုံး(ကြယ်တစ်စု)ရှိ၍ အဆိုပါ ရာသီခွင်တစ်ခုစီကို ရုပ်ပုံတစ်ခုစီဖြင့်
-          ခွဲခြားသတ်မှတ်ထားသည်။ ထို ၁၂ ရာသီခွင်ကို နေသာမက၊ ကျန် အခြားဂြိုဟ်များလည်း
-          ဖြတ်သန်းသွားလာကြသည်။ လက်တင်အမည်များဖြင့် ခွဲခြားထားသော ၁၂ ရာသီခွင်မှာ အောက်ပါအတိုင်းဖြစ်၍
-          ရာသီခွင်အတွင်းရှိ နက္ခတ်တို့၏ ရုပ်ပုံများကိုလည်း ယှဉ်တွဲဖော်ပြထားသည်။ အဆိုပါ လက်တင်
-          အမည်များသည် ရှေးဂရိလူမျိုးတို့၏ အခေါ်အဝေါ်များမှ ဆင်းသက်လာခြင်း ဖြစ်လေသည်။
-        </p>
-      </div>
+    <div class="zodiac-wheel-background">
+      <img src="./assets/images/home/zodiac-wheel.svg" alt="Zodiac Wheel" />
+      <div class="zodiac-glow-background"></div>
+    </div>
+
+    <main id="main" class="container my-5">
+      <section class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title burmese-text">ရာသီခွင်</h1>
+          <p class="hero-subtitle">DISCOVER YOUR PATH IN THE UNIVERSE</p>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="/home.html" class="btn btn-lg btn-hover-effect burmese-text"
+            >သင့်ရဲ့ ရာသီခွင်အကြောင်း လေ့လာပါ</a
+          >
+        </div>
+      </section>
     </main>
 
-    <footer id="footer"></footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="/js/index.js"></script>
+    <script type="module" src="/js/main.js"></script>
   </body>
 </html>
