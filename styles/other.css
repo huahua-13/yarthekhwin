@@ -99,7 +99,7 @@
 
 .zodiac-signs > div,
 #chinese {
-  scroll-margin: 15rem;
+  scroll-margin: 12rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -154,6 +154,10 @@
 
 .bur-content h4 {
   margin-top: 4.5rem;
+}
+
+.bur-content > div {
+  scroll-margin: 12rem;
 }
 
 .bur-content p {
@@ -213,10 +217,6 @@
   width: fit-content;
   margin-left: 25%;
   margin-right: 25%;
-}
-
-.bur-signs > div {
-  scroll-margin: 15rem;
 }
 
 #burmese {

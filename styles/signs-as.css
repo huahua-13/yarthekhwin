@@ -162,7 +162,7 @@ input[type="radio"] {
   border-width: 0;
 }
 
-h3 {
+main h3 {
   text-align: center;
   margin-bottom: 4rem !important;
 }
@@ -171,9 +171,10 @@ body {
   min-height: 100svh;
   margin: 0;
   font: 1rem;
+}
+main {
   text-align: center;
 }
-
 .cards {
   --img-w: 200px;
   --duration: 300ms;

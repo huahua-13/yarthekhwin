@@ -1,5 +1,3 @@
-import "./main.js";
-
 const reviews = [
   {
     name: "Ei Ei",
@@ -30,7 +28,7 @@ const reviews = [
     sign: "♊︎ Gemini",
     text: "ဖော်ရွေတာဟာ မျက်နှာများတာမဟုတ် အားလုံးထဲချစ်စရာကောင်းနေခြင်းသာဖြစ်သည်။",
     img: "./assets/images/about/scarlett.png",
-  },  
+  },
   {
     name: "May",
     sign: "♈︎ Aries",
@@ -79,7 +77,6 @@ const reviews = [
     text: "အကောင်းမြင်တတ်တယ်။ ဘယ်သူဘာထင်ထင်ဂရုမစိုက်ပါဘူး ကိုယ်လုပ်ချင်ရာကိုယ်လုပ်ပါတယ်။",
     img: "./assets/images/about/tun tun.png",
   },
-  
 ];
 
 const path = document.getElementById("orbitPath");
@@ -113,17 +110,11 @@ function render() {
     el.className = "avatar" + (i === 1 ? " active" : "");
     el.style.left =
       pt.x -
-      parseInt(
-        getComputedStyle(document.documentElement).getPropertyValue("--avatar")
-      ) /
-        2 +
+      parseInt(getComputedStyle(document.documentElement).getPropertyValue("--avatar")) / 2 +
       "px";
     el.style.top =
       pt.y -
-      parseInt(
-        getComputedStyle(document.documentElement).getPropertyValue("--avatar")
-      ) /
-        2 +
+      parseInt(getComputedStyle(document.documentElement).getPropertyValue("--avatar")) / 2 +
       "px";
     el.innerHTML = `<img src="${rev.img}" alt="${rev.name}">`;
     avatarsEl.appendChild(el);
