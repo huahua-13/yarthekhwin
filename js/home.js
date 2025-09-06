@@ -89,7 +89,7 @@ const SIGNS = [
   },
   {
     name: "Aquarius",
-    burmese: "ကုမ်ရာသီ",
+    burmese: "ကုံရာသီ",
     href: "/signs/aquarius.html",
     icon: "/assets/images/home/signs/aquarius.svg",
     range: "Jan 20 – Feb 18",
