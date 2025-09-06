@@ -77,6 +77,7 @@
   margin-bottom: 20px;
   border: 1px solid white;
   transition: box-shadow 0.3s;
+  font-size: 1rem;
 }
 
 .boxed-row .burmese-text:hover {
@@ -98,6 +99,7 @@
   margin-bottom: 20px;
   border: 1px solid white;
   transition: box-shadow 0.3s;
+  font-size: 1rem;
 }
 
 .history-row .burmese-text:hover {
