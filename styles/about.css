@@ -180,6 +180,9 @@ svg.orbit {
   color: #45505d;
 }
 @media (max-width: 768px) {
+  .l2 {
+  gap: 40px;
+  }
   .texts {
     padding: 20px 10px;
     font-size: 0.8rem;
