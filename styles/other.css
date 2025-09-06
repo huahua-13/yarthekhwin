@@ -73,7 +73,7 @@
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
 }
 
-.chin-content h1 {
+.chin-content h2 {
   text-align: justify;
   margin-top: 4.5rem;
   margin-left: 1.5rem;
@@ -87,13 +87,13 @@
   justify-content: center;
 }
 
-.zodiac-signs h1 {
+.zodiac-signs h2 {
   text-align: center;
   text-decoration: underline;
-  text-decoration-color: whitesmoke;
+  text-decoration-color: var(--white);
 }
 
-.zodiac-signs h2 {
+.zodiac-signs h3 {
   margin-top: 4.5rem;
   margin-left: 1.5rem;
 }
@@ -122,5 +122,125 @@
     align-items: center;
     margin: auto;
     justify-content: center;
+  }
+}
+
+/*Burmese Zodiac Signs*/
+.bur-title h2 {
+  margin-top: 6.5rem;
+  margin-left: 1.5rem;
+}
+
+.bur-title p {
+  margin: 1.5rem;
+  text-align: justify;
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+.bur-signs h3 {
+  margin-left: 2.3rem;
+}
+
+
+.bur-signs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3.7rem;
+  margin-top: 4.5rem;
+}
+
+.bur-content h3 {
+  margin-top: 4.5rem;
+  margin-left: 1.5rem;
+}
+
+.bur-content p {
+  margin: 1.5rem;
+  text-align: justify;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  border: 1px solid var(--white);
+  border-radius: 30px;
+  padding: 1.5rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.mahabote h2 {
+  margin-top: 4.5rem;
+  text-decoration: underline;
+  text-decoration-color: var(--white);
+  justify-content: center;
+  text-align: center;
+
+}
+
+.mahabote p {
+  margin: 1.5rem;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  justify-content: center;
+}
+
+.mahabote-types h3 {
+  margin-top: 1.5rem;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: var(--white);
+}
+
+.mahabote-types p {
+  margin: 1.5rem;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  justify-content: center;
+}
+
+.mahabote-list p {
+  margin: 1.5rem;
+  text-align: justify;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  justify-content: center;
+  border: 1px solid var(--white);
+  border-radius: 30px;
+  width: fit-content;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.bur{
+  margin-bottom: 50rem;
+}
+.bur-signs > div,
+#burmese {
+  scroll-margin: 15rem;
+}
+
+.bur-content > div,
+#burmese {
+  scroll-margin: 15rem;
+}
+
+@media screen and (max-width: 768px) {
+  .bur-signs {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+  }
+  .mahabote-list p{
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
