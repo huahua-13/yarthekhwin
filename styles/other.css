@@ -4,6 +4,11 @@
   font-size: 1.05rem;
 }
 
+.main-content > div {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .tabs {
   display: flex;
   flex-wrap: wrap;

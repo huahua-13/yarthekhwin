@@ -23,42 +23,6 @@ if ("fonts" in document) {
     { weight: "100 900", style: "normal" }
   );
 
-  let serifMedium = new FontFace(
-    "Mackinac",
-    "url('/assets/fonts/mackinac-medium.woff2') format('woff2')",
-    { weight: "500" }
-  );
-
-  let serifMediumItalic = new FontFace(
-    "Mackinac",
-    "url('/assets/fonts/mackinac-medium-italic.woff2') format('woff2')",
-    { weight: "500", style: "italic" }
-  );
-
-  let serifBold = new FontFace(
-    "Mackinac",
-    "url('/assets/fonts/mackinac-bold.woff2') format('woff2')",
-    { weight: "700" }
-  );
-
-  let serifBoldItalic = new FontFace(
-    "Mackinac",
-    "url('/assets/fonts/mackinac-bold-italic.woff2') format('woff2')",
-    { weight: "700", style: "italic" }
-  );
-
-  let monoRegular = new FontFace(
-    "FragmentMono",
-    "url('/assets/fonts/fragment-mono-regular.woff2') format('woff2')",
-    { weight: "400" }
-  );
-
-  let monoItalic = new FontFace(
-    "FragmentMono",
-    "url('/assets/fonts/fragment-mono-italic.woff2') format('woff2')",
-    { weight: "400", style: "italic" }
-  );
-
   let burmeseFont = new FontFace(
     "seesai",
     "url('/assets/fonts/burmese/seesai.ttf') format('truetype')",
@@ -68,16 +32,7 @@ if ("fonts" in document) {
     }
   );
 
-  Promise.all([
-    sansRoman.load(),
-    serifMedium.load(),
-    serifMediumItalic.load(),
-    serifBold.load(),
-    serifBoldItalic.load(),
-    monoRegular.load(),
-    monoItalic.load(),
-    burmeseFont.load(),
-  ])
+  Promise.all([sansRoman.load(), burmeseFont.load()])
     .then((result) => {
       result.forEach((font) => document.fonts.add(font));
       document.documentElement.classList.add("wf-loaded-stage2");
