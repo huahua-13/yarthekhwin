@@ -69,14 +69,14 @@ const reviews = [
   },
   {
     name: "Kywe Kywe",
-    sign: "♉︎ Taurus",
-    text: "Development went smoothly. Great experience.",
+    sign: "♏︎ Scorpio",
+    text: "မချစ်တတ်ဘူးလို့မထင်ပါနဲ့ အစွဲအလမ်းကြီးပြီး အချစ်ကြီးပါတယ်။ မုန်းပြီလည်းဆိုလည်းလှည့်မကြည့်တော့ပါ",
     img: "./assets/images/about/kywe kywe.png",
   },
   {
     name: "Tun Tun",
-    sign: "♉︎ Taurus",
-    text: "Development went smoothly. Great experience.",
+    sign: "♐︎ Sagittarius",
+    text: "အကောင်းမြင်တတ်တယ်။ ဘယ်သူဘာထင်ထင်ဂရုမစိုက်ပါဘူး ကိုယ်လုပ်ချင်ရာကိုယ်လုပ်ပါတယ်။",
     img: "./assets/images/about/tun tun.png",
   },
   
