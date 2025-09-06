@@ -1,17 +1,7 @@
 @import url("./main.css");
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-}
 
 .content {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
 }
 
 .tabs {
@@ -26,8 +16,9 @@
   background-color: transparent;
   border: 2px solid var(--light-lavender);
   color: var(--white);
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   padding: 5px 25px;
+  padding-top: 7px;
   border-radius: 40px;
   cursor: pointer;
   transition: 0.3s;
@@ -50,16 +41,13 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 3.7rem;
 }
 
 .tab-btn :focus,
 .tab-btn {
   cursor: pointer;
-}
-
-.chin-signs h3 {
-  margin-left: 2.5rem;
 }
 
 .rounded-circle {
@@ -75,34 +63,33 @@
 
 .chin-content h2 {
   text-align: justify;
-  margin-top: 4.5rem;
-  margin-left: 1.5rem;
+  margin-top: 3rem;
 }
 
 .chin-content p {
-  margin: 1.5rem;
+  margin: 1.5rem auto;
   text-align: justify;
   line-height: 2rem;
-  font-size: 1.3rem;
+  font-size: 1.05rem;
   justify-content: center;
 }
 
-.zodiac-signs h2 {
+.zodiac-signs h2,
+.zodiac-title {
   text-align: center;
   text-decoration: underline;
   text-decoration-color: var(--white);
 }
 
-.zodiac-signs h3 {
+.zodiac-signs h4 {
   margin-top: 4.5rem;
-  margin-left: 1.5rem;
 }
 
 .zodiac-signs p {
-  margin: 1.5rem;
+  margin: 1.5rem auto;
   text-align: justify;
   line-height: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   border: 1px solid whitesmoke;
   border-radius: 30px;
   padding: 1.5rem;
@@ -128,20 +115,18 @@
 /*Burmese Zodiac Signs*/
 .bur-title h2 {
   margin-top: 6.5rem;
-  margin-left: 1.5rem;
 }
 
 .bur-title p {
-  margin: 1.5rem;
+  margin: 1.5rem auto;
   text-align: justify;
   line-height: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
 }
 
-.bur-signs h3 {
+.bur-signs h4 {
   margin-left: 2.3rem;
 }
-
 
 .bur-signs {
   display: flex;
@@ -149,25 +134,38 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 3.7rem;
-  margin-top: 4.5rem;
+  margin-top: 3rem;
 }
 
-.bur-content h3 {
+.bur-signs > a > img,
+.chin-signs > a > img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+.bur-signs > a:hover img,
+.chin-signs > a:hover img {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(120, 115, 245, 0.9);
+}
+
+.bur-content h4 {
   margin-top: 4.5rem;
-  margin-left: 1.5rem;
 }
 
 .bur-content p {
-  margin: 1.5rem;
+  margin: 1.5rem auto;
   text-align: justify;
   line-height: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   border: 1px solid var(--white);
   border-radius: 30px;
   padding: 1.5rem;
   justify-content: center;
-  text-align: center;
+  text-align: justify;
 }
 
 .mahabote h2 {
@@ -176,19 +174,18 @@
   text-decoration-color: var(--white);
   justify-content: center;
   text-align: center;
-
 }
 
 .mahabote p {
-  margin: 1.5rem;
+  margin: 1.5rem auto;
   text-align: center;
   line-height: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   padding: 1.5rem;
   justify-content: center;
 }
 
-.mahabote-types h3 {
+.mahabote-types h4 {
   margin-top: 1.5rem;
   text-align: center;
   text-decoration: underline;
@@ -196,19 +193,19 @@
 }
 
 .mahabote-types p {
-  margin: 1.5rem;
+  margin: 1.5rem auto;
   text-align: center;
   line-height: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   padding: 1.5rem;
   justify-content: center;
 }
 
 .mahabote-list p {
-  margin: 1.5rem;
+  margin: 1.5rem auto;
   text-align: justify;
   line-height: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   padding: 1.5rem;
   justify-content: center;
   border: 1px solid var(--white);
@@ -218,17 +215,12 @@
   margin-right: 25%;
 }
 
-.bur{
-  margin-bottom: 50rem;
-}
-.bur-signs > div,
-#burmese {
+.bur-signs > div {
   scroll-margin: 15rem;
 }
 
-.bur-content > div,
 #burmese {
-  scroll-margin: 15rem;
+  scroll-margin: 2rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -239,7 +231,7 @@
     margin: auto;
     justify-content: center;
   }
-  .mahabote-list p{
+  .mahabote-list p {
     margin-left: 5%;
     margin-right: 5%;
   }
