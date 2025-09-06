@@ -18,11 +18,14 @@
 }
 .main h3 {
   margin: 20px;
+  font-size: 1.8rem;
 }
 .main p,
 .tarot-reading p {
   padding: 0 50px;
+  font-size: 1rem;
 }
+
 .t-title {
   font-size: 1.8rem;
   text-align: center;
@@ -48,7 +51,8 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 2px solid rgba(241, 221, 248, 0.37);
-  box-shadow: 0 0 10px rgba(241, 221, 248, 0.6), 0 0 20px rgba(241, 221, 248, 0.4);
+  box-shadow: 0 0 10px rgba(241, 221, 248, 0.6),
+    0 0 20px rgba(241, 221, 248, 0.4);
   border-radius: 12px;
   cursor: pointer;
   transition: transform 0.2s;
@@ -159,7 +163,8 @@
     padding: 0 15px;
   }
   .card {
-    box-shadow: 0 0 8px rgba(241, 221, 248, 0.5), 0 0 16px rgba(241, 221, 248, 0.35); /* softer glow */
+    box-shadow: 0 0 8px rgba(241, 221, 248, 0.5),
+      0 0 16px rgba(241, 221, 248, 0.35); /* softer glow */
   }
 
   .popup img {
@@ -174,6 +179,9 @@
   }
 }
 @media (max-width: 768px) {
+  .main h3 {
+    font-size: 1.5rem;
+  }
   .t-title {
     font-size: 1.2rem;
     margin-bottom: 20px;
@@ -185,7 +193,8 @@
   }
   .card {
     padding: 10px;
-    box-shadow: 0 0 5px rgba(241, 221, 248, 0.4), 0 0 10px rgba(241, 221, 248, 0.3); /* reduced glow */
+    box-shadow: 0 0 5px rgba(241, 221, 248, 0.4),
+      0 0 10px rgba(241, 221, 248, 0.3); /* reduced glow */
   }
   h1 {
     font-size: 1.5rem;
@@ -225,6 +234,9 @@
 }
 .tarot-text {
   margin: 50px 0px;
+}
+.tarot-text #major {
+  font-size: 1rem;
 }
 .tarot-text {
   margin-bottom: 60px;
@@ -428,7 +440,11 @@
       rgba(255, 255, 255, 0.1) 5px,
       transparent 5px
     ),
-    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 5px, transparent 5px);
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(255, 255, 255, 0.1) 5px,
+      transparent 5px
+    );
   background-size: 30px 30px;
 }
 
@@ -448,7 +464,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(106, 77, 163, 0.2), rgba(48, 12, 92, 0.2));
+  background: linear-gradient(
+    135deg,
+    rgba(106, 77, 163, 0.2),
+    rgba(48, 12, 92, 0.2)
+  );
   z-index: 1;
 }
 
@@ -587,7 +607,10 @@
   .tarot-cards {
     gap: 1rem;
   }
-
+  .tarot-text #major {
+    padding: 0px 20px;
+    font-size: 0.8rem;
+  }
   .tarot-title {
     font-size: 1.5rem;
   }
