@@ -1,0 +1,48 @@
+<svg width="138" height="134" viewBox="0 0 138 134" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="29.8462" cy="47.7059" r="1.00173" transform="rotate(-56.568 29.8462 47.7059)" fill="#FBFBFB" stroke="#FBFBFB" stroke-width="0.500867"/>
+<circle cx="18.4712" cy="51.2995" r="1.00173" transform="rotate(-56.568 18.4712 51.2995)" fill="#FBFBFB" stroke="#FBFBFB" stroke-width="0.500867"/>
+<circle cx="26.8965" cy="71.2654" r="1.00173" transform="rotate(-56.568 26.8965 71.2654)" fill="#FBFBFB" stroke="#FBFBFB" stroke-width="0.500867"/>
+<circle cx="15.2187" cy="84.8625" r="1.00173" transform="rotate(-56.568 15.2187 84.8625)" fill="#FBFBFB" stroke="#FBFBFB" stroke-width="0.500867"/>
+<circle cx="39.8521" cy="63.9141" r="1.00173" transform="rotate(-56.568 39.8521 63.9141)" fill="#FBFBFB" stroke="#FBFBFB" stroke-width="0.500867"/>
+<circle cx="49.9243" cy="48.6572" r="1.00173" transform="rotate(-56.568 49.9243 48.6572)" fill="#FBFBFB" stroke="#FBFBFB" stroke-width="0.500867"/>
+<circle cx="91.1655" cy="60.2792" r="1.00173" transform="rotate(-56.568 91.1655 60.2792)" fill="#FBFBFB" stroke="#FBFBFB" stroke-width="0.500867"/>
+<circle cx="49.5308" cy="84.7079" r="1.00173" transform="rotate(-56.568 49.5308 84.7079)" fill="#FBFBFB" stroke="#FBFBFB" stroke-width="0.500867"/>
+<circle cx="70.5117" cy="85.6554" r="1.00173" transform="rotate(-56.568 70.5117 85.6554)" fill="#FBFBFB" stroke="#FBFBFB" stroke-width="0.500867"/>
+<circle cx="71.3755" cy="30.7098" r="1.00173" transform="rotate(-56.568 71.3755 30.7098)" fill="#FBFBFB" stroke="#FBFBFB" stroke-width="0.500867"/>
+<circle cx="108.744" cy="92.2902" r="1.00173" transform="rotate(-56.568 108.744 92.2902)" fill="#FBFBFB" stroke="#FBFBFB" stroke-width="0.500867"/>
+<circle cx="100.285" cy="111.012" r="1.00173" transform="rotate(-56.568 100.285 111.012)" fill="#FBFBFB" stroke="#FBFBFB" stroke-width="0.500867"/>
+<circle cx="11.6133" cy="70.7786" r="1.00173" transform="rotate(-56.568 11.6133 70.7786)" fill="#FBFBFB" stroke="#FBFBFB" stroke-width="0.500867"/>
+<circle cx="118.883" cy="76.4774" r="1.00173" transform="rotate(-56.568 118.883 76.4774)" fill="#FBFBFB" stroke="#FBFBFB" stroke-width="0.500867"/>
+<circle cx="121.87" cy="61.0441" r="1.00173" transform="rotate(-56.568 121.87 61.0441)" fill="#FBFBFB" stroke="#FBFBFB" stroke-width="0.500867"/>
+<circle cx="134.979" cy="57.0956" r="1.00173" transform="rotate(-56.568 134.979 57.0956)" fill="#FBFBFB" stroke="#FBFBFB" stroke-width="0.500867"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M29.8462 47.7059L18.4712 51.2995Z" fill="#FBFBFB"/>
+<path d="M29.8462 47.7059L18.4712 51.2995" stroke="#FBFBFB" stroke-width="0.500867" stroke-linecap="square"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M29.8465 47.7058L49.9243 48.6573Z" fill="#FBFBFB"/>
+<path d="M29.8465 47.7058L49.9243 48.6573" stroke="#FBFBFB" stroke-width="0.500867" stroke-linecap="square"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M71.3751 30.7099L49.9238 48.6573Z" fill="#FBFBFB"/>
+<path d="M71.3751 30.7099L49.9238 48.6573" stroke="#FBFBFB" stroke-width="0.500867" stroke-linecap="square"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M91.1651 60.2795L49.9238 48.6573Z" fill="#FBFBFB"/>
+<path d="M91.1651 60.2795L49.9238 48.6573" stroke="#FBFBFB" stroke-width="0.500867" stroke-linecap="square"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M91.1653 60.2795L118.883 76.4774Z" fill="#FBFBFB"/>
+<path d="M91.1653 60.2795L118.883 76.4774" stroke="#FBFBFB" stroke-width="0.500867" stroke-linecap="square"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M91.1653 60.2795L121.869 61.0442Z" fill="#FBFBFB"/>
+<path d="M91.1653 60.2795L121.869 61.0442" stroke="#FBFBFB" stroke-width="0.500867" stroke-linecap="square"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M134.98 57.0954L121.87 61.0441Z" fill="#FBFBFB"/>
+<path d="M134.98 57.0954L121.87 61.0441" stroke="#FBFBFB" stroke-width="0.500867" stroke-linecap="square"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M39.8519 63.914L49.9241 48.6573Z" fill="#FBFBFB"/>
+<path d="M39.8519 63.914L49.9241 48.6573" stroke="#FBFBFB" stroke-width="0.500867" stroke-linecap="square"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M39.8521 63.914L26.8965 71.2655Z" fill="#FBFBFB"/>
+<path d="M39.8521 63.914L26.8965 71.2655" stroke="#FBFBFB" stroke-width="0.500867" stroke-linecap="square"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.6133 70.7787L26.8963 71.2656Z" fill="#FBFBFB"/>
+<path d="M11.6133 70.7787L26.8963 71.2656" stroke="#FBFBFB" stroke-width="0.500867" stroke-linecap="square"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.2192 84.8625L26.8965 71.2655Z" fill="#FBFBFB"/>
+<path d="M15.2192 84.8625L26.8965 71.2655" stroke="#FBFBFB" stroke-width="0.500867" stroke-linecap="square"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M49.5308 84.7081L26.8963 71.2656Z" fill="#FBFBFB"/>
+<path d="M49.5308 84.7081L26.8963 71.2656" stroke="#FBFBFB" stroke-width="0.500867" stroke-linecap="square"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M49.5308 84.7079L70.5115 85.6553Z" fill="#FBFBFB"/>
+<path d="M49.5308 84.7079L70.5115 85.6553" stroke="#FBFBFB" stroke-width="0.500867" stroke-linecap="square"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M100.285 111.013L70.5117 85.6554Z" fill="#FBFBFB"/>
+<path d="M100.285 111.013L70.5117 85.6554" stroke="#FBFBFB" stroke-width="0.500867" stroke-linecap="square"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M108.744 92.2901L70.5117 85.6554Z" fill="#FBFBFB"/>
+<path d="M108.744 92.2901L70.5117 85.6554" stroke="#FBFBFB" stroke-width="0.500867" stroke-linecap="square"/>
+</svg>
