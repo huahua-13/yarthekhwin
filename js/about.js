@@ -73,8 +73,8 @@ const reviews = [
   },
   {
     name: "Tun Tun",
-    sign: "♐︎ Sagittarius",
-    text: "အကောင်းမြင်တတ်တယ်။ ဘယ်သူဘာထင်ထင်ဂရုမစိုက်ပါဘူး ကိုယ်လုပ်ချင်ရာကိုယ်လုပ်ပါတယ်။",
+    sign: "♑︎ Capricorn",
+    text: "Capricornတွေဟာအောင်မြင်ချင်စိတ်အလွန်ပြင်းထန်ပြီးအခက်အခဲတွေကိုအနိုင်ရအောင်ကြိုးစားတတ်ပါတယ်",
     img: "./assets/images/about/tun tun.png",
   },
 ];
