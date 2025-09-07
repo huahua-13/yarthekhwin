@@ -18,16 +18,16 @@
 }
 .main h3 {
   margin: 20px;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 .main p,
 .tarot-reading p {
   padding: 0 50px;
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 
 .t-title {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -180,10 +180,15 @@
 }
 @media (max-width: 768px) {
   .main h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+  }
+  .main p,
+  .tarot-reading p {
+    padding: 0 20px;
+    font-size: rem;
   }
   .t-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 20px;
   }
   .card-grid {
@@ -201,7 +206,7 @@
     margin-bottom: 20px;
   }
   .burmese-text p {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   .extra-cards {
     display: none;
@@ -236,7 +241,7 @@
   margin: 50px 0px;
 }
 .tarot-text #major {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 .tarot-text {
   margin-bottom: 60px;
@@ -609,7 +614,7 @@
   }
   .tarot-text #major {
     padding: 0px 20px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .tarot-title {
     font-size: 1.5rem;

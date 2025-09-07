@@ -11,7 +11,10 @@
   align-items: center;
   position: relative;
 }
-
+main .aboutTitle img {
+  width: 20%;
+  margin-bottom: 20px;
+}
 .level {
   display: flex;
   flex-wrap: wrap;
@@ -38,7 +41,8 @@
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid rgba(241, 221, 248, 0.37);
-  box-shadow: 0 0 10px rgba(241, 221, 248, 0.6), 0 0 15px rgba(241, 221, 248, 0.4);
+  box-shadow: 0 0 10px rgba(241, 221, 248, 0.6),
+    0 0 15px rgba(241, 221, 248, 0.4);
   transition: all 0.3s linear;
 }
 .photo:hover {
@@ -101,7 +105,8 @@ svg.orbit {
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.02);
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.45s ease, top 0.45s ease, left 0.45s ease, box-shadow 0.45s ease;
+  transition: transform 0.45s ease, top 0.45s ease, left 0.45s ease,
+    box-shadow 0.45s ease;
 }
 .avatar img {
   width: 100%;
@@ -113,7 +118,8 @@ svg.orbit {
   transform: scale(1.35);
   box-shadow: 0 14px 28px rgba(22, 29, 37, 0.18);
   border: 2px solid rgba(241, 221, 248, 0.37);
-  box-shadow: 0 0 10px rgba(241, 221, 248, 0.6), 0 0 15px rgba(241, 221, 248, 0.4);
+  box-shadow: 0 0 10px rgba(241, 221, 248, 0.6),
+    0 0 15px rgba(241, 221, 248, 0.4);
   outline: 1px solid var(--light-lavender);
 }
 .avatar.active:hover {
@@ -176,14 +182,22 @@ svg.orbit {
   font-style: italic;
   line-height: 1.7;
   color: #45505d;
+  font-size: 1rem;
 }
 @media (max-width: 768px) {
+  main h1 {
+    font-size: 2rem;
+  }
+  main .aboutTitle img {
+    width: 50%;
+    margin-bottom: 20px;
+  }
   .l2 {
     gap: 40px;
   }
   .texts {
     padding: 20px 10px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .aboutTexts {
     margin: 20px;
