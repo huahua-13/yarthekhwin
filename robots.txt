@@ -1,0 +1,8 @@
+# robots.txt for YarTheKhwin
+
+User-agent: *
+Disallow: 
+Disallow: /sign-in.html
+Disallow: /cgi-bin/
+
+Sitemap: https://yarthekhwin.onrender.com/sitemap.xml
