@@ -135,13 +135,13 @@
   justify-content: center;
 }
 .popup-content h2 {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   margin: 0 0 10px;
 }
 
 .popup-content p {
   font-family: "seesai", "Fricolage Grotesque", sans-serif;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #ccc;
   line-height: 1.4em;
 }
@@ -160,35 +160,50 @@
   .card-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    padding: 0 15px;
   }
   .card {
     box-shadow: 0 0 8px rgba(241, 221, 248, 0.5),
       0 0 16px rgba(241, 221, 248, 0.35); /* softer glow */
   }
-
   .popup img {
     max-width: 30%;
   }
   .popup-content h2 {
-    margin-top: -20px;
-    font-size: 20px;
+    margin-top: 15px;
+    font-size: 1.6rem;
   }
   .popup-content p {
-    font-size: 15px;
+    font-size: 1rem;
   }
 }
+/* @media (min-width: 600px) and (max-width: 900px) {
+  .popup {
+    margin: 70px 20px;
+  }
+  .popup .dates{
+    font-size: 1.2rem;
+  }
+  .popup img {
+    max-width: 0%;
+  }
+  .popup-content h2 {
+    margin-top: 10px;
+    font-size: 2rem;
+  }
+  .popup-content p {
+    font-size: 2rem;
+  }
+} */
 @media (max-width: 768px) {
   .main h3 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
   .main p,
   .tarot-reading p {
     padding: 0 20px;
-    font-size: rem;
   }
   .t-title {
-    font-size: 1rem;
+    font-size: 1.6rem;
     margin-bottom: 20px;
   }
   .card-grid {
@@ -206,7 +221,7 @@
     margin-bottom: 20px;
   }
   .burmese-text p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .extra-cards {
     display: none;
@@ -215,20 +230,23 @@
     display: block;
   }
   .popup {
-    margin: 70px;
+    margin: 70px 25px;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+  .popup .dates{
+    font-size: 1.1rem;
+  }
   .popup img {
-    max-width: 100%;
+    max-width: 70%;
   }
   .popup-content h2 {
     margin-top: -20px;
-    font-size: 15px;
+    font-size: 2rem;
   }
   .popup-content p {
-    font-size: 8px;
+    font-size: 1rem;
   }
 }
 
@@ -612,9 +630,12 @@
   .tarot-cards {
     gap: 1rem;
   }
+  .tarot-text h3{
+    font-size: 1.7rem;
+  }
   .tarot-text #major {
     padding: 0px 20px;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .tarot-title {
     font-size: 1.5rem;

@@ -184,7 +184,7 @@ svg.orbit {
   color: #45505d;
   font-size: 1rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   main h1 {
     font-size: 2rem;
   }
@@ -197,7 +197,7 @@ svg.orbit {
   }
   .texts {
     padding: 20px 10px;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .aboutTexts {
     margin: 20px;

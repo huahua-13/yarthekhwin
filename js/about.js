@@ -141,7 +141,7 @@ downBtn.addEventListener("click", () => {
 
 // switch orbit for mobile
 function updateOrbit() {
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 900) {
     path.setAttribute("d", horizontalD);
     tPositions = [0.2, 0.5, 0.8];
     upBtn.textContent = "←";
