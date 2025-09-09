@@ -27,7 +27,7 @@ const tarotDeck = [
     name: "The Emperor",
     image: "/assets/images/tarot/the-emperor.svg",
     meaning:
-      "သင့်ရဲ့ ခေါင်းဆောင်နိုင်စွမ်းကို ပြသရမယ့်အချိန် ရောက်ပြီ။ ခိုင်မာတဲ့ ဆုံးဖြတ်ချက်တွေ ချမှတ်ပြီး ကိစ္စတွေကို စနစ်တကျ ထိန်းချုပ်လိုက်ပါ။ တည်ငြိမ်မှုနဲ့ စည်းကမ်းတွေက သင့်ကို အောင်မြင်မှုဆီ ပို့ဆောင်ပေးပါလိမ့်မယ်။",
+      "သင့်ရဲ့ ခေါင်းဆောင်နိုင်စွမ်းကို ပြသရမဲ့အချိန် ရောက်ပြီ။ ခိုင်မာတဲ့ ဆုံးဖြတ်ချက်တွေ ချမှတ်ပြီး ကိစ္စတွေကို စနစ်တကျ ထိန်းချုပ်လိုက်ပါ။ တည်ငြိမ်မှုနဲ့ စည်းကမ်းတွေက သင့်ကို အောင်မြင်မှုဆီ ပို့ဆောင်ပေးပါလိမ့်မယ်။",
   },
   {
     name: "The Hierophant",
@@ -69,7 +69,7 @@ const tarotDeck = [
     name: "Justice",
     image: "/assets/images/tarot/justice.svg",
     meaning:
-      "မျှတမှုနဲ့ မှန်ကန်တဲ့ ဆုံးဖြတ်ချက်တွေ ချမှတ်ရမယ့်အချိန် ဖြစ်တယ်။ သင့်ရဲ့ လုပ်ရပ်တိုင်းအတွက် ရလဒ်တွေက ပေါ်ထွက်လာလိမ့်မယ်။ ဘယ်လိုအခြေအနေမျိုးမှာမဆို မှန်ကန်တဲ့လမ်းကြောင်းကို ရွေးချယ်ဖို့မမေ့ပါနဲ့။",
+      "မျှတမှုနဲ့ မှန်ကန်တဲ့ ဆုံးဖြတ်ချက်တွေ ချမှတ်ရမဲ့အချိန် ဖြစ်တယ်။ သင့်ရဲ့ လုပ်ရပ်တိုင်းအတွက် ရလဒ်တွေက ပေါ်ထွက်လာလိမ့်မယ်။ ဘယ်လိုအခြေအနေမျိုးမှာမဆို မှန်ကန်တဲ့လမ်းကြောင်းကို ရွေးချယ်ဖို့မမေ့ပါနဲ့။",
   },
 ];
 
@@ -139,19 +139,13 @@ function drawCards() {
 }
 
 function displayResults(cards) {
-  document.getElementById(
-    "card1-name"
-  ).innerHTML = `<span>Past</span> <br/> ${cards[0].name}`;
+  document.getElementById("card1-name").innerHTML = `<span>Past</span> <br/> ${cards[0].name}`;
   document.getElementById("card1-desc").innerHTML = cards[0].meaning;
 
-  document.getElementById(
-    "card2-name"
-  ).innerHTML = `<span>Present</span> <br/> ${cards[1].name}`;
+  document.getElementById("card2-name").innerHTML = `<span>Present</span> <br/> ${cards[1].name}`;
   document.getElementById("card2-desc").innerHTML = cards[1].meaning;
 
-  document.getElementById(
-    "card3-name"
-  ).innerHTML = `<span>Future</span> <br/> ${cards[2].name}`;
+  document.getElementById("card3-name").innerHTML = `<span>Future</span> <br/> ${cards[2].name}`;
   document.getElementById("card3-desc").innerHTML = cards[2].meaning;
 
   tarotResultsEl.classList.add("show");
