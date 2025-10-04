@@ -38,10 +38,12 @@ async function loadComponent(componentUrl, targetElementId) {
     console.error(`Error loading component ${componentUrl}:`, error);
   }
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   loadComponent("../components/header.html", "header");
   loadComponent("../components/footer.html", "footer");
+  loadComponent("../components/scroll-to-top.html", "scroll-to-top");
+
+  setTimeout(initializeScrollToTop, 100);
 
   if (typeof bootstrap !== "undefined") {
     const tooltipTriggerList = [].slice.call(
@@ -59,3 +61,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+function initializeScrollToTop() {
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  
+  if (scrollToTopBtn) {
+    
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 200) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+  } else {
+    console.log('Scroll-to-top button not found, retrying...');
+    setTimeout(initializeScrollToTop, 500);
+  }
+}

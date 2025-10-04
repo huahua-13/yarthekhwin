@@ -504,6 +504,11 @@
   margin-bottom: 1.5rem;
 }
 
+.card-img {
+  margin-bottom: 1rem;
+  width: 150px;
+}
+
 .card-name {
   font-size: 1.2rem;
   margin-bottom: 1rem;

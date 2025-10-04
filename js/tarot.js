@@ -139,12 +139,15 @@ function drawCards() {
 }
 
 function displayResults(cards) {
+  document.getElementById("card1-img").src = cards[0].image;
   document.getElementById("card1-name").innerHTML = `<span>Past</span> <br/> ${cards[0].name}`;
   document.getElementById("card1-desc").innerHTML = cards[0].meaning;
 
+  document.getElementById("card2-img").src = cards[1].image;
   document.getElementById("card2-name").innerHTML = `<span>Present</span> <br/> ${cards[1].name}`;
   document.getElementById("card2-desc").innerHTML = cards[1].meaning;
 
+  document.getElementById("card3-img").src = cards[2].image;
   document.getElementById("card3-name").innerHTML = `<span>Future</span> <br/> ${cards[2].name}`;
   document.getElementById("card3-desc").innerHTML = cards[2].meaning;
 
